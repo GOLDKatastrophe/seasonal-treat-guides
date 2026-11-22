@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en" class="nojs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Halloween Time 2026 — Disneyland Resort Treat Guide</title>
+<style>
+  :root{
+    --paper:#171320;
+    --card:#241E30;
+    --ink:#F4EEE3;
+    --soft:#B3A6C2;
+    --rule:#413653;
+    --pumpkin:#FF9040;
+    --wine:#FF6B7A;
+    --done:#8BD46B;
+    --want:#FFC85C;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html{-webkit-text-size-adjust:100%;color-scheme:dark}
+  #q::placeholder{color:#8A7C99}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font:16px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    padding-bottom:4rem;
+  }
+  header{
+    position:sticky;top:0;z-index:20;background:var(--paper);
+    border-bottom:1px solid var(--rule);
+    padding:.7rem .9rem .6rem;
+    padding-top:calc(.7rem + env(safe-area-inset-top));
+  }
+  h1{
+    font:600 1.28rem/1.15 Georgia,"Iowan Old Style","Times New Roman",serif;
+    margin:0 0 .15rem;letter-spacing:-.01em;
+  }
+  .sub{font-size:.78rem;color:var(--soft);margin:0 0 .55rem}
+  .tally{float:right;font-size:.78rem;color:var(--pumpkin);font-weight:600}
+  #q{
+    width:100%;padding:.5rem .65rem;font-size:16px;color:var(--ink);
+    background:var(--card);border:1px solid var(--rule);border-radius:7px;
+    font-family:inherit;
+  }
+  #q:focus{outline:2px solid var(--pumpkin);outline-offset:1px}
+  .chips{display:flex;gap:.35rem;overflow-x:auto;padding:.5rem 0 .1rem;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{
+    flex:0 0 auto;padding:.32rem .68rem;font-size:.78rem;font-family:inherit;
+    background:transparent;color:var(--soft);
+    border:1px solid var(--rule);border-radius:99px;cursor:pointer;
+  }
+  .chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+  .chip.warn[aria-pressed="true"]{background:var(--wine);border-color:var(--wine)}
+  .chip.mine[aria-pressed="true"]{background:var(--want);border-color:var(--want);color:#16121C}
+  .chipdiv{flex:0 0 auto;width:1px;background:var(--rule);margin:.15rem .15rem}
+
+  nav{padding:.55rem .9rem;border-bottom:1px solid var(--rule);display:flex;gap:.9rem;
+      overflow-x:auto;font-size:.79rem;scrollbar-width:none}
+  nav::-webkit-scrollbar{display:none}
+  nav a{color:var(--soft);text-decoration:none;white-space:nowrap;border-bottom:1px solid transparent}
+  nav a:active{color:var(--pumpkin)}
+
+  main{padding:0 .9rem}
+  .park{
+    font:600 1.05rem/1.2 Georgia,"Iowan Old Style",serif;
+    margin:1.6rem 0 0;padding:.45rem 0 .4rem;
+    border-top:2px solid var(--ink);border-bottom:1px solid var(--ink);
+    scroll-margin-top:8.2rem;
+  }
+  .land{
+    font:600 .74rem/1 -apple-system,system-ui,sans-serif;letter-spacing:.08em;
+    color:var(--pumpkin);margin:1.35rem 0 .5rem;text-transform:none;
+  }
+  .land::before{content:"◆ ";font-size:.62rem;vertical-align:.1em}
+  .spot{background:var(--card);border:1px solid var(--rule);border-radius:9px;
+        margin:0 0 .55rem;overflow:hidden}
+  .spot h3{font:600 .95rem/1.25 Georgia,serif;margin:0;padding:.6rem .7rem .1rem}
+  .spot .meta{font-size:.72rem;color:var(--soft);padding:0 .7rem .45rem;margin:0}
+  ul{list-style:none;margin:0;padding:0}
+  li{display:flex;gap:.6rem;align-items:flex-start;
+     padding:.52rem .7rem;border-top:1px solid var(--rule);cursor:pointer}
+  li:active{background:#312942}
+  .box{flex:0 0 20px;height:20px;margin-top:.1rem;border:1.5px solid var(--soft);
+       border-radius:5px;display:grid;place-items:center;font-size:.8rem;color:transparent}
+  li.on .box{background:var(--done);border-color:var(--done);color:#16121C}
+  li.on .txt{opacity:.42;text-decoration:line-through;text-decoration-thickness:1px}
+  .txt{flex:1;min-width:0}
+  li.want{box-shadow:inset 3px 0 0 var(--want)}
+  .star{
+    flex:0 0 36px;align-self:stretch;margin:-.52rem -.7rem -.52rem 0;
+    background:none;border:0;padding:0;cursor:pointer;font-family:inherit;
+    color:#55486A;font-size:1.1rem;line-height:1;display:grid;place-items:center;
+  }
+  li.want .star{color:var(--want)}
+  .star:focus-visible{outline:2px solid var(--pumpkin);outline-offset:-3px}
+  .n{font-weight:600;font-size:.9rem}
+  .d{font-size:.79rem;color:var(--soft);display:block;margin-top:.08rem}
+  .tags{margin-top:.22rem;display:flex;gap:.3rem;flex-wrap:wrap}
+  .t{font-size:.66rem;padding:.09rem .38rem;border-radius:4px;border:1px solid var(--rule);color:var(--soft)}
+  .t.new{color:var(--pumpkin);border-color:var(--pumpkin);font-weight:600}
+  .t.gone{color:var(--wine);border-color:var(--wine);font-weight:600}
+  .t.bar{color:#C9A8F0;border-color:#6B4E91}
+  .empty{padding:2.5rem .5rem;text-align:center;color:var(--soft);font-size:.88rem}
+  footer{padding:1.6rem .9rem 0;font-size:.74rem;color:var(--soft);line-height:1.5}
+  @media (prefers-reduced-motion:no-preference){li,.chip{transition:background .12s ease}}
+
+  .actions{display:flex;gap:.45rem;padding:.55rem .9rem;border-bottom:1px solid var(--rule)}
+  .act{
+    flex:1;padding:.45rem .5rem;font:600 .78rem/1 inherit;
+    background:var(--card);color:var(--ink);
+    border:1px solid var(--rule);border-radius:7px;cursor:pointer;
+  }
+  .act:active{background:var(--ink);color:var(--paper)}
+  .act.quiet{flex:0 0 auto;font-weight:400;color:var(--soft)}
+  .files{
+    display:flex;gap:.45rem;overflow-x:auto;scrollbar-width:none;
+    padding:.55rem .9rem;border-bottom:1px solid var(--rule);align-items:center;
+  }
+  .files::-webkit-scrollbar{display:none}
+  .files span{flex:0 0 auto;font-size:.74rem;color:var(--soft)}
+  .files a{
+    flex:0 0 auto;font-size:.76rem;text-decoration:none;color:var(--ink);
+    background:var(--card);border:1px solid var(--rule);border-radius:99px;
+    padding:.3rem .62rem;white-space:nowrap;
+  }
+  .files a:active{background:var(--ink);color:var(--paper)}
+  #toast{
+    position:fixed;left:50%;bottom:1.4rem;transform:translateX(-50%);
+    background:var(--ink);color:var(--paper);padding:.5rem .9rem;border-radius:99px;
+    font-size:.8rem;opacity:0;pointer-events:none;z-index:50;
+  }
+  #toast.show{opacity:1}
+
+  @media print{
+    @page{margin:14mm}
+    body{background:#fff;color:#000;padding:0;font-size:10.5pt}
+    header,nav,.actions,.files,#toast{display:none}
+
+
+    .printhead{display:block !important;margin:0 0 1rem}
+    .printhead h1{font-size:17pt;margin:0}
+    .printhead p{font-size:9pt;color:#555;margin:.2rem 0 0}
+    main{padding:0}
+    .park{break-after:avoid;color:#000;border-color:#000}
+    .land{break-after:avoid;color:#000}
+    .spot{break-inside:avoid;background:#fff;border-color:#999}
+    .spot h3,.n{color:#000}
+    .spot .meta,.d,.t{color:#555}
+    li{border-color:#ccc}
+    li.on .txt{opacity:1;text-decoration:none}
+    .box{border-color:#666}
+    footer{color:#666}
+  }
+  .printhead{display:none}
+
+  .nojs #q,.nojs .chips,.nojs .actions,.nojs .tally,.nojs .jsonly{display:none}
+  .nojs .box{width:6px;height:6px;flex-basis:6px;margin-top:.42rem;
+             border:none;border-radius:50%;background:var(--pumpkin)}
+  .nojs li{cursor:default}
+  .nojs .star{display:none}
+  .banner{
+    margin:.9rem 0 0;padding:.7rem .8rem;background:var(--card);
+    border:1px solid var(--want);border-radius:9px;font-size:.85rem;line-height:1.45;
+  }
+  .banner.stale{border-color:var(--wine)}
+  .banner p{margin:0}
+  .banner .row{display:flex;gap:.45rem;margin-top:.6rem}
+  .banner button{
+    flex:1;padding:.45rem .5rem;font:600 .8rem/1 inherit;cursor:pointer;
+    background:var(--want);color:#16121C;border:1px solid var(--want);border-radius:7px;
+  }
+  .banner button.alt{background:transparent;color:var(--ink);border-color:var(--rule)}
+  @media print{.banner{display:none}}
+
+  .nojs-note{display:none}
+  .nojs .nojs-note{display:block;margin:0 0 .9rem;padding:.6rem .7rem;
+    background:var(--card);border:1px solid var(--pumpkin);border-radius:9px;
+    font-size:.82rem;color:var(--ink);line-height:1.45}
+</style>
+</head>
+<body>
+
+<header>
+  <span class="tally" id="tally">0 want · 0 tried</span>
+  <h1>Halloween Time Treats</h1>
+  <p class="sub">Disneyland Resort · Aug 21 – Oct 31, 2026</p>
+  <input id="q" type="search" placeholder="Search a treat, drink, or location" autocomplete="off">
+  <div class="chips">
+    <button class="chip" data-f="new" aria-pressed="false">New this year</button>
+    <button class="chip warn" data-f="gone" aria-pressed="false">Gone after Oct 31</button>
+    <span class="chipdiv" aria-hidden="true"></span>
+    <button class="chip" data-f="food" aria-pressed="false">Food</button>
+    <button class="chip" data-f="drink" aria-pressed="false">Drinks</button>
+    <button class="chip" data-f="booze" aria-pressed="false">Alcohol</button>
+    <span class="chipdiv" aria-hidden="true"></span>
+    <button class="chip" data-f="todo" aria-pressed="false">Not tried</button>
+    <button class="chip mine" data-f="want" aria-pressed="false">My list</button>
+  </div>
+</header>
+
+<nav id="nav"><a href="#disneyland-park">Disneyland Park</a><a href="#california-adventure">California Adventure</a><a href="#downtown-disney">Downtown Disney</a><a href="#hotels">Hotels</a><a href="#candy-shops">Candy Shops</a></nav>
+
+<div class="files">
+  <span>Printable PDFs</span>
+  <a href="halloween-2026-full-checklist.pdf" download>Everything</a>
+  <a href="halloween-2026-highlights-checklist.pdf" download>Highlights</a>
+</div>
+
+<div class="actions">
+  <button class="act" id="print">My list as PDF</button>
+  <button class="act" id="share">Share my list</button>
+  <button class="act quiet" id="reset">Clear</button>
+</div>
+
+<div id="banner"></div>
+
+<div class="printhead">
+  <h1>Halloween Time Treats — Disneyland Resort</h1>
+  <p>Aug 21 – Oct 31, 2026. Checked boxes are what's already been tried.</p>
+</div>
+
+<p class="nojs-note">You’re reading a static preview, which doesn’t run scripts. Open this page in Safari or Chrome to search, filter, star the ones you want, and check things off.</p>
+<main id="out"><h2 class="park" id="disneyland-park">Disneyland Park</h2><div class="land">Main Street, U.S.A.</div><div class="spot"><h3>Carnation Café</h3><p class="meta">Through Nov 12 · Reservations recommended</p><ul><li data-k="Carnation Café|Spicy Chicken Sandwich"><span class="box">✓</span><span class="txt"><span class="n">Spicy Chicken Sandwich</span><span class="d">Fried chicken in chile sauce, pepper jack, mustard slaw, brioche</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Carnation Café|Caramel Apple Martini"><span class="box">✓</span><span class="txt"><span class="n">Caramel Apple Martini</span><span class="d">Caramel vodka, butterscotch liqueur, sour apple, lollipop garnish</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Carnation Café|Night Owl Pumpkin Ale"><span class="box">✓</span><span class="txt"><span class="n">Night Owl Pumpkin Ale</span><span class="d">Elysian Brewing</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Carnation Café|Spaten Oktoberfest Ur-Märzen"><span class="box">✓</span><span class="txt"><span class="n">Spaten Oktoberfest Ur-Märzen</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Gibson Girl Ice Cream Parlor</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Gibson Girl Ice Cream Parlor|Rest in Chocolate"><span class="box">✓</span><span class="txt"><span class="n">Rest in Chocolate</span><span class="d">Chocolate ice cream in a chocolate waffle cup, cookie crumbles, gummy worms, chocolate tombstone</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Jolly Holiday Bakery Cafe</h3><p class="meta">Mobile order</p><ul><li data-k="Jolly Holiday Bakery Cafe|BooGogi Beef Toast + Corn Cheese Soup"><span class="box">✓</span><span class="txt"><span class="n">BooGogi Beef Toast + Corn Cheese Soup</span><span class="d">Marinated beef, mozzarella, pickled radish, kimchi aïoli on sourdough</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Jolly Holiday Bakery Cafe|Caramel Apple Cheesecake"><span class="box">✓</span><span class="txt"><span class="n">Caramel Apple Cheesecake</span><span class="d">Caramel cheesecake, apple filling, orange white chocolate mousse</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Jolly Holiday Bakery Cafe|Pumpkin Muffin"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Muffin</span><span class="d">Cream cheese icing</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li><li data-k="Jolly Holiday Bakery Cafe|Brownie Pie"><span class="box">✓</span><span class="txt"><span class="n">Brownie Pie</span><span class="d">Fudge brownie in pie crust, ganache, mousse, sprinkles</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Jolly Holiday Bakery Cafe|Mickey Pumpkin Cupcake"><span class="box">✓</span><span class="txt"><span class="n">Mickey Pumpkin Cupcake</span><span class="d">Cream cheese frosting, brown sugar crumble, chocolate ears</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Jolly Holiday Bakery Cafe|Mickey Mummy Macaron"><span class="box">✓</span><span class="txt"><span class="n">Mickey Mummy Macaron</span><span class="d">Cookies-and-cream filling</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Jolly Holiday Bakery Cafe|Halloween Matterhorn Macaroon"><span class="box">✓</span><span class="txt"><span class="n">Halloween Matterhorn Macaroon</span><span class="d">Coconut macaroon in white chocolate and sprinkles</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Jolly Holiday Bakery Cafe|Mickey Ghost Cookie"><span class="box">✓</span><span class="txt"><span class="n">Mickey Ghost Cookie</span><span class="d">Shortbread dipped in chocolate</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Jolly Holiday Bakery Cafe|Maple-Bacon Cinnamon Roll"><span class="box">✓</span><span class="txt"><span class="n">Maple-Bacon Cinnamon Roll</span><span class="d">Maple cream cheese, glazed bacon, pecans</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li><li data-k="Jolly Holiday Bakery Cafe|Pumpkin Cold Brew"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Cold Brew</span><span class="d">Vanilla foam, spiced sugar</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Little Red Wagon</h3><p class="meta">Through Jan 6 · Mobile order</p><ul><li data-k="Little Red Wagon|Spicy Chili-Cheese Corn Dog"><span class="box">✓</span><span class="txt"><span class="n">Spicy Chili-Cheese Corn Dog</span><span class="d">Chili, jalapeño-cilantro crema, cheddar, hot cheese puff dust</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Little Red Wagon|Lychee-Strawberry Green Tea"><span class="box">✓</span><span class="txt"><span class="n">Lychee-Strawberry Green Tea</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Market House</h3><p class="meta"></p><ul><li data-k="Market House|Churro Hand Tart"><span class="box">✓</span><span class="txt"><span class="n">Churro Hand Tart</span><span class="d">Spiced cake in a pastry tart, cinnamon sugar</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Market House|Shortbread Bat Cookie"><span class="box">✓</span><span class="txt"><span class="n">Shortbread Bat Cookie</span><span class="d">Dark chocolate dip, vampire Mickey face</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Plaza Inn</h3><p class="meta"></p><ul><li data-k="Plaza Inn|Pumpkin Cake"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Cake</span><span class="d">Pumpkin mousse filling, whipped frosting, chocolate stem</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Plaza Inn|Villainous Red Velvet Cake"><span class="box">✓</span><span class="txt"><span class="n">Villainous Red Velvet Cake</span><span class="d">Raspberry jam, chocolate chips, black ganache</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Refreshment Corner</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Refreshment Corner|Birria Potato"><span class="box">✓</span><span class="txt"><span class="n">Birria Potato</span><span class="d">Baked potato with beef birria, pepper jack, salsa verde, consommé on the side</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Churro cart — Town Square</h3><p class="meta">Through Jan 6</p><ul><li data-k="Churro cart — Town Square|Apple Pie Dip"><span class="box">✓</span><span class="txt"><span class="n">Apple Pie Dip</span><span class="d">Cream cheese frosting with spiced apple compote</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Churro cart — Central Plaza (by the castle)</h3><p class="meta">Through Jan 6</p><ul><li data-k="Churro cart — Central Plaza (by the castle)|Apple Pie Dip"><span class="box">✓</span><span class="txt"><span class="n">Apple Pie Dip</span><span class="d">Cream cheese frosting with spiced apple compote</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="land">Adventureland</div><div class="spot"><h3>Bengal Barbecue</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Bengal Barbecue|Iced Pandan Cooler"><span class="box">✓</span><span class="txt"><span class="n">Iced Pandan Cooler</span><span class="d">Brown sugar popping spheres, ube cream</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>The Tropical Hideaway</h3><p class="meta">Through Jan 6</p><ul><li data-k="The Tropical Hideaway|Miso Soup"><span class="box">✓</span><span class="txt"><span class="n">Miso Soup</span><span class="d">Seaweed, tofu, green onion</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Tiki Juice Bar</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Tiki Juice Bar|DOLE Whip Cone"><span class="box">✓</span><span class="txt"><span class="n">DOLE Whip Cone</span><span class="d">Pineapple soft serve in a sugar cone with Halloween sprinkles</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="land">Frontierland</div><div class="spot"><h3>Rancho del Zocalo</h3><p class="meta"></p><ul><li data-k="Rancho del Zocalo|Pozole"><span class="box">✓</span><span class="txt"><span class="n">Pozole</span><span class="d">Pork pozole with onion, cabbage, lime, radish, tortilla chips</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li><li data-k="Rancho del Zocalo|Iced Chocolate Cafe"><span class="box">✓</span><span class="txt"><span class="n">Iced Chocolate Cafe</span><span class="d">Hot chocolate, espresso, cream and coconut over ice</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>River Belle Terrace</h3><p class="meta">Through Nov 12 · Reservations recommended</p><ul><li data-k="River Belle Terrace|Pumpkin Crunch Cake"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Crunch Cake</span><span class="d">Pumpkin filling, spiced chantilly, house graham cracker</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>The Golden Horseshoe</h3><p class="meta"></p><ul><li data-k="The Golden Horseshoe|Apple Pie Sundae"><span class="box">✓</span><span class="txt"><span class="n">Apple Pie Sundae</span><span class="d">Apple pie, vanilla ice cream, salted caramel, cinnamon streusel</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="The Golden Horseshoe|Chili-Cheese Fries"><span class="box">✓</span><span class="txt"><span class="n">Chili-Cheese Fries</span><span class="d">Beef chili, shredded cheese, sour cream, green onion</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="The Golden Horseshoe|Strawberry Soda"><span class="box">✓</span><span class="txt"><span class="n">Strawberry Soda</span><span class="d">Sprite with strawberry purée</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Stage Door Café</h3><p class="meta">Through Jan 6 · Mobile order</p><ul><li data-k="Stage Door Café|Chili-Cheese Fries"><span class="box">✓</span><span class="txt"><span class="n">Chili-Cheese Fries</span><span class="d">Beef chili, shredded cheese, sour cream, green onion</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Stage Door Café|Strawberry Soda"><span class="box">✓</span><span class="txt"><span class="n">Strawberry Soda</span><span class="d">Sprite with strawberry purée</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Ship to Shore Marketplace</h3><p class="meta">Through Jan 6</p><ul><li data-k="Ship to Shore Marketplace|Pinwheels"><span class="box">✓</span><span class="txt"><span class="n">Pinwheels</span><span class="d">Fried wheat pinwheels with lemon juice and hot sauce</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="land">New Orleans Square</div><div class="spot"><h3>Harbour Galley</h3><p class="meta">Mobile order</p><ul><li data-k="Harbour Galley|Pumpkin Cookies"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Cookies</span><span class="d">Fresh-baked, sold in packs of 6 or 13 while supplies last</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Harbour Galley|Whipped Cream Cheese Dip"><span class="box">✓</span><span class="txt"><span class="n">Whipped Cream Cheese Dip</span><span class="d">Pairs with the pumpkin cookies</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Harbour Galley|Brown Butter Maple Cold Brew"><span class="box">✓</span><span class="txt"><span class="n">Brown Butter Maple Cold Brew</span><span class="d">Beignet-flavored cold brew, maple and brown butter, brown butter foam</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Café Orleans</h3><p class="meta">Through Jan 6 · Reservations recommended</p><ul><li data-k="Café Orleans|Seaborn Cherry Temple Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Seaborn Cherry Temple Cocktail</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Mint Julep Bar</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Mint Julep Bar|Frightfully Festive Cocoa Dip"><span class="box">✓</span><span class="txt"><span class="n">Frightfully Festive Cocoa Dip</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="land">Bayou Country</div><div class="spot"><h3>Hungry Bear Barbecue Jamboree</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Hungry Bear Barbecue Jamboree|Grizzly Pumpkin Cold Brew Latte"><span class="box">✓</span><span class="txt"><span class="n">Grizzly Pumpkin Cold Brew Latte</span><span class="d">Cold brew, whipped cream, pumpkin spice, pumpkin candy</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="land">Fantasyland</div><div class="spot"><h3>Red Rose Taverne</h3><p class="meta">Mobile order</p><ul><li data-k="Red Rose Taverne|Enchanted Pumpkin Stuff"><span class="box">✓</span><span class="txt"><span class="n">Enchanted Pumpkin Stuff</span><span class="d">Shortbread cookie hiding a mini pumpkin pie, pumpkin mousse, chocolate branch</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Red Rose Taverne|French Toast Cold Brew"><span class="box">✓</span><span class="txt"><span class="n">French Toast Cold Brew</span><span class="d">Brown sugar and vanilla cold brew, cinnamon cream, cinnamon cereal</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Edelweiss Snacks</h3><p class="meta">Through Jan 6 · Mobile order</p><ul><li data-k="Edelweiss Snacks|Matterhorn Puff"><span class="box">✓</span><span class="txt"><span class="n">Matterhorn Puff</span><span class="d">Cinnamon apples and cream, chocolate, snow sugar</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Maurice&#x27;s Treats</h3><p class="meta">Through Nov 12</p><ul><li data-k="Maurice&#x27;s Treats|Sea Salt Vanilla Cream"><span class="box">✓</span><span class="txt"><span class="n">Sea Salt Vanilla Cream</span><span class="d">With Halloween sprinkles</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Churro cart — Casey Jr. Circus Train</h3><p class="meta">Through Jan 6</p><ul><li data-k="Churro cart — Casey Jr. Circus Train|Cranberry Cream Cheese Dip"><span class="box">✓</span><span class="txt"><span class="n">Cranberry Cream Cheese Dip</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Churro cart — small world Promenade</h3><p class="meta">Through Jan 6</p><ul><li data-k="Churro cart — small world Promenade|Cranberry Cream Cheese Dip"><span class="box">✓</span><span class="txt"><span class="n">Cranberry Cream Cheese Dip</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Pretzel cart — small world Promenade</h3><p class="meta">Through Jan 6</p><ul><li data-k="Pretzel cart — small world Promenade|Cranberry Cream Cheese Dip"><span class="box">✓</span><span class="txt"><span class="n">Cranberry Cream Cheese Dip</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="land">Tomorrowland</div><div class="spot"><h3>Alien Pizza Planet</h3><p class="meta"></p><ul><li data-k="Alien Pizza Planet|Heatwave Pizza Slice"><span class="box">✓</span><span class="txt"><span class="n">Heatwave Pizza Slice</span><span class="d">Spicy blush sauce, sausage, two pepperonis, bratwurst, Fresno chiles, hot honey</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li><li data-k="Alien Pizza Planet|Spicy Blush Pasta"><span class="box">✓</span><span class="txt"><span class="n">Spicy Blush Pasta</span><span class="d">Italian sausage, spicy blush sauce, tomato relish</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li><li data-k="Alien Pizza Planet|Seasonal Alien Macarooooon"><span class="box">✓</span><span class="txt"><span class="n">Seasonal Alien Macarooooon</span><span class="d">Berries and cream filling</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Alien Pizza Planet|Halloween Green Drink"><span class="box">✓</span><span class="txt"><span class="n">Halloween Green Drink</span><span class="d">Apple juice and apple syrup, caramel cold foam, sprinkles</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Galactic Grill</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Galactic Grill|Stellar Spicy Chicken Sandwich"><span class="box">✓</span><span class="txt"><span class="n">Stellar Spicy Chicken Sandwich</span><span class="d">Panko chicken, ghost pepper salsa verde, pepper jack, cilantro lime slaw</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Galactic Grill|Darth by Chocolate"><span class="box">✓</span><span class="txt"><span class="n">Darth by Chocolate</span><span class="d">Chocolate pudding, red velvet sponge, mousse, crushed cookies</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Galactic Grill|Pumpkin Cream Sweet Tea"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Cream Sweet Tea</span><span class="d">Sweet tea with pumpkin cream foam</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Popcorn cart — Star Trader</h3><p class="meta">Through Nov 12</p><ul><li data-k="Popcorn cart — Star Trader|Spicy Pickle Popcorn"><span class="box">✓</span><span class="txt"><span class="n">Spicy Pickle Popcorn</span><span class="d">Crushed hot cheese puffs and dill pickle seasoning</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Pretzel cart — Star Tours</h3><p class="meta">Through Nov 12</p><ul><li data-k="Pretzel cart — Star Tours|Supernova Pretzel"><span class="box">✓</span><span class="txt"><span class="n">Supernova Pretzel</span><span class="d">Jalapeño cheese-filled, spicy crumble and lime</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Churro cart — Buzz Lightyear</h3><p class="meta">Through Nov 12</p><ul><li data-k="Churro cart — Buzz Lightyear|Caramel-Peanut Butter Candy Loaded Dip"><span class="box">✓</span><span class="txt"><span class="n">Caramel-Peanut Butter Candy Loaded Dip</span><span class="d">Chocolate-peanut butter flakes and candy corn</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><h2 class="park" id="california-adventure">California Adventure</h2><div class="land">Buena Vista Street</div><div class="spot"><h3>Clarabelle&#x27;s Hand-Scooped Ice Cream</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Clarabelle&#x27;s Hand-Scooped Ice Cream|Halloween Mickey Ice Cream Bar"><span class="box">✓</span><span class="txt"><span class="n">Halloween Mickey Ice Cream Bar</span><span class="d">White chocolate dip, Halloween sprinkles</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="land">Hollywood Land</div><div class="spot"><h3>Hollywood Lounge</h3><p class="meta">Mobile order on select items</p><ul><li data-k="Hollywood Lounge|Spicy Oogie Boogie Burrito"><span class="box">✓</span><span class="txt"><span class="n">Spicy Oogie Boogie Burrito</span><span class="d">Carne asada, fries, guac, hot cheese snacks, spicy crema, green tortilla</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Hollywood Lounge|Beef and Cheese Tamale a la Plancha"><span class="box">✓</span><span class="txt"><span class="n">Beef and Cheese Tamale a la Plancha</span><span class="d">Salsa verde, lime crema, lettuce, pico</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Hollywood Lounge|Phantom Potion"><span class="box">✓</span><span class="txt"><span class="n">Phantom Potion</span><span class="d">Pineapple lemonade, blue curaçao, apple pucker, Sprite, Oogie Boogie glow cube</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Hollywood Lounge|Horchata Whiskey Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Horchata Whiskey Cocktail</span><span class="d">Horchata, RumChata, cinnamon whiskey</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Hollywood Lounge|Seaborn Prickly Pear Margarita"><span class="box">✓</span><span class="txt"><span class="n">Seaborn Prickly Pear Margarita</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Hollywood Lounge|Calidad El Titán Dark Lager"><span class="box">✓</span><span class="txt"><span class="n">Calidad El Titán Dark Lager</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Schmoozies!</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Schmoozies!|Matcha Mickey Waffles"><span class="box">✓</span><span class="txt"><span class="n">Matcha Mickey Waffles</span><span class="d">Filled with banana custard</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Schmoozies!|Pumpkin Pie Mickey Shake"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Pie Mickey Shake</span><span class="d">Pumpkin pie and vanilla, whipped topping, golden crème cookies</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Award Wieners</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Award Wieners|Oktoberfest Dog"><span class="box">✓</span><span class="txt"><span class="n">Oktoberfest Dog</span><span class="d">Pork cheddar sausage, sauerkraut, caraway, beer mustard sauce, pretzel bun</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Award Wieners|Seaborn Sangria"><span class="box">✓</span><span class="txt"><span class="n">Seaborn Sangria</span><span class="d">Over ice with mixed fruit</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Award Wieners|Route 30 Oktoberfest Lager"><span class="box">✓</span><span class="txt"><span class="n">Route 30 Oktoberfest Lager</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Studio Catering Co.</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Studio Catering Co.|Beef and Cheese Tamale a la Plancha"><span class="box">✓</span><span class="txt"><span class="n">Beef and Cheese Tamale a la Plancha</span><span class="d">Salsa verde, lime crema, lettuce, pico</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Studio Catering Co.|Spicy Oogie Boogie Burrito"><span class="box">✓</span><span class="txt"><span class="n">Spicy Oogie Boogie Burrito</span><span class="d">Carne asada, fries, guac, hot cheese snacks, spicy crema</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="land">Avengers Campus</div><div class="spot"><h3>Pym Test Kitchen</h3><p class="meta">Mobile order</p><ul><li data-k="Pym Test Kitchen|BBQ Pork Muenster Grilled Cheese"><span class="box">✓</span><span class="txt"><span class="n">BBQ Pork Muenster Grilled Cheese</span><span class="d">Pork belly and Muenster on sourdough, crispy onions, jalapeño slaw, potato bites</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Pym Test Kitchen|Strawberry Matcha Latte"><span class="box">✓</span><span class="txt"><span class="n">Strawberry Matcha Latte</span><span class="d">Strawberry cold foam, sugar wafers, condensed milk drizzle</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Pym Test Kitchen|Strawberry Matcha Rum Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Strawberry Matcha Rum Cocktail</span><span class="d">The latte with white rum, served in a particle beaker</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Pym Tasting Lab</h3><p class="meta">Through Jan 6 · Mobile order</p><ul><li data-k="Pym Tasting Lab|Seaborn Pomegranate Margarita"><span class="box">✓</span><span class="txt"><span class="n">Seaborn Pomegranate Margarita</span><span class="d">Over ice</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Terran Treats</h3><p class="meta">Through Oct 31</p><ul><li data-k="Terran Treats|Ube Cheesecake Churro"><span class="box">✓</span><span class="txt"><span class="n">Ube Cheesecake Churro</span><span class="d">Rolled in chocolate cookie sugar, ube cheesecake whip, cookie crumble</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="land">Cars Land</div><div class="spot"><h3>Cozy Cone 1 — Churros</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Cozy Cone 1 — Churros|Vietnamese Coffee with Ube Sweet Cream Foam"><span class="box">✓</span><span class="txt"><span class="n">Vietnamese Coffee with Ube Sweet Cream Foam</span><span class="d">Black sprinkles</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Cozy Cone 1 — Churros|Cursed Ube Foam Iced Coffee"><span class="box">✓</span><span class="txt"><span class="n">Cursed Ube Foam Iced Coffee</span><span class="d">Vietnamese iced coffee with Baileys, ube foam</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Cozy Cone 2 — Ice Cream</h3><p class="meta">Through Oct 31 · Mobile order</p><ul><li data-k="Cozy Cone 2 — Ice Cream|Ube Soft Serve"><span class="box">✓</span><span class="txt"><span class="n">Ube Soft Serve</span><span class="d">Black sprinkles, cup or cone</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Cozy Cone 2 — Ice Cream|Ube-Vanilla Twist"><span class="box">✓</span><span class="txt"><span class="n">Ube-Vanilla Twist</span><span class="d">Swirl with black sprinkles, cup or cone</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Cozy Cone 3 — Chili Cone Queso</h3><p class="meta">Through Oct 31 · Mobile order</p><ul><li data-k="Cozy Cone 3 — Chili Cone Queso|Slow Burnin&#x27; Mac &amp; Cheese Cone"><span class="box">✓</span><span class="txt"><span class="n">Slow Burnin&#x27; Mac &amp; Cheese Cone</span><span class="d">Pasta in spicy red pepper cheese sauce</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Cozy Cone 4 — Frozen Cone-Coctions</h3><p class="meta">Mobile order</p><ul><li data-k="Cozy Cone 4 — Frozen Cone-Coctions|Haunted Highway Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Haunted Highway Cocktail</span><span class="d">Pineapple lemonade, blue curaçao, apple pucker, Sprite, gummy worms — Oogie Boogie Bash only</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Cozy Cone 4 — Frozen Cone-Coctions|Strawberry-Peach Margarita"><span class="box">✓</span><span class="txt"><span class="n">Strawberry-Peach Margarita</span><span class="d">Tequila, spicy strawberry-peach chamoy lemonade, peach ring</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Cozy Cone 4 — Frozen Cone-Coctions|Strawberry Michelada"><span class="box">✓</span><span class="txt"><span class="n">Strawberry Michelada</span><span class="d">Modelo, strawberry-chamoy lemonade, chile-lime rim</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Cozy Cone 4 — Frozen Cone-Coctions|Cali Screamin&#x27; Pumpkin Vanilla Cream Ale"><span class="box">✓</span><span class="txt"><span class="n">Cali Screamin&#x27; Pumpkin Vanilla Cream Ale</span><span class="d">Mother Earth Brewing Co.</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Cozy Cone 4 — Frozen Cone-Coctions|Poison Apple Seltzer"><span class="box">✓</span><span class="txt"><span class="n">Poison Apple Seltzer</span><span class="d">Unsung Brewing Co.</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Cozy Cone 5 — Popcone</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Cozy Cone 5 — Popcone|Pineapple-Cucumber Agua Fresca"><span class="box">✓</span><span class="txt"><span class="n">Pineapple-Cucumber Agua Fresca</span><span class="d">Diced cucumber and pineapple, chamoy, chile-lime</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Cozy Cone 5 — Popcone|Fantasma Agua Fresca Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Fantasma Agua Fresca Cocktail</span><span class="d">The agua fresca with tequila</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Flo&#x27;s V8 Cafe</h3><p class="meta">Mobile order</p><ul><li data-k="Flo&#x27;s V8 Cafe|Mango-Habanero Chicken Strips"><span class="box">✓</span><span class="txt"><span class="n">Mango-Habanero Chicken Strips</span><span class="d">With fries, green onions, ranch</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Flo&#x27;s V8 Cafe|Desert Pear Agave Wine Margarita"><span class="box">✓</span><span class="txt"><span class="n">Desert Pear Agave Wine Margarita</span><span class="d">Agave wine with desert pear lemonade</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="land">San Fransokyo Square</div><div class="spot"><h3>Aunt Cass Café</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Aunt Cass Café|Taro Bread Pudding"><span class="box">✓</span><span class="txt"><span class="n">Taro Bread Pudding</span><span class="d">Warm taro and white chocolate, tapioca spheres, coconut-vanilla sauce</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Aunt Cass Café|Vampire Mickey Sourdough"><span class="box">✓</span><span class="txt"><span class="n">Vampire Mickey Sourdough</span><span class="d">Plant-based</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Aunt Cass Café|Chicken Pot Pie Soup"><span class="box">✓</span><span class="txt"><span class="n">Chicken Pot Pie Soup</span><span class="d">Served in a bread bowl</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li><li data-k="Aunt Cass Café|Chocolate-Raspberry Cold Brew"><span class="box">✓</span><span class="txt"><span class="n">Chocolate-Raspberry Cold Brew</span><span class="d">Raspberry foam topper</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Cocina Cucamonga Mexican Grill</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Cocina Cucamonga Mexican Grill|Ube Flan Cake"><span class="box">✓</span><span class="txt"><span class="n">Ube Flan Cake</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Cocina Cucamonga Mexican Grill|Mango Agua Fresca"><span class="box">✓</span><span class="txt"><span class="n">Mango Agua Fresca</span><span class="d">House-made with chile-lime and chamoy</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Cocina Cucamonga Mexican Grill|Mango Tequila Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Mango Tequila Cocktail</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Cocina Cucamonga Mexican Grill|Blood Orange Paloma Hard Seltzer"><span class="box">✓</span><span class="txt"><span class="n">Blood Orange Paloma Hard Seltzer</span><span class="d">Bottle Logic, over ice</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Lucky Fortune Cookery</h3><p class="meta">Mobile order</p><ul><li data-k="Lucky Fortune Cookery|Seasonal Baymax Macaron"><span class="box">✓</span><span class="txt"><span class="n">Seasonal Baymax Macaron</span><span class="d">Ube cream and salted caramel chocolate crunch pearls</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Lucky Fortune Cookery|Three Milk Ube Tea"><span class="box">✓</span><span class="txt"><span class="n">Three Milk Ube Tea</span><span class="d">Brown sugar tapioca spheres, coconut foam</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Port of San Fransokyo Cervecería</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Port of San Fransokyo Cervecería|Karlitos Mexican Lager"><span class="box">✓</span><span class="txt"><span class="n">Karlitos Mexican Lager</span><span class="d">Karl Strauss — michelada option available</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Port of San Fransokyo Cervecería|Karlitos Lager Flight"><span class="box">✓</span><span class="txt"><span class="n">Karlitos Lager Flight</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Port of San Fransokyo Cervecería|Karl Strauss Oktoberfest"><span class="box">✓</span><span class="txt"><span class="n">Karl Strauss Oktoberfest</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Boudin Bread Cart</h3><p class="meta">Through Nov 12</p><ul><li data-k="Boudin Bread Cart|Vampire Mickey Sourdough"><span class="box">✓</span><span class="txt"><span class="n">Vampire Mickey Sourdough</span><span class="d">Plant-based</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Cappuccino Cart</h3><p class="meta">Mobile order</p><ul><li data-k="Cappuccino Cart|Mickey Waffle Macaron"><span class="box">✓</span><span class="txt"><span class="n">Mickey Waffle Macaron</span><span class="d">Salted maple buttercream, maple syrup, chocolate-coated waffle pieces</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Cappuccino Cart|Peanut Butter Mocha Cold Brew"><span class="box">✓</span><span class="txt"><span class="n">Peanut Butter Mocha Cold Brew</span><span class="d">Peanut butter whip and drizzle, PB chocolate candies</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Cappuccino Cart|Peanut Butter Whiskey Cold Brew"><span class="box">✓</span><span class="txt"><span class="n">Peanut Butter Whiskey Cold Brew</span><span class="d">Mocha cold brew with peanut butter whiskey and foam</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Cappuccino Cart|Pumpkin Spice Hard Cider"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Spice Hard Cider</span><span class="d">Coronado Brewing Co.</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="land">Grizzly Peak</div><div class="spot"><h3>Smokejumpers Grill</h3><p class="meta">Mobile order</p><ul><li data-k="Smokejumpers Grill|Villainous Wings"><span class="box">✓</span><span class="txt"><span class="n">Villainous Wings</span><span class="d">Gochujang sauce, ghost pepper ranch, chives</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Smokejumpers Grill|Oogie Boogie Lemonade"><span class="box">✓</span><span class="txt"><span class="n">Oogie Boogie Lemonade</span><span class="d">Green apple syrup, cherry popping spheres, raspberry sauce</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Smokejumpers Grill|Green Apple Lemonade Margarita"><span class="box">✓</span><span class="txt"><span class="n">Green Apple Lemonade Margarita</span><span class="d">The Oogie Boogie Lemonade with tequila</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Smokejumpers Grill|Aurora Borealis Hard Seltzer"><span class="box">✓</span><span class="txt"><span class="n">Aurora Borealis Hard Seltzer</span><span class="d">Bottle Logic honeydew lime, over ice</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Churro cart — Redwood Creek Challenge Trail</h3><p class="meta">Through Jan 6</p><ul><li data-k="Churro cart — Redwood Creek Challenge Trail|Fluffernutter Churro"><span class="box">✓</span><span class="txt"><span class="n">Fluffernutter Churro</span><span class="d">Peanut butter sauce, marshmallow sauce, chocolate chips</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="land">Pixar Pier &amp; Paradise Gardens</div><div class="spot"><h3>Lamplight Lounge</h3><p class="meta">Reservations recommended</p><ul><li data-k="Lamplight Lounge|Arroz Con Leche Donut"><span class="box">✓</span><span class="txt"><span class="n">Arroz Con Leche Donut</span><span class="d">Cinnamon sugar donut, arroz con leche, candied pecans, spiced chocolate powder</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Lamplight Lounge|Steak Frites"><span class="box">✓</span><span class="txt"><span class="n">Steak Frites</span><span class="d">New York steak, Manchego truffle fries, peppercorn sauce</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Lamplight Lounge|Halloween Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Halloween Cocktail</span><span class="d">Bourbon, cinnamon whiskey, lemon, amaretto, apple juice</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Lamplight Lounge|All Hallows Treat Stout"><span class="box">✓</span><span class="txt"><span class="n">All Hallows Treat Stout</span><span class="d">Ommegang imperial chocolate peanut butter</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Lamplight Lounge|2 Towns Spiced Cosmic Crisp Cider"><span class="box">✓</span><span class="txt"><span class="n">2 Towns Spiced Cosmic Crisp Cider</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Lamplight Lounge — Boardwalk Dining</h3><p class="meta">Reservations recommended</p><ul><li data-k="Lamplight Lounge — Boardwalk Dining|Halloween Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Halloween Cocktail</span><span class="d">Bourbon, cinnamon whiskey, lemon, amaretto, apple juice</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Lamplight Lounge — Boardwalk Dining|2 Towns Spiced Cosmic Crisp Cider"><span class="box">✓</span><span class="txt"><span class="n">2 Towns Spiced Cosmic Crisp Cider</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Boardwalk Pizza &amp; Pasta</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Boardwalk Pizza &amp; Pasta|Anti Vampire Pizza"><span class="box">✓</span><span class="txt"><span class="n">Anti Vampire Pizza</span><span class="d">Garlic-marinated chicken, garlic sauce, bacon, tomato harissa drizzle — slice or whole pie</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="Boardwalk Pizza &amp; Pasta|Caramel Apple Cheesecake"><span class="box">✓</span><span class="txt"><span class="n">Caramel Apple Cheesecake</span><span class="d">Apple filling, vanilla chantilly, salted caramel</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Bayside Brews</h3><p class="meta">Through Jan 6 · Mobile order</p><ul><li data-k="Bayside Brews|Santa Monica Pickle Lager"><span class="box">✓</span><span class="txt"><span class="n">Santa Monica Pickle Lager</span><span class="d">Michelada option available</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="spot"><h3>Churro cart — Goofy&#x27;s Sky School</h3><p class="meta">Through Jan 6</p><ul><li data-k="Churro cart — Goofy&#x27;s Sky School|Caramel Cheesecake Churro"><span class="box">✓</span><span class="txt"><span class="n">Caramel Cheesecake Churro</span><span class="d">Caramel cheesecake icing, caramel and chocolate drizzle</span><span class="tags"><span class="t new">New</span><span class="t ">ends Jan 6</span></span></span></li></ul></div><div class="land">Carts &amp; other stands</div><div class="spot"><h3>Outdoor vending carts</h3><p class="meta">Around the park</p><ul><li data-k="Outdoor vending carts|Oogie Boogie Cookie"><span class="box">✓</span><span class="txt"><span class="n">Oogie Boogie Cookie</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Outdoor vending carts|Buffalo Chicken Ranch Pull-apart Bread"><span class="box">✓</span><span class="txt"><span class="n">Buffalo Chicken Ranch Pull-apart Bread</span><span class="d">Cream cheese, Parmesan ranch, fried onions</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Outdoor vending carts|Sour Apple Cotton Candy"><span class="box">✓</span><span class="txt"><span class="n">Sour Apple Cotton Candy</span><span class="d">Green apple</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Outdoor vending carts|Goo Goo Muck Hazy IPA"><span class="box">✓</span><span class="txt"><span class="n">Goo Goo Muck Hazy IPA</span><span class="d">Fall Brewing Company</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Outdoor vending carts|Seaborn Boo Raspberry Margarita"><span class="box">✓</span><span class="txt"><span class="n">Seaborn Boo Raspberry Margarita</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="land">Performance Corridor</div><div class="spot"><h3>Sonoma Terrace</h3><p class="meta">Through Nov 12 · Mobile order</p><ul><li data-k="Sonoma Terrace|Enegren Oktoberfest"><span class="box">✓</span><span class="txt"><span class="n">Enegren Oktoberfest</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><h2 class="park" id="downtown-disney">Downtown Disney</h2><div class="land">Coffee &amp; sweets</div><div class="spot"><h3>Parkside Market Coffee</h3><p class="meta">Through Oct 31</p><ul><li data-k="Parkside Market Coffee|Little Monster Brownie"><span class="box">✓</span><span class="txt"><span class="n">Little Monster Brownie</span><span class="d">Vanilla frosting with a monster face</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Parkside Market Coffee|Pumpkin Pie Cinnamon Roll"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Pie Cinnamon Roll</span><span class="d">Pumpkin spice cream cheese frosting, cookie crunch</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Parkside Market Coffee|Tombstone Chocolate Trifle"><span class="box">✓</span><span class="txt"><span class="n">Tombstone Chocolate Trifle</span><span class="d">Coffee-soaked chocolate cake, tiramisu cream, dark chocolate shavings</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Parkside Market Coffee|The Mystic Cauldron Latte"><span class="box">✓</span><span class="txt"><span class="n">The Mystic Cauldron Latte</span><span class="d">Blackberry under purple cold foam, chocolate cookie crumbles</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Parkside Market Coffee|The Harvest Chai Latte"><span class="box">✓</span><span class="txt"><span class="n">The Harvest Chai Latte</span><span class="d">Chai spices, caramel apple butter, cinnamon</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Parkside Market Coffee|The Pumpkin Slice Latte"><span class="box">✓</span><span class="txt"><span class="n">The Pumpkin Slice Latte</span><span class="d">Pumpkin pie syrup, pumpkin cold foam, fall spice dust</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Parkside Market Coffee|The Sleeping Curse"><span class="box">✓</span><span class="txt"><span class="n">The Sleeping Curse</span><span class="d">Hot apple cider with brown sugar syrup</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>California Churro</h3><p class="meta">Through Oct 31</p><ul><li data-k="California Churro|Ube Matcha and Crème"><span class="box">✓</span><span class="txt"><span class="n">Ube Matcha and Crème</span><span class="d">Matcha sugar, whipped cream, ube condensed milk</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Beignets Expressed</h3><p class="meta">Oct 1 – Oct 31 only</p><ul><li data-k="Beignets Expressed|Caramel Apple Beignet"><span class="box">✓</span><span class="txt"><span class="n">Caramel Apple Beignet</span><span class="d">Candied apple icing, caramel drizzle, spooky sprinkles</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Kayla&#x27;s Cake</h3><p class="meta">Through Oct 31</p><ul><li data-k="Kayla&#x27;s Cake|Marshmallow Mummy Macaron"><span class="box">✓</span><span class="txt"><span class="n">Marshmallow Mummy Macaron</span><span class="d">Homemade marshmallow, dark chocolate ganache, candy eyeballs</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Wetzel&#x27;s Pretzels</h3><p class="meta">Through Oct 31</p><ul><li data-k="Wetzel&#x27;s Pretzels|Oreo Bitz"><span class="box">✓</span><span class="txt"><span class="n">Oreo Bitz</span><span class="d">Bitz with crème drizzle and cookie pieces</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>GG&#x27;s Chicken Shop</h3><p class="meta">Through Oct 31</p><ul><li data-k="GG&#x27;s Chicken Shop|Graveyard Dirt Pudding"><span class="box">✓</span><span class="txt"><span class="n">Graveyard Dirt Pudding</span><span class="d">Chocolate pudding, Oreo crumble, gummy worms, tombstone cookie</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Seoul Sister</h3><p class="meta">Through Oct 31</p><ul><li data-k="Seoul Sister|Spooky Seoul Berry Bubble Lemonade"><span class="box">✓</span><span class="txt"><span class="n">Spooky Seoul Berry Bubble Lemonade</span><span class="d">Cherry lemonade with blueberry popping boba</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="land">Bars &amp; restaurants</div><div class="spot"><h3>Vista Parkside Market</h3><p class="meta">Through Oct 31</p><ul><li data-k="Vista Parkside Market|Campfire Cream Soda"><span class="box">✓</span><span class="txt"><span class="n">Campfire Cream Soda</span><span class="d">Coke, vanilla cream, marshmallow syrup</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Vista Parkside Market|Candy Corn Cream Soda"><span class="box">✓</span><span class="txt"><span class="n">Candy Corn Cream Soda</span><span class="d">Orange soda, vanilla cream, marshmallow syrup</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Vista Parkside Market|Horned Shadow Elixir"><span class="box">✓</span><span class="txt"><span class="n">Horned Shadow Elixir</span><span class="d">Tequila, blood orange, honey, lime</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Vista Parkside Market|All Hallow&#x27;s Eve"><span class="box">✓</span><span class="txt"><span class="n">All Hallow&#x27;s Eve</span><span class="d">Mango-cherry whiskey, bourbon, Thai tea cacao vermouth, bitters</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Vista Parkside Market|Sleepy Hollow"><span class="box">✓</span><span class="txt"><span class="n">Sleepy Hollow</span><span class="d">Dark rum, amaretto, chai syrup, lemon, vanilla, bitters</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Vista Parkside Market|The Raven&#x27;s Revenge"><span class="box">✓</span><span class="txt"><span class="n">The Raven&#x27;s Revenge</span><span class="d">Chili cacao vodka, espresso, vanilla, coffee liqueur</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Ballast Point Brewing Co.</h3><p class="meta">Sept 5 – Oct 31</p><ul><li data-k="Ballast Point Brewing Co.|Ghostly Glazed Pork Belly"><span class="box">✓</span><span class="txt"><span class="n">Ghostly Glazed Pork Belly</span><span class="d">Ghost pepper-pomegranate glaze, miso butter acorn squash</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Ballast Point Brewing Co.|Haunted Harvest Quesadilla"><span class="box">✓</span><span class="txt"><span class="n">Haunted Harvest Quesadilla</span><span class="d">Huitlacoche ricotta, Oaxaca cheese, salsa macha, spinach tortilla</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Ballast Point Brewing Co.|Spooky Tiramisu"><span class="box">✓</span><span class="txt"><span class="n">Spooky Tiramisu</span><span class="d">Espresso martini-soaked ladyfingers, mascarpone, raspberry coulis</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Ballast Point Brewing Co.|The Cursed Apple"><span class="box">✓</span><span class="txt"><span class="n">The Cursed Apple</span><span class="d">Frozen apple cider slush with a cinnamon whiskey float</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Black Tap Craft Burgers &amp; Shakes</h3><p class="meta">Oct 20 – Nov 2 only</p><ul><li data-k="Black Tap Craft Burgers &amp; Shakes|Trick or Treat Shake Flight"><span class="box">✓</span><span class="txt"><span class="n">Trick or Treat Shake Flight</span><span class="tags"><span class="t gone">ends Nov 2</span></span></span></li><li data-k="Black Tap Craft Burgers &amp; Shakes|Kit Kat Shake"><span class="box">✓</span><span class="txt"><span class="n">Kit Kat Shake</span><span class="d">Chocolate rim rolled in wafer crumbs, whipped cream, chocolate drizzle</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Nov 2</span></span></span></li><li data-k="Black Tap Craft Burgers &amp; Shakes|Skittles Shake"><span class="box">✓</span><span class="txt"><span class="n">Skittles Shake</span><span class="d">Vanilla rim rolled in Skittles and gummy clusters, strawberry drizzle</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Nov 2</span></span></span></li><li data-k="Black Tap Craft Burgers &amp; Shakes|Sweet and Salty Shake"><span class="box">✓</span><span class="txt"><span class="n">Sweet and Salty Shake</span><span class="d">Peanut butter shake, M&amp;M rim, pretzel rods, peanut butter cups</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Nov 2</span></span></span></li></ul></div><div class="spot"><h3>Naples Ristorante e Bar</h3><p class="meta">Through Oct 31</p><ul><li data-k="Naples Ristorante e Bar|Pumpkin Blooderscotch Cannolis"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Blooderscotch Cannolis</span><span class="d">Pumpkin butterscotch cream, red caramel drizzle, sugar knife</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Naples Ristorante e Bar|Pumpkin Mule"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Mule</span><span class="d">Pumpkin butter, spiced rum, lemon, ginger beer</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Céntrico</h3><p class="meta">Through Oct 31</p><ul><li data-k="Céntrico|Pumpkin Flan"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Flan</span><span class="d">Pumpkin and spices</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Céntrico|La Calavera Roja"><span class="box">✓</span><span class="txt"><span class="n">La Calavera Roja</span><span class="d">Reposado, lime, cranberry, spiced apple syrup</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Paseo</h3><p class="meta">Through Oct 31</p><ul><li data-k="Paseo|Pumpkin Dulce"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Dulce</span><span class="d">Spiced sponge, maple ganache, walnut crumble, pumpkin mousse, rosemary ice cream</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Paseo|La Calavera Roja"><span class="box">✓</span><span class="txt"><span class="n">La Calavera Roja</span><span class="d">Reposado, lime, cranberry, spiced apple syrup</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>Splitsville Luxury Lanes</h3><p class="meta">Through Oct 31</p><ul><li data-k="Splitsville Luxury Lanes|Midnight Roll"><span class="box">✓</span><span class="txt"><span class="n">Midnight Roll</span><span class="d">Avocado, salmon, cream cheese in black rice, masago, chipotle mayo</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Splitsville Luxury Lanes|Black Spider"><span class="box">✓</span><span class="txt"><span class="n">Black Spider</span><span class="d">Blackberry liqueur, vodka or gin, cranberry, lime, sugar rim</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Splitsville Luxury Lanes|Witches&#x27; Brew"><span class="box">✓</span><span class="txt"><span class="n">Witches&#x27; Brew</span><span class="d">Melon liqueur, vodka, blue curaçao, ginger soda</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><h2 class="park" id="hotels">Hotels</h2><div class="land">Disneyland Hotel</div><div class="spot"><h3>Trader Sam&#x27;s Enchanted Tiki Bar</h3><p class="meta">Cups served at the Outdoor Patio Bar, limit 2 per person</p><ul><li data-k="Trader Sam&#x27;s Enchanted Tiki Bar|DOLE Whip Pineapple-Orange with Guava"><span class="box">✓</span><span class="txt"><span class="n">DOLE Whip Pineapple-Orange with Guava</span><span class="d">In a Nightmare Before Christmas Haunted Mansion Holiday cup, while supplies last</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li><li data-k="Trader Sam&#x27;s Enchanted Tiki Bar|DOLE Whip Tropical Float"><span class="box">✓</span><span class="txt"><span class="n">DOLE Whip Tropical Float</span><span class="d">Pineapple juice topped with soft serve, in the Holiday cup</span><span class="tags"><span class="t ">ends Jan 6</span></span></span></li><li data-k="Trader Sam&#x27;s Enchanted Tiki Bar|DOLE Whip Tropical Float with Rum"><span class="box">✓</span><span class="txt"><span class="n">DOLE Whip Tropical Float with Rum</span><span class="d">With coconut rum, Holiday cup served on the side</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Jan 6</span></span></span></li><li data-k="Trader Sam&#x27;s Enchanted Tiki Bar|This Chilling Challenge"><span class="box">✓</span><span class="txt"><span class="n">This Chilling Challenge</span><span class="d">Smith &amp; Cross rum, pineapple, lime, honey, ginger, bitters</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Trader Sam&#x27;s Enchanted Tiki Bar|Cloaked Specter"><span class="box">✓</span><span class="txt"><span class="n">Cloaked Specter</span><span class="d">Coconut rum, pineapple, lime, falernum, cinnamon, bitters</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Trader Sam&#x27;s Enchanted Tiki Bar|Scarecrow Old Fashioned"><span class="box">✓</span><span class="txt"><span class="n">Scarecrow Old Fashioned</span><span class="d">Buffalo Trace, allspice dram, falernum, bitters</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Broken Spell Lounge</h3><p class="meta">Through Nov 12</p><ul><li data-k="Broken Spell Lounge|The Dark Heart"><span class="box">✓</span><span class="txt"><span class="n">The Dark Heart</span><span class="d">Hennessy VS, Plymouth gin, crème de cacao, chocolate and lemon bitters</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Broken Spell Lounge|Three Witches"><span class="box">✓</span><span class="txt"><span class="n">Three Witches</span><span class="d">Casamigos Reposado, espresso, Licor 43, Mr. Black, orgeat</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="Broken Spell Lounge|Green-eyed Sceptre"><span class="box">✓</span><span class="txt"><span class="n">Green-eyed Sceptre</span><span class="d">Absinthe, prosecco, spiced pear, cinnamon syrup, lime, blackberry</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>The Coffee House</h3><p class="meta">Through Nov 12 · Mobile order · Lattes hot or iced</p><ul><li data-k="The Coffee House|Mickey Bat Cookie"><span class="box">✓</span><span class="txt"><span class="n">Mickey Bat Cookie</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="The Coffee House|Banana Bread Latte"><span class="box">✓</span><span class="txt"><span class="n">Banana Bread Latte</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="The Coffee House|Butter Pecan Latte"><span class="box">✓</span><span class="txt"><span class="n">Butter Pecan Latte</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="The Coffee House|Maple Sea Salt Latte"><span class="box">✓</span><span class="txt"><span class="n">Maple Sea Salt Latte</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="The Coffee House|Hot Caramel Apple Spice"><span class="box">✓</span><span class="txt"><span class="n">Hot Caramel Apple Spice</span><span class="tags"><span class="t new">New</span><span class="t ">ends Nov 12</span></span></span></li><li data-k="The Coffee House|Pumpkin Spice Latte"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Spice Latte</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Goofy&#x27;s Kitchen</h3><p class="meta">Through Oct 31 · Reservations recommended</p><ul><li data-k="Goofy&#x27;s Kitchen|Pumpkin Spice Latte"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Spice Latte</span><span class="d">Hot or iced</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Goofy&#x27;s Kitchen|Chocolate Espresso Martini"><span class="box">✓</span><span class="txt"><span class="n">Chocolate Espresso Martini</span><span class="d">Tito&#x27;s, Mr. Black, crème de cacao, chocolate syrup</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Goofy&#x27;s Kitchen|Foolish Margarita"><span class="box">✓</span><span class="txt"><span class="n">Foolish Margarita</span><span class="d">Patrón Silver, Chambord, agave, lime</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Goofy&#x27;s Kitchen|Spicy Pineapple Margarita"><span class="box">✓</span><span class="txt"><span class="n">Spicy Pineapple Margarita</span><span class="d">Código Reposado, habanero-lime syrup, pineapple, chamoy rim</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Goofy&#x27;s Kitchen|Witching Hour Spritz"><span class="box">✓</span><span class="txt"><span class="n">Witching Hour Spritz</span><span class="d">Tito&#x27;s, Midori, pineapple, Sprite</span><span class="tags"><span class="t new">New</span><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Goofy&#x27;s Kitchen|Night Owl Pumpkin Ale"><span class="box">✓</span><span class="txt"><span class="n">Night Owl Pumpkin Ale</span><span class="d">Elysian Brewing</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="land">Grand Californian</div><div class="spot"><h3>Great Hall Cart</h3><p class="meta">Through Oct 31</p><ul><li data-k="Great Hall Cart|Sally Pumpkin Spiced Cupcake"><span class="box">✓</span><span class="txt"><span class="n">Sally Pumpkin Spiced Cupcake</span><span class="d">Devil&#x27;s food chocolate chip cake, coffee fudge, pumpkin spice buttercream</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|The Mayor Chocolate Cake Pop"><span class="box">✓</span><span class="txt"><span class="n">The Mayor Chocolate Cake Pop</span><span class="d">Hand-dipped white chocolate and sprinkles</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|Oogie Boogie Crisped Rice Treat"><span class="box">✓</span><span class="txt"><span class="n">Oogie Boogie Crisped Rice Treat</span><span class="d">Cookies and cream</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|Scary Wreath Macaron"><span class="box">✓</span><span class="txt"><span class="n">Scary Wreath Macaron</span><span class="d">Pumpkin cheesecake with a chocolate fudge center</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|Jack Skellington Linzer Cookie"><span class="box">✓</span><span class="txt"><span class="n">Jack Skellington Linzer Cookie</span><span class="d">Decorated sugar cookie</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|Gingerbread Skeleton Cookie"><span class="box">✓</span><span class="txt"><span class="n">Gingerbread Skeleton Cookie</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|Gooey Peanut Butter Cookie"><span class="box">✓</span><span class="txt"><span class="n">Gooey Peanut Butter Cookie</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|Pecan Caramel Crunch Cookie"><span class="box">✓</span><span class="txt"><span class="n">Pecan Caramel Crunch Cookie</span><span class="d">Giant cookie with caramel bits, toasted pecans, toffee</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|Buttery Pumpkin Bread"><span class="box">✓</span><span class="txt"><span class="n">Buttery Pumpkin Bread</span><span class="d">Sprinkles and pumpkin spiced icing</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|Chocolate Chip Cookie Cup with Milk"><span class="box">✓</span><span class="txt"><span class="n">Chocolate Chip Cookie Cup with Milk</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Great Hall Cart|Chocolate Chip Cookie Shot with Liqueur"><span class="box">✓</span><span class="txt"><span class="n">Chocolate Chip Cookie Shot with Liqueur</span><span class="tags"><span class="t bar">21+</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><div class="spot"><h3>GCH Craftsman Grill</h3><p class="meta">Through Nov 12</p><ul><li data-k="GCH Craftsman Grill|Mickey Vampire Donut"><span class="box">✓</span><span class="txt"><span class="n">Mickey Vampire Donut</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="GCH Craftsman Grill|Candy Bar Donut"><span class="box">✓</span><span class="txt"><span class="n">Candy Bar Donut</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="GCH Craftsman Grill|Minnie Halloween Cupcake"><span class="box">✓</span><span class="txt"><span class="n">Minnie Halloween Cupcake</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li><li data-k="GCH Craftsman Grill|Pumpkin Muffin"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Muffin</span><span class="tags"><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>GCH Craftsman Bar</h3><p class="meta">Through Nov 12 · Reservations recommended</p><ul><li data-k="GCH Craftsman Bar|Recuérdame Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Recuérdame Cocktail</span><span class="d">Casa Amigos Reposado, passion fruit, hibiscus liqueur, lemon</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Hearthstone Lounge</h3><p class="meta">Through Nov 12</p><ul><li data-k="Hearthstone Lounge|Recuérdame Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Recuérdame Cocktail</span><span class="d">Casa Amigos Reposado, passion fruit, hibiscus liqueur, lemon</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="spot"><h3>Storytellers Cafe</h3><p class="meta">Through Nov 12 · Reservations recommended</p><ul><li data-k="Storytellers Cafe|Recuérdame Cocktail"><span class="box">✓</span><span class="txt"><span class="n">Recuérdame Cocktail</span><span class="d">Casa Amigos Reposado, passion fruit, hibiscus liqueur, lemon</span><span class="tags"><span class="t bar">21+</span><span class="t ">ends Nov 12</span></span></span></li></ul></div><div class="land">Pixar Place Hotel</div><div class="spot"><h3>The Sketch Pad Cafe</h3><p class="meta">Through Oct 31</p><ul><li data-k="The Sketch Pad Cafe|Caramel Apple Overnight Oats"><span class="box">✓</span><span class="txt"><span class="n">Caramel Apple Overnight Oats</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="The Sketch Pad Cafe|Dulce de Leche Linzer Cookie"><span class="box">✓</span><span class="txt"><span class="n">Dulce de Leche Linzer Cookie</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="The Sketch Pad Cafe|Nutella Linzer Cookie"><span class="box">✓</span><span class="txt"><span class="n">Nutella Linzer Cookie</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="The Sketch Pad Cafe|Tiramisu Latte"><span class="box">✓</span><span class="txt"><span class="n">Tiramisu Latte</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="The Sketch Pad Cafe|Pumpkin Spice Latte"><span class="box">✓</span><span class="txt"><span class="n">Pumpkin Spice Latte</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li></ul></div><h2 class="park" id="candy-shops">Candy Shops</h2><div class="land">Candy Palace · Pooh Corner · Trolley Treats · Bing Bong&#x27;s · Wonderful World of Sweets</div><div class="spot"><h3>Same case at every shop</h3><p class="meta">Through Oct 31 · While supplies last</p><ul><li data-k="Same case at every shop|Mickey Ghost Cake Pop"><span class="box">✓</span><span class="txt"><span class="n">Mickey Ghost Cake Pop</span><span class="d">Vanilla cake pop in white chocolate with black chocolate detail</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Same case at every shop|Mickey Swirl Marshmallow Pop"><span class="box">✓</span><span class="txt"><span class="n">Mickey Swirl Marshmallow Pop</span><span class="d">Orange white chocolate with purple drizzle</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Same case at every shop|Minnie Halloween Caramel Apple"><span class="box">✓</span><span class="txt"><span class="n">Minnie Halloween Caramel Apple</span><span class="d">Marshmallow ears, milk chocolate, orange sugar, purple M&amp;M&#x27;s, bow</span><span class="tags"><span class="t new">New</span><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Same case at every shop|Jack Skellington Caramel Apple"><span class="box">✓</span><span class="txt"><span class="n">Jack Skellington Caramel Apple</span><span class="d">Caramel and white chocolate with black detail — not at Bing Bong&#x27;s</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Same case at every shop|Minnie Skeleton Caramel Apple"><span class="box">✓</span><span class="txt"><span class="n">Minnie Skeleton Caramel Apple</span><span class="d">Black sugar, white M&amp;M&#x27;s, black and white bow — not at Bing Bong&#x27;s</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Same case at every shop|Evil Caramel Apple"><span class="box">✓</span><span class="txt"><span class="n">Evil Caramel Apple</span><span class="d">Caramel and red white chocolate with green drizzle</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Same case at every shop|Mickey Spiderweb Cereal Treat"><span class="box">✓</span><span class="txt"><span class="n">Mickey Spiderweb Cereal Treat</span><span class="d">Cookies and cream, black chocolate, white chocolate web</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Same case at every shop|Halloween Marshmallow Wand"><span class="box">✓</span><span class="txt"><span class="n">Halloween Marshmallow Wand</span><span class="d">Milk chocolate with orange and purple drizzle</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li><li data-k="Same case at every shop|Minnie Chocolate Cake Pop"><span class="box">✓</span><span class="txt"><span class="n">Minnie Chocolate Cake Pop</span><span class="d">Milk chocolate with an orange bow</span><span class="tags"><span class="t gone">ends Oct 31</span></span></span></li></ul></div></main>
+<div id="toast"></div>
+
+<footer>
+  <p class="jsonly">Share my list sends your picks as a link — either one they can add their own treats to, or a view-only copy that leaves their list alone. My list as PDF makes a printable page-sized copy instead. Tap the star to add something to your list before the trip. Tap the line itself to check it off once you’ve tried it. Both save in whatever browser you open this page in and survive closing the tab — they’re yours alone and nobody else sees them. On an iPhone, add this page to your Home Screen so iOS doesn’t clear them after a week of not opening it.</p>
+  <p>End dates are the last day each item is scheduled to be sold. Land assignments follow Disney's official foodie guide. Menus and prices change without notice; confirm in the Disneyland app.</p>
+  <p>Compiled from the Disney Food Blog Halloween Time roundup and Disney's official Disney Eats foodie guide. Descriptions condensed.</p>
+</footer>
+
+<script>
+const D=[
+{p:"Disneyland Park",L:[
+ {l:"Main Street, U.S.A.",s:[
+  {n:"Carnation Café",m:"Through Nov 12 · Reservations recommended",i:[
+   {n:"Spicy Chicken Sandwich",d:"Fried chicken in chile sauce, pepper jack, mustard slaw, brioche",t:["food"],e:"Nov 12"},
+   {n:"Caramel Apple Martini",d:"Caramel vodka, butterscotch liqueur, sour apple, lollipop garnish",t:["new","booze"],e:"Nov 12"},
+   {n:"Night Owl Pumpkin Ale",d:"Elysian Brewing",t:["booze"],e:"Nov 12"},
+   {n:"Spaten Oktoberfest Ur-Märzen",d:"",t:["booze"],e:"Nov 12"}]},
+  {n:"Gibson Girl Ice Cream Parlor",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Rest in Chocolate",d:"Chocolate ice cream in a chocolate waffle cup, cookie crumbles, gummy worms, chocolate tombstone",t:["food"],e:"Nov 12"}]},
+  {n:"Jolly Holiday Bakery Cafe",m:"Mobile order",i:[
+   {n:"BooGogi Beef Toast + Corn Cheese Soup",d:"Marinated beef, mozzarella, pickled radish, kimchi aïoli on sourdough",t:["food"],e:"Nov 12"},
+   {n:"Caramel Apple Cheesecake",d:"Caramel cheesecake, apple filling, orange white chocolate mousse",t:["food"],e:"Nov 12"},
+   {n:"Pumpkin Muffin",d:"Cream cheese icing",t:["food"],e:"Jan 6"},
+   {n:"Brownie Pie",d:"Fudge brownie in pie crust, ganache, mousse, sprinkles",t:["new","food"],e:"Nov 12"},
+   {n:"Mickey Pumpkin Cupcake",d:"Cream cheese frosting, brown sugar crumble, chocolate ears",t:["new","food"],e:"Nov 12"},
+   {n:"Mickey Mummy Macaron",d:"Cookies-and-cream filling",t:["food"],e:"Oct 31"},
+   {n:"Halloween Matterhorn Macaroon",d:"Coconut macaroon in white chocolate and sprinkles",t:["new","food"],e:"Nov 12"},
+   {n:"Mickey Ghost Cookie",d:"Shortbread dipped in chocolate",t:["new","food"],e:"Oct 31"},
+   {n:"Maple-Bacon Cinnamon Roll",d:"Maple cream cheese, glazed bacon, pecans",t:["food"],e:"Jan 6"},
+   {n:"Pumpkin Cold Brew",d:"Vanilla foam, spiced sugar",t:["drink"],e:"Nov 12"}]},
+  {n:"Little Red Wagon",m:"Through Jan 6 · Mobile order",i:[
+   {n:"Spicy Chili-Cheese Corn Dog",d:"Chili, jalapeño-cilantro crema, cheddar, hot cheese puff dust",t:["new","food"],e:"Jan 6"},
+   {n:"Lychee-Strawberry Green Tea",d:"",t:["drink"],e:"Jan 6"}]},
+  {n:"Market House",m:"",i:[
+   {n:"Churro Hand Tart",d:"Spiced cake in a pastry tart, cinnamon sugar",t:["new","food"],e:"Jan 6"},
+   {n:"Shortbread Bat Cookie",d:"Dark chocolate dip, vampire Mickey face",t:["food"],e:"Oct 31"}]},
+  {n:"Plaza Inn",m:"",i:[
+   {n:"Pumpkin Cake",d:"Pumpkin mousse filling, whipped frosting, chocolate stem",t:["new","food"],e:"Oct 31"},
+   {n:"Villainous Red Velvet Cake",d:"Raspberry jam, chocolate chips, black ganache",t:["new","food"],e:"Nov 12"}]},
+  {n:"Refreshment Corner",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Birria Potato",d:"Baked potato with beef birria, pepper jack, salsa verde, consommé on the side",t:["food"],e:"Nov 12"}]},
+  {n:"Churro cart — Town Square",m:"Through Jan 6",i:[
+   {n:"Apple Pie Dip",d:"Cream cheese frosting with spiced apple compote",t:["food"],e:"Jan 6"}]},
+  {n:"Churro cart — Central Plaza (by the castle)",m:"Through Jan 6",i:[
+   {n:"Apple Pie Dip",d:"Cream cheese frosting with spiced apple compote",t:["food"],e:"Jan 6"}]}]},
+
+ {l:"Adventureland",s:[
+  {n:"Bengal Barbecue",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Iced Pandan Cooler",d:"Brown sugar popping spheres, ube cream",t:["drink"],e:"Nov 12"}]},
+  {n:"The Tropical Hideaway",m:"Through Jan 6",i:[
+   {n:"Miso Soup",d:"Seaweed, tofu, green onion",t:["new","food"],e:"Jan 6"}]},
+  {n:"Tiki Juice Bar",m:"Through Nov 12 · Mobile order",i:[
+   {n:"DOLE Whip Cone",d:"Pineapple soft serve in a sugar cone with Halloween sprinkles",t:["food"],e:"Nov 12"}]}]},
+
+ {l:"Frontierland",s:[
+  {n:"Rancho del Zocalo",m:"",i:[
+   {n:"Pozole",d:"Pork pozole with onion, cabbage, lime, radish, tortilla chips",t:["food"],e:"Jan 6"},
+   {n:"Iced Chocolate Cafe",d:"Hot chocolate, espresso, cream and coconut over ice",t:["new","drink"],e:"Nov 12"}]},
+  {n:"River Belle Terrace",m:"Through Nov 12 · Reservations recommended",i:[
+   {n:"Pumpkin Crunch Cake",d:"Pumpkin filling, spiced chantilly, house graham cracker",t:["new","food"],e:"Nov 12"}]},
+  {n:"The Golden Horseshoe",m:"",i:[
+   {n:"Apple Pie Sundae",d:"Apple pie, vanilla ice cream, salted caramel, cinnamon streusel",t:["new","food"],e:"Nov 12"},
+   {n:"Chili-Cheese Fries",d:"Beef chili, shredded cheese, sour cream, green onion",t:["new","food"],e:"Jan 6"},
+   {n:"Strawberry Soda",d:"Sprite with strawberry purée",t:["new","drink"],e:"Jan 6"}]},
+  {n:"Stage Door Café",m:"Through Jan 6 · Mobile order",i:[
+   {n:"Chili-Cheese Fries",d:"Beef chili, shredded cheese, sour cream, green onion",t:["new","food"],e:"Jan 6"},
+   {n:"Strawberry Soda",d:"Sprite with strawberry purée",t:["new","drink"],e:"Jan 6"}]},
+  {n:"Ship to Shore Marketplace",m:"Through Jan 6",i:[
+   {n:"Pinwheels",d:"Fried wheat pinwheels with lemon juice and hot sauce",t:["new","food"],e:"Jan 6"}]}]},
+
+ {l:"New Orleans Square",s:[
+  {n:"Harbour Galley",m:"Mobile order",i:[
+   {n:"Pumpkin Cookies",d:"Fresh-baked, sold in packs of 6 or 13 while supplies last",t:["food"],e:"Nov 12"},
+   {n:"Whipped Cream Cheese Dip",d:"Pairs with the pumpkin cookies",t:["food"],e:"Nov 12"},
+   {n:"Brown Butter Maple Cold Brew",d:"Beignet-flavored cold brew, maple and brown butter, brown butter foam",t:["new","drink"],e:"Jan 6"}]},
+  {n:"Café Orleans",m:"Through Jan 6 · Reservations recommended",i:[
+   {n:"Seaborn Cherry Temple Cocktail",d:"",t:["new","booze"],e:"Jan 6"}]},
+  {n:"Mint Julep Bar",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Frightfully Festive Cocoa Dip",d:"",t:["new","food"],e:"Nov 12"}]}]},
+
+ {l:"Bayou Country",s:[
+  {n:"Hungry Bear Barbecue Jamboree",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Grizzly Pumpkin Cold Brew Latte",d:"Cold brew, whipped cream, pumpkin spice, pumpkin candy",t:["new","drink"],e:"Nov 12"}]}]},
+
+ {l:"Fantasyland",s:[
+  {n:"Red Rose Taverne",m:"Mobile order",i:[
+   {n:"Enchanted Pumpkin Stuff",d:"Shortbread cookie hiding a mini pumpkin pie, pumpkin mousse, chocolate branch",t:["food"],e:"Nov 12"},
+   {n:"French Toast Cold Brew",d:"Brown sugar and vanilla cold brew, cinnamon cream, cinnamon cereal",t:["new","drink"],e:"Jan 6"}]},
+  {n:"Edelweiss Snacks",m:"Through Jan 6 · Mobile order",i:[
+   {n:"Matterhorn Puff",d:"Cinnamon apples and cream, chocolate, snow sugar",t:["food"],e:"Jan 6"}]},
+  {n:"Maurice's Treats",m:"Through Nov 12",i:[
+   {n:"Sea Salt Vanilla Cream",d:"With Halloween sprinkles",t:["new","food"],e:"Nov 12"}]},
+  {n:"Churro cart — Casey Jr. Circus Train",m:"Through Jan 6",i:[
+   {n:"Cranberry Cream Cheese Dip",d:"",t:["new","food"],e:"Jan 6"}]},
+  {n:"Churro cart — small world Promenade",m:"Through Jan 6",i:[
+   {n:"Cranberry Cream Cheese Dip",d:"",t:["new","food"],e:"Jan 6"}]},
+  {n:"Pretzel cart — small world Promenade",m:"Through Jan 6",i:[
+   {n:"Cranberry Cream Cheese Dip",d:"",t:["new","food"],e:"Jan 6"}]}]},
+
+ {l:"Tomorrowland",s:[
+  {n:"Alien Pizza Planet",m:"",i:[
+   {n:"Heatwave Pizza Slice",d:"Spicy blush sauce, sausage, two pepperonis, bratwurst, Fresno chiles, hot honey",t:["food"],e:"Jan 6"},
+   {n:"Spicy Blush Pasta",d:"Italian sausage, spicy blush sauce, tomato relish",t:["food"],e:"Jan 6"},
+   {n:"Seasonal Alien Macarooooon",d:"Berries and cream filling",t:["food"],e:"Nov 12"},
+   {n:"Halloween Green Drink",d:"Apple juice and apple syrup, caramel cold foam, sprinkles",t:["new","drink"],e:"Nov 12"}]},
+  {n:"Galactic Grill",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Stellar Spicy Chicken Sandwich",d:"Panko chicken, ghost pepper salsa verde, pepper jack, cilantro lime slaw",t:["food"],e:"Nov 12"},
+   {n:"Darth by Chocolate",d:"Chocolate pudding, red velvet sponge, mousse, crushed cookies",t:["food"],e:"Nov 12"},
+   {n:"Pumpkin Cream Sweet Tea",d:"Sweet tea with pumpkin cream foam",t:["new","drink"],e:"Nov 12"}]},
+  {n:"Popcorn cart — Star Trader",m:"Through Nov 12",i:[
+   {n:"Spicy Pickle Popcorn",d:"Crushed hot cheese puffs and dill pickle seasoning",t:["food"],e:"Nov 12"}]},
+  {n:"Pretzel cart — Star Tours",m:"Through Nov 12",i:[
+   {n:"Supernova Pretzel",d:"Jalapeño cheese-filled, spicy crumble and lime",t:["food"],e:"Nov 12"}]},
+  {n:"Churro cart — Buzz Lightyear",m:"Through Nov 12",i:[
+   {n:"Caramel-Peanut Butter Candy Loaded Dip",d:"Chocolate-peanut butter flakes and candy corn",t:["new","food"],e:"Nov 12"}]}]}
+]},
+
+{p:"California Adventure",L:[
+ {l:"Buena Vista Street",s:[
+  {n:"Clarabelle's Hand-Scooped Ice Cream",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Halloween Mickey Ice Cream Bar",d:"White chocolate dip, Halloween sprinkles",t:["new","food"],e:"Nov 12"}]}]},
+
+ {l:"Hollywood Land",s:[
+  {n:"Hollywood Lounge",m:"Mobile order on select items",i:[
+   {n:"Spicy Oogie Boogie Burrito",d:"Carne asada, fries, guac, hot cheese snacks, spicy crema, green tortilla",t:["food"],e:"Nov 12"},
+   {n:"Beef and Cheese Tamale a la Plancha",d:"Salsa verde, lime crema, lettuce, pico",t:["new","food"],e:"Nov 12"},
+   {n:"Phantom Potion",d:"Pineapple lemonade, blue curaçao, apple pucker, Sprite, Oogie Boogie glow cube",t:["new","booze"],e:"Nov 12"},
+   {n:"Horchata Whiskey Cocktail",d:"Horchata, RumChata, cinnamon whiskey",t:["booze"],e:"Nov 12"},
+   {n:"Seaborn Prickly Pear Margarita",d:"",t:["new","booze"],e:"Jan 6"},
+   {n:"Calidad El Titán Dark Lager",d:"",t:["new","booze"],e:"Jan 6"}]},
+  {n:"Schmoozies!",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Matcha Mickey Waffles",d:"Filled with banana custard",t:["new","food"],e:"Nov 12"},
+   {n:"Pumpkin Pie Mickey Shake",d:"Pumpkin pie and vanilla, whipped topping, golden crème cookies",t:["new","drink"],e:"Nov 12"}]},
+  {n:"Award Wieners",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Oktoberfest Dog",d:"Pork cheddar sausage, sauerkraut, caraway, beer mustard sauce, pretzel bun",t:["new","food"],e:"Nov 12"},
+   {n:"Seaborn Sangria",d:"Over ice with mixed fruit",t:["new","booze"],e:"Jan 6"},
+   {n:"Route 30 Oktoberfest Lager",d:"",t:["booze"],e:"Nov 12"}]},
+  {n:"Studio Catering Co.",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Beef and Cheese Tamale a la Plancha",d:"Salsa verde, lime crema, lettuce, pico",t:["new","food"],e:"Nov 12"},
+   {n:"Spicy Oogie Boogie Burrito",d:"Carne asada, fries, guac, hot cheese snacks, spicy crema",t:["food"],e:"Nov 12"}]}]},
+
+ {l:"Avengers Campus",s:[
+  {n:"Pym Test Kitchen",m:"Mobile order",i:[
+   {n:"BBQ Pork Muenster Grilled Cheese",d:"Pork belly and Muenster on sourdough, crispy onions, jalapeño slaw, potato bites",t:["new","food"],e:"Nov 12"},
+   {n:"Strawberry Matcha Latte",d:"Strawberry cold foam, sugar wafers, condensed milk drizzle",t:["new","drink"],e:"Jan 6"},
+   {n:"Strawberry Matcha Rum Cocktail",d:"The latte with white rum, served in a particle beaker",t:["new","booze"],e:"Jan 6"}]},
+  {n:"Pym Tasting Lab",m:"Through Jan 6 · Mobile order",i:[
+   {n:"Seaborn Pomegranate Margarita",d:"Over ice",t:["new","booze"],e:"Jan 6"}]},
+  {n:"Terran Treats",m:"Through Oct 31",i:[
+   {n:"Ube Cheesecake Churro",d:"Rolled in chocolate cookie sugar, ube cheesecake whip, cookie crumble",t:["food"],e:"Oct 31"}]}]},
+
+ {l:"Cars Land",s:[
+  {n:"Cozy Cone 1 — Churros",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Vietnamese Coffee with Ube Sweet Cream Foam",d:"Black sprinkles",t:["new","drink"],e:"Nov 12"},
+   {n:"Cursed Ube Foam Iced Coffee",d:"Vietnamese iced coffee with Baileys, ube foam",t:["new","booze"],e:"Nov 12"}]},
+  {n:"Cozy Cone 2 — Ice Cream",m:"Through Oct 31 · Mobile order",i:[
+   {n:"Ube Soft Serve",d:"Black sprinkles, cup or cone",t:["food"],e:"Oct 31"},
+   {n:"Ube-Vanilla Twist",d:"Swirl with black sprinkles, cup or cone",t:["food"],e:"Oct 31"}]},
+  {n:"Cozy Cone 3 — Chili Cone Queso",m:"Through Oct 31 · Mobile order",i:[
+   {n:"Slow Burnin' Mac & Cheese Cone",d:"Pasta in spicy red pepper cheese sauce",t:["food"],e:"Oct 31"}]},
+  {n:"Cozy Cone 4 — Frozen Cone-Coctions",m:"Mobile order",i:[
+   {n:"Haunted Highway Cocktail",d:"Pineapple lemonade, blue curaçao, apple pucker, Sprite, gummy worms — Oogie Boogie Bash only",t:["new","booze"],e:"Oct 31"},
+   {n:"Strawberry-Peach Margarita",d:"Tequila, spicy strawberry-peach chamoy lemonade, peach ring",t:["booze"],e:"Jan 6"},
+   {n:"Strawberry Michelada",d:"Modelo, strawberry-chamoy lemonade, chile-lime rim",t:["booze"],e:"Jan 6"},
+   {n:"Cali Screamin' Pumpkin Vanilla Cream Ale",d:"Mother Earth Brewing Co.",t:["booze"],e:"Nov 12"},
+   {n:"Poison Apple Seltzer",d:"Unsung Brewing Co.",t:["booze"],e:"Nov 12"}]},
+  {n:"Cozy Cone 5 — Popcone",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Pineapple-Cucumber Agua Fresca",d:"Diced cucumber and pineapple, chamoy, chile-lime",t:["new","drink"],e:"Nov 12"},
+   {n:"Fantasma Agua Fresca Cocktail",d:"The agua fresca with tequila",t:["new","booze"],e:"Nov 12"}]},
+  {n:"Flo's V8 Cafe",m:"Mobile order",i:[
+   {n:"Mango-Habanero Chicken Strips",d:"With fries, green onions, ranch",t:["food"],e:"Nov 12"},
+   {n:"Desert Pear Agave Wine Margarita",d:"Agave wine with desert pear lemonade",t:["new","booze"],e:"Jan 6"}]}]},
+
+ {l:"San Fransokyo Square",s:[
+  {n:"Aunt Cass Café",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Taro Bread Pudding",d:"Warm taro and white chocolate, tapioca spheres, coconut-vanilla sauce",t:["food"],e:"Nov 12"},
+   {n:"Vampire Mickey Sourdough",d:"Plant-based",t:["food"],e:"Nov 12"},
+   {n:"Chicken Pot Pie Soup",d:"Served in a bread bowl",t:["food"],e:"Jan 6"},
+   {n:"Chocolate-Raspberry Cold Brew",d:"Raspberry foam topper",t:["new","drink"],e:"Nov 12"}]},
+  {n:"Cocina Cucamonga Mexican Grill",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Ube Flan Cake",d:"",t:["food"],e:"Nov 12"},
+   {n:"Mango Agua Fresca",d:"House-made with chile-lime and chamoy",t:["new","drink"],e:"Nov 12"},
+   {n:"Mango Tequila Cocktail",d:"",t:["new","booze"],e:"Nov 12"},
+   {n:"Blood Orange Paloma Hard Seltzer",d:"Bottle Logic, over ice",t:["booze"],e:"Nov 12"}]},
+  {n:"Lucky Fortune Cookery",m:"Mobile order",i:[
+   {n:"Seasonal Baymax Macaron",d:"Ube cream and salted caramel chocolate crunch pearls",t:["food"],e:"Nov 12"},
+   {n:"Three Milk Ube Tea",d:"Brown sugar tapioca spheres, coconut foam",t:["drink"],e:"Jan 6"}]},
+  {n:"Port of San Fransokyo Cervecería",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Karlitos Mexican Lager",d:"Karl Strauss — michelada option available",t:["new","booze"],e:"Nov 12"},
+   {n:"Karlitos Lager Flight",d:"",t:["new","booze"],e:"Nov 12"},
+   {n:"Karl Strauss Oktoberfest",d:"",t:["booze"],e:"Nov 12"}]},
+  {n:"Boudin Bread Cart",m:"Through Nov 12",i:[
+   {n:"Vampire Mickey Sourdough",d:"Plant-based",t:["food"],e:"Nov 12"}]},
+  {n:"Cappuccino Cart",m:"Mobile order",i:[
+   {n:"Mickey Waffle Macaron",d:"Salted maple buttercream, maple syrup, chocolate-coated waffle pieces",t:["new","food"],e:"Jan 6"},
+   {n:"Peanut Butter Mocha Cold Brew",d:"Peanut butter whip and drizzle, PB chocolate candies",t:["drink"],e:"Nov 12"},
+   {n:"Peanut Butter Whiskey Cold Brew",d:"Mocha cold brew with peanut butter whiskey and foam",t:["booze"],e:"Nov 12"},
+   {n:"Pumpkin Spice Hard Cider",d:"Coronado Brewing Co.",t:["new","booze"],e:"Jan 6"}]}]},
+
+ {l:"Grizzly Peak",s:[
+  {n:"Smokejumpers Grill",m:"Mobile order",i:[
+   {n:"Villainous Wings",d:"Gochujang sauce, ghost pepper ranch, chives",t:["new","food"],e:"Nov 12"},
+   {n:"Oogie Boogie Lemonade",d:"Green apple syrup, cherry popping spheres, raspberry sauce",t:["drink"],e:"Nov 12"},
+   {n:"Green Apple Lemonade Margarita",d:"The Oogie Boogie Lemonade with tequila",t:["booze"],e:"Nov 12"},
+   {n:"Aurora Borealis Hard Seltzer",d:"Bottle Logic honeydew lime, over ice",t:["booze"],e:"Jan 6"}]},
+  {n:"Churro cart — Redwood Creek Challenge Trail",m:"Through Jan 6",i:[
+   {n:"Fluffernutter Churro",d:"Peanut butter sauce, marshmallow sauce, chocolate chips",t:["food"],e:"Jan 6"}]}]},
+
+ {l:"Pixar Pier & Paradise Gardens",s:[
+  {n:"Lamplight Lounge",m:"Reservations recommended",i:[
+   {n:"Arroz Con Leche Donut",d:"Cinnamon sugar donut, arroz con leche, candied pecans, spiced chocolate powder",t:["new","food"],e:"Jan 6"},
+   {n:"Steak Frites",d:"New York steak, Manchego truffle fries, peppercorn sauce",t:["new","food"],e:"Jan 6"},
+   {n:"Halloween Cocktail",d:"Bourbon, cinnamon whiskey, lemon, amaretto, apple juice",t:["new","booze"],e:"Nov 12"},
+   {n:"All Hallows Treat Stout",d:"Ommegang imperial chocolate peanut butter",t:["booze"],e:"Nov 12"},
+   {n:"2 Towns Spiced Cosmic Crisp Cider",d:"",t:["booze"],e:"Jan 6"}]},
+  {n:"Lamplight Lounge — Boardwalk Dining",m:"Reservations recommended",i:[
+   {n:"Halloween Cocktail",d:"Bourbon, cinnamon whiskey, lemon, amaretto, apple juice",t:["new","booze"],e:"Nov 12"},
+   {n:"2 Towns Spiced Cosmic Crisp Cider",d:"",t:["booze"],e:"Jan 6"}]},
+  {n:"Boardwalk Pizza & Pasta",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Anti Vampire Pizza",d:"Garlic-marinated chicken, garlic sauce, bacon, tomato harissa drizzle — slice or whole pie",t:["food"],e:"Nov 12"},
+   {n:"Caramel Apple Cheesecake",d:"Apple filling, vanilla chantilly, salted caramel",t:["new","food"],e:"Nov 12"}]},
+  {n:"Bayside Brews",m:"Through Jan 6 · Mobile order",i:[
+   {n:"Santa Monica Pickle Lager",d:"Michelada option available",t:["new","booze"],e:"Jan 6"}]},
+  {n:"Churro cart — Goofy's Sky School",m:"Through Jan 6",i:[
+   {n:"Caramel Cheesecake Churro",d:"Caramel cheesecake icing, caramel and chocolate drizzle",t:["new","food"],e:"Jan 6"}]}]},
+
+ {l:"Carts & other stands",s:[
+  {n:"Outdoor vending carts",m:"Around the park",i:[
+   {n:"Oogie Boogie Cookie",d:"",t:["food"],e:"Oct 31"},
+   {n:"Buffalo Chicken Ranch Pull-apart Bread",d:"Cream cheese, Parmesan ranch, fried onions",t:["new","food"],e:"Nov 12"},
+   {n:"Sour Apple Cotton Candy",d:"Green apple",t:["new","food"],e:"Nov 12"},
+   {n:"Goo Goo Muck Hazy IPA",d:"Fall Brewing Company",t:["booze"],e:"Nov 12"},
+   {n:"Seaborn Boo Raspberry Margarita",d:"",t:["new","booze"],e:"Nov 12"}]}]},
+
+ {l:"Performance Corridor",s:[
+  {n:"Sonoma Terrace",m:"Through Nov 12 · Mobile order",i:[
+   {n:"Enegren Oktoberfest",d:"",t:["booze"],e:"Nov 12"}]}]}
+]},
+
+{p:"Downtown Disney",L:[
+ {l:"Coffee & sweets",s:[
+  {n:"Parkside Market Coffee",m:"Through Oct 31",i:[
+   {n:"Little Monster Brownie",d:"Vanilla frosting with a monster face",t:["new","food"],e:"Oct 31"},
+   {n:"Pumpkin Pie Cinnamon Roll",d:"Pumpkin spice cream cheese frosting, cookie crunch",t:["new","food"],e:"Oct 31"},
+   {n:"Tombstone Chocolate Trifle",d:"Coffee-soaked chocolate cake, tiramisu cream, dark chocolate shavings",t:["new","food"],e:"Oct 31"},
+   {n:"The Mystic Cauldron Latte",d:"Blackberry under purple cold foam, chocolate cookie crumbles",t:["new","drink"],e:"Oct 31"},
+   {n:"The Harvest Chai Latte",d:"Chai spices, caramel apple butter, cinnamon",t:["new","drink"],e:"Oct 31"},
+   {n:"The Pumpkin Slice Latte",d:"Pumpkin pie syrup, pumpkin cold foam, fall spice dust",t:["new","drink"],e:"Oct 31"},
+   {n:"The Sleeping Curse",d:"Hot apple cider with brown sugar syrup",t:["new","drink"],e:"Oct 31"}]},
+  {n:"California Churro",m:"Through Oct 31",i:[
+   {n:"Ube Matcha and Crème",d:"Matcha sugar, whipped cream, ube condensed milk",t:["new","food"],e:"Oct 31"}]},
+  {n:"Beignets Expressed",m:"Oct 1 – Oct 31 only",i:[
+   {n:"Caramel Apple Beignet",d:"Candied apple icing, caramel drizzle, spooky sprinkles",t:["food"],e:"Oct 31"}]},
+  {n:"Kayla's Cake",m:"Through Oct 31",i:[
+   {n:"Marshmallow Mummy Macaron",d:"Homemade marshmallow, dark chocolate ganache, candy eyeballs",t:["new","food"],e:"Oct 31"}]},
+  {n:"Wetzel's Pretzels",m:"Through Oct 31",i:[
+   {n:"Oreo Bitz",d:"Bitz with crème drizzle and cookie pieces",t:["food"],e:"Oct 31"}]},
+  {n:"GG's Chicken Shop",m:"Through Oct 31",i:[
+   {n:"Graveyard Dirt Pudding",d:"Chocolate pudding, Oreo crumble, gummy worms, tombstone cookie",t:["food"],e:"Oct 31"}]},
+  {n:"Seoul Sister",m:"Through Oct 31",i:[
+   {n:"Spooky Seoul Berry Bubble Lemonade",d:"Cherry lemonade with blueberry popping boba",t:["new","drink"],e:"Oct 31"}]}]},
+
+ {l:"Bars & restaurants",s:[
+  {n:"Vista Parkside Market",m:"Through Oct 31",i:[
+   {n:"Campfire Cream Soda",d:"Coke, vanilla cream, marshmallow syrup",t:["drink"],e:"Oct 31"},
+   {n:"Candy Corn Cream Soda",d:"Orange soda, vanilla cream, marshmallow syrup",t:["drink"],e:"Oct 31"},
+   {n:"Horned Shadow Elixir",d:"Tequila, blood orange, honey, lime",t:["new","booze"],e:"Oct 31"},
+   {n:"All Hallow's Eve",d:"Mango-cherry whiskey, bourbon, Thai tea cacao vermouth, bitters",t:["booze"],e:"Oct 31"},
+   {n:"Sleepy Hollow",d:"Dark rum, amaretto, chai syrup, lemon, vanilla, bitters",t:["booze"],e:"Oct 31"},
+   {n:"The Raven's Revenge",d:"Chili cacao vodka, espresso, vanilla, coffee liqueur",t:["booze"],e:"Oct 31"}]},
+  {n:"Ballast Point Brewing Co.",m:"Sept 5 – Oct 31",i:[
+   {n:"Ghostly Glazed Pork Belly",d:"Ghost pepper-pomegranate glaze, miso butter acorn squash",t:["new","food"],e:"Oct 31"},
+   {n:"Haunted Harvest Quesadilla",d:"Huitlacoche ricotta, Oaxaca cheese, salsa macha, spinach tortilla",t:["new","food"],e:"Oct 31"},
+   {n:"Spooky Tiramisu",d:"Espresso martini-soaked ladyfingers, mascarpone, raspberry coulis",t:["new","food"],e:"Oct 31"},
+   {n:"The Cursed Apple",d:"Frozen apple cider slush with a cinnamon whiskey float",t:["new","booze"],e:"Oct 31"}]},
+  {n:"Black Tap Craft Burgers & Shakes",m:"Oct 20 – Nov 2 only",i:[
+   {n:"Trick or Treat Shake Flight",d:"",t:["drink"],e:"Nov 2"},
+   {n:"Kit Kat Shake",d:"Chocolate rim rolled in wafer crumbs, whipped cream, chocolate drizzle",t:["new","drink"],e:"Nov 2"},
+   {n:"Skittles Shake",d:"Vanilla rim rolled in Skittles and gummy clusters, strawberry drizzle",t:["new","drink"],e:"Nov 2"},
+   {n:"Sweet and Salty Shake",d:"Peanut butter shake, M&M rim, pretzel rods, peanut butter cups",t:["new","drink"],e:"Nov 2"}]},
+  {n:"Naples Ristorante e Bar",m:"Through Oct 31",i:[
+   {n:"Pumpkin Blooderscotch Cannolis",d:"Pumpkin butterscotch cream, red caramel drizzle, sugar knife",t:["food"],e:"Oct 31"},
+   {n:"Pumpkin Mule",d:"Pumpkin butter, spiced rum, lemon, ginger beer",t:["booze"],e:"Oct 31"}]},
+  {n:"Céntrico",m:"Through Oct 31",i:[
+   {n:"Pumpkin Flan",d:"Pumpkin and spices",t:["food"],e:"Oct 31"},
+   {n:"La Calavera Roja",d:"Reposado, lime, cranberry, spiced apple syrup",t:["booze"],e:"Oct 31"}]},
+  {n:"Paseo",m:"Through Oct 31",i:[
+   {n:"Pumpkin Dulce",d:"Spiced sponge, maple ganache, walnut crumble, pumpkin mousse, rosemary ice cream",t:["food"],e:"Oct 31"},
+   {n:"La Calavera Roja",d:"Reposado, lime, cranberry, spiced apple syrup",t:["booze"],e:"Oct 31"}]},
+  {n:"Splitsville Luxury Lanes",m:"Through Oct 31",i:[
+   {n:"Midnight Roll",d:"Avocado, salmon, cream cheese in black rice, masago, chipotle mayo",t:["food"],e:"Oct 31"},
+   {n:"Black Spider",d:"Blackberry liqueur, vodka or gin, cranberry, lime, sugar rim",t:["booze"],e:"Oct 31"},
+   {n:"Witches' Brew",d:"Melon liqueur, vodka, blue curaçao, ginger soda",t:["booze"],e:"Oct 31"}]}]}
+]},
+
+{p:"Hotels",L:[
+ {l:"Disneyland Hotel",s:[
+  {n:"Trader Sam's Enchanted Tiki Bar",m:"Cups served at the Outdoor Patio Bar, limit 2 per person",i:[
+   {n:"DOLE Whip Pineapple-Orange with Guava",d:"In a Nightmare Before Christmas Haunted Mansion Holiday cup, while supplies last",t:["drink"],e:"Jan 6"},
+   {n:"DOLE Whip Tropical Float",d:"Pineapple juice topped with soft serve, in the Holiday cup",t:["drink"],e:"Jan 6"},
+   {n:"DOLE Whip Tropical Float with Rum",d:"With coconut rum, Holiday cup served on the side",t:["booze"],e:"Jan 6"},
+   {n:"This Chilling Challenge",d:"Smith & Cross rum, pineapple, lime, honey, ginger, bitters",t:["new","booze"],e:"Nov 12"},
+   {n:"Cloaked Specter",d:"Coconut rum, pineapple, lime, falernum, cinnamon, bitters",t:["booze"],e:"Nov 12"},
+   {n:"Scarecrow Old Fashioned",d:"Buffalo Trace, allspice dram, falernum, bitters",t:["booze"],e:"Nov 12"}]},
+  {n:"Broken Spell Lounge",m:"Through Nov 12",i:[
+   {n:"The Dark Heart",d:"Hennessy VS, Plymouth gin, crème de cacao, chocolate and lemon bitters",t:["new","booze"],e:"Nov 12"},
+   {n:"Three Witches",d:"Casamigos Reposado, espresso, Licor 43, Mr. Black, orgeat",t:["new","booze"],e:"Nov 12"},
+   {n:"Green-eyed Sceptre",d:"Absinthe, prosecco, spiced pear, cinnamon syrup, lime, blackberry",t:["booze"],e:"Nov 12"}]},
+  {n:"The Coffee House",m:"Through Nov 12 · Mobile order · Lattes hot or iced",i:[
+   {n:"Mickey Bat Cookie",d:"",t:["food"],e:"Nov 12"},
+   {n:"Banana Bread Latte",d:"",t:["new","drink"],e:"Nov 12"},
+   {n:"Butter Pecan Latte",d:"",t:["new","drink"],e:"Nov 12"},
+   {n:"Maple Sea Salt Latte",d:"",t:["new","drink"],e:"Nov 12"},
+   {n:"Hot Caramel Apple Spice",d:"",t:["new","drink"],e:"Nov 12"},
+   {n:"Pumpkin Spice Latte",d:"",t:["drink"],e:"Nov 12"}]},
+  {n:"Goofy's Kitchen",m:"Through Oct 31 · Reservations recommended",i:[
+   {n:"Pumpkin Spice Latte",d:"Hot or iced",t:["drink"],e:"Oct 31"},
+   {n:"Chocolate Espresso Martini",d:"Tito's, Mr. Black, crème de cacao, chocolate syrup",t:["new","booze"],e:"Oct 31"},
+   {n:"Foolish Margarita",d:"Patrón Silver, Chambord, agave, lime",t:["new","booze"],e:"Oct 31"},
+   {n:"Spicy Pineapple Margarita",d:"Código Reposado, habanero-lime syrup, pineapple, chamoy rim",t:["new","booze"],e:"Oct 31"},
+   {n:"Witching Hour Spritz",d:"Tito's, Midori, pineapple, Sprite",t:["new","booze"],e:"Oct 31"},
+   {n:"Night Owl Pumpkin Ale",d:"Elysian Brewing",t:["booze"],e:"Oct 31"}]}]},
+
+ {l:"Grand Californian",s:[
+  {n:"Great Hall Cart",m:"Through Oct 31",i:[
+   {n:"Sally Pumpkin Spiced Cupcake",d:"Devil's food chocolate chip cake, coffee fudge, pumpkin spice buttercream",t:["new","food"],e:"Oct 31"},
+   {n:"The Mayor Chocolate Cake Pop",d:"Hand-dipped white chocolate and sprinkles",t:["new","food"],e:"Oct 31"},
+   {n:"Oogie Boogie Crisped Rice Treat",d:"Cookies and cream",t:["new","food"],e:"Oct 31"},
+   {n:"Scary Wreath Macaron",d:"Pumpkin cheesecake with a chocolate fudge center",t:["new","food"],e:"Oct 31"},
+   {n:"Jack Skellington Linzer Cookie",d:"Decorated sugar cookie",t:["food"],e:"Oct 31"},
+   {n:"Gingerbread Skeleton Cookie",d:"",t:["food"],e:"Oct 31"},
+   {n:"Gooey Peanut Butter Cookie",d:"",t:["food"],e:"Oct 31"},
+   {n:"Pecan Caramel Crunch Cookie",d:"Giant cookie with caramel bits, toasted pecans, toffee",t:["food"],e:"Oct 31"},
+   {n:"Buttery Pumpkin Bread",d:"Sprinkles and pumpkin spiced icing",t:["food"],e:"Oct 31"},
+   {n:"Chocolate Chip Cookie Cup with Milk",d:"",t:["drink"],e:"Oct 31"},
+   {n:"Chocolate Chip Cookie Shot with Liqueur",d:"",t:["booze"],e:"Oct 31"}]},
+  {n:"GCH Craftsman Grill",m:"Through Nov 12",i:[
+   {n:"Mickey Vampire Donut",d:"",t:["food"],e:"Nov 12"},
+   {n:"Candy Bar Donut",d:"",t:["food"],e:"Nov 12"},
+   {n:"Minnie Halloween Cupcake",d:"",t:["food"],e:"Nov 12"},
+   {n:"Pumpkin Muffin",d:"",t:["food"],e:"Nov 12"}]},
+  {n:"GCH Craftsman Bar",m:"Through Nov 12 · Reservations recommended",i:[
+   {n:"Recuérdame Cocktail",d:"Casa Amigos Reposado, passion fruit, hibiscus liqueur, lemon",t:["booze"],e:"Nov 12"}]},
+  {n:"Hearthstone Lounge",m:"Through Nov 12",i:[
+   {n:"Recuérdame Cocktail",d:"Casa Amigos Reposado, passion fruit, hibiscus liqueur, lemon",t:["booze"],e:"Nov 12"}]},
+  {n:"Storytellers Cafe",m:"Through Nov 12 · Reservations recommended",i:[
+   {n:"Recuérdame Cocktail",d:"Casa Amigos Reposado, passion fruit, hibiscus liqueur, lemon",t:["booze"],e:"Nov 12"}]}]},
+
+ {l:"Pixar Place Hotel",s:[
+  {n:"The Sketch Pad Cafe",m:"Through Oct 31",i:[
+   {n:"Caramel Apple Overnight Oats",d:"",t:["new","food"],e:"Oct 31"},
+   {n:"Dulce de Leche Linzer Cookie",d:"",t:["new","food"],e:"Oct 31"},
+   {n:"Nutella Linzer Cookie",d:"",t:["new","food"],e:"Oct 31"},
+   {n:"Tiramisu Latte",d:"",t:["new","drink"],e:"Oct 31"},
+   {n:"Pumpkin Spice Latte",d:"",t:["new","drink"],e:"Oct 31"}]}]}
+]},
+
+{p:"Candy Shops",L:[
+ {l:"Candy Palace · Pooh Corner · Trolley Treats · Bing Bong's · Wonderful World of Sweets",s:[
+  {n:"Same case at every shop",m:"Through Oct 31 · While supplies last",i:[
+   {n:"Mickey Ghost Cake Pop",d:"Vanilla cake pop in white chocolate with black chocolate detail",t:["new","food"],e:"Oct 31"},
+   {n:"Mickey Swirl Marshmallow Pop",d:"Orange white chocolate with purple drizzle",t:["new","food"],e:"Oct 31"},
+   {n:"Minnie Halloween Caramel Apple",d:"Marshmallow ears, milk chocolate, orange sugar, purple M&M's, bow",t:["new","food"],e:"Oct 31"},
+   {n:"Jack Skellington Caramel Apple",d:"Caramel and white chocolate with black detail — not at Bing Bong's",t:["food"],e:"Oct 31"},
+   {n:"Minnie Skeleton Caramel Apple",d:"Black sugar, white M&M's, black and white bow — not at Bing Bong's",t:["food"],e:"Oct 31"},
+   {n:"Evil Caramel Apple",d:"Caramel and red white chocolate with green drizzle",t:["food"],e:"Oct 31"},
+   {n:"Mickey Spiderweb Cereal Treat",d:"Cookies and cream, black chocolate, white chocolate web",t:["food"],e:"Oct 31"},
+   {n:"Halloween Marshmallow Wand",d:"Milk chocolate with orange and purple drizzle",t:["food"],e:"Oct 31"},
+   {n:"Minnie Chocolate Cake Pop",d:"Milk chocolate with an orange bow",t:["food"],e:"Oct 31"}]}]}
+]}
+];
+
+document.documentElement.classList.remove('nojs');
+const out=document.getElementById('out'),nav=document.getElementById('nav'),
+      q=document.getElementById('q'),tally=document.getElementById('tally');
+const done=new Set(), want=new Set(); let active=new Set();
+let viewing=null;   /* a borrowed list being previewed; never saved */
+
+const KEY='dlr-halloween-2026', WKEY=KEY+'-want';
+let store=null;
+try{ localStorage.setItem(KEY+'-t','1'); localStorage.removeItem(KEY+'-t'); store=localStorage; }catch(e){}
+if(store){
+  try{ (JSON.parse(store.getItem(KEY)||'[]')).forEach(k=>done.add(k)); }catch(e){}
+  try{ (JSON.parse(store.getItem(WKEY)||'[]')).forEach(k=>want.add(k)); }catch(e){}
+}
+function save(){ if(!store)return; try{ store.setItem(KEY,JSON.stringify([...done])); }catch(e){} }
+function saveWant(){ if(!store)return; try{ store.setItem(WKEY,JSON.stringify([...want])); }catch(e){} }
+function countUp(){ tally.textContent=`${want.size} want · ${done.size} tried`; }
+
+let toastT;
+function toast(msg){
+  const el=document.getElementById('toast');
+  el.textContent=msg; el.classList.add('show');
+  clearTimeout(toastT); toastT=setTimeout(()=>el.classList.remove('show'),1900);
+}
+const slug=s=>s.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+nav.innerHTML=D.map(p=>`<a href="#${slug(p.p)}">${esc(p.p)}</a>`).join('');
+
+let total=0;D.forEach(p=>p.L.forEach(l=>l.s.forEach(s=>total+=s.i.length)));
+
+/* Stable item order drives the share link. Every item's position is its bit
+   index; FP fingerprints that order so a link made before a data edit is
+   rejected instead of silently starring the wrong treats. */
+const IDX=[];
+D.forEach(p=>p.L.forEach(l=>l.s.forEach(sp=>sp.i.forEach(it=>IDX.push(sp.n+'|'+it.n)))));
+const POS=new Map(IDX.map((k,i)=>[k,i]));
+const FP=(()=>{
+  let h=2166136261; const src=IDX.join('\n');
+  for(let i=0;i<src.length;i++){ h^=src.charCodeAt(i); h=Math.imul(h,16777619); }
+  return ((h>>>0).toString(36)+'0000').slice(0,5);
+})();
+
+function encodeList(){
+  const b=new Uint8Array(Math.ceil(IDX.length/8));
+  want.forEach(k=>{ const i=POS.get(k); if(i!==undefined) b[i>>3]|=1<<(i&7); });
+  let bin=''; for(const v of b) bin+=String.fromCharCode(v);
+  return btoa(bin).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+}
+function decodeList(str){
+  let t=str.replace(/-/g,'+').replace(/_/g,'/');
+  while(t.length%4)t+='=';
+  let bin; try{ bin=atob(t); }catch(e){ return null; }
+  const out=[];
+  for(let i=0;i<IDX.length;i++){
+    const c=bin.charCodeAt(i>>3);
+    if(!isNaN(c)&&(c>>(i&7))&1) out.push(IDX[i]);
+  }
+  return out;
+}
+function shareURL(mode){
+  return location.origin+location.pathname+'#'+(mode==='view'?'v':'l')+
+         '='+FP+'.'+encodeList();
+}
+
+function match(it,spot,land,term){
+  if(active.has('new')&&!it.t.includes('new'))return false;
+  if(active.has('gone')&&it.e!=='Oct 31')return false;
+  const types=['food','drink','booze'].filter(t=>active.has(t));
+  if(types.length&&!types.some(t=>it.t.includes(t)))return false;
+  if(active.has('todo')&&done.has(spot+'|'+it.n))return false;
+  if(active.has('want')&&!want.has(spot+'|'+it.n))return false;
+  if(viewing&&!viewing.has(spot+'|'+it.n))return false;
+  if(term){
+    const hay=(it.n+' '+it.d+' '+spot+' '+land).toLowerCase();
+    if(!hay.includes(term))return false;
+  }
+  return true;
+}
+
+function render(){
+  const term=q.value.trim().toLowerCase();
+  let html='',shown=0;
+  for(const p of D){
+    let ph='';
+    for(const land of p.L){
+      let lh='';
+      for(const sp of land.s){
+        const hits=sp.i.filter(it=>match(it,sp.n,land.l,term));
+        if(!hits.length)continue;
+        shown+=hits.length;
+        lh+=`<div class="spot"><h3>${esc(sp.n)}</h3>`+
+            (sp.m?`<p class="meta">${esc(sp.m)}</p>`:'<p class="meta"></p>')+'<ul>';
+        for(const it of hits){
+          const key=sp.n+'|'+it.n;
+          const tags=[];
+          if(it.t.includes('new'))tags.push('<span class="t new">New</span>');
+          if(it.t.includes('booze'))tags.push('<span class="t bar">21+</span>');
+          tags.push(`<span class="t ${it.e==='Oct 31'||it.e==='Nov 2'?'gone':''}">ends ${it.e}</span>`);
+          const cls=(done.has(key)?'on ':'')+(want.has(key)?'want':'');
+          lh+=`<li data-k="${esc(key)}" class="${cls.trim()}">`+
+              `<span class="box">✓</span><span class="txt"><span class="n">${esc(it.n)}</span>`+
+              (it.d?`<span class="d">${esc(it.d)}</span>`:'')+
+              `<span class="tags">${tags.join('')}</span></span>`+
+              `<button class="star" aria-pressed="${want.has(key)}" aria-label="Add ${esc(it.n)} to my list">`+
+              `${want.has(key)?'★':'☆'}</button></li>`;
+        }
+        lh+='</ul></div>';
+      }
+      if(lh)ph+=`<div class="land">${esc(land.l)}</div>`+lh;
+    }
+    if(ph)html+=`<h2 class="park" id="${slug(p.p)}">${esc(p.p)}</h2>`+ph;
+  }
+  const blank=active.has('want')&&!want.size&&!term
+    ? `<p class="empty">Your list is empty. Tap the star beside anything you want to try, then come back here.</p>`
+    : `<p class="empty">Nothing matches those filters. Clear the search or turn a filter off.</p>`;
+  out.innerHTML=html||blank;
+  countUp();
+}
+
+out.addEventListener('click',e=>{
+  const li=e.target.closest('li');if(!li)return;
+  const k=li.dataset.k;
+  const star=e.target.closest('.star');
+  if(star){
+    const on=!want.has(k);
+    on?want.add(k):want.delete(k);
+    li.classList.toggle('want',on);
+    star.textContent=on?'★':'☆';
+    star.setAttribute('aria-pressed',String(on));
+    countUp(); saveWant();
+    if(active.has('want'))render();
+    return;
+  }
+  done.has(k)?done.delete(k):done.add(k);
+  li.classList.toggle('on');
+  countUp(); save();
+  if(active.has('todo'))render();
+});
+
+async function sendLink(mode){
+  const url=shareURL(mode), n=want.size;
+  const label=mode==='view'
+    ? `My list \u2014 ${n} treat${n===1?'':'s'} to try (view only)`
+    : `My list \u2014 ${n} treat${n===1?'':'s'} to try`;
+  if(navigator.share){
+    try{ await navigator.share({title:'Halloween Time Treats',text:label,url}); return; }
+    catch(e){ if(e.name==='AbortError')return; }
+  }
+  try{ await navigator.clipboard.writeText(url); toast('Link copied'); }
+  catch(e){ prompt('Copy this link:',url); }
+}
+
+document.getElementById('share').addEventListener('click',()=>{
+  if(!want.size){ toast('Star a few treats first'); return; }
+  const bn=document.getElementById('banner');
+  bn.innerHTML='<div class="banner"><p>How should they get your list?</p>'+
+    '<div class="row"><button id="sfull">They can add to it</button>'+
+    '<button class="alt" id="sview">View only</button>'+
+    '<button class="alt" id="scan">Cancel</button></div></div>';
+  const shut=()=>{ bn.innerHTML=''; };
+  document.getElementById('sfull').onclick=()=>{ shut(); sendLink('edit'); };
+  document.getElementById('sview').onclick=()=>{ shut(); sendLink('view'); };
+  document.getElementById('scan').onclick=shut;
+});
+
+/* A shared link arrives as #l=<fingerprint>.<bits> to merge, or
+   #v=... to look at without touching your own list. */
+(function readLink(){
+  const m=/[#&]([lv])=([^&]+)/.exec(location.hash);
+  if(!m)return;
+  const viewOnly=m[1]==='v';
+  const clean=()=>{ try{ history.replaceState(null,'',location.pathname+location.search); }
+                    catch(e){ location.hash=''; } };
+  const raw=m[2], dot=raw.indexOf('.');
+  const fp=dot<0?'':raw.slice(0,dot), payload=dot<0?raw:raw.slice(dot+1);
+  const bn=document.getElementById('banner');
+
+  if(fp!==FP){
+    bn.innerHTML='<div class="banner stale"><p>That link was made from an earlier '+
+      'version of this guide, so its picks no longer line up with the current list. '+
+      'Ask whoever sent it to share a fresh one.</p></div>';
+    clean(); return;
+  }
+  const picks=decodeList(payload);
+  if(!picks||!picks.length){
+    bn.innerHTML='<div class="banner stale"><p>That link didn\u2019t contain a readable '+
+      'list. Ask whoever sent it to share it again.</p></div>';
+    clean(); return;
+  }
+  const label=`${picks.length} treat${picks.length===1?'':'s'}`;
+
+  if(viewOnly){
+    viewing=new Set(picks);
+    bn.innerHTML='<div class="banner"><p>You\u2019re looking at someone else\u2019s list of '+
+      label+'. Nothing here is saved to yours \u2014 star anything you want to keep.</p>'+
+      '<div class="row"><button id="vkeep">Keep all '+picks.length+'</button>'+
+      '<button class="alt" id="vexit">Back to the full guide</button></div></div>';
+    render(); clean();
+    document.getElementById('vkeep').onclick=()=>{
+      picks.forEach(k=>want.add(k)); saveWant();
+      viewing=null; bn.innerHTML=''; render(); toast(`Added ${label} to your list`);
+    };
+    document.getElementById('vexit').onclick=()=>{
+      viewing=null; bn.innerHTML=''; render();
+    };
+    return;
+  }
+
+  if(!want.size){
+    picks.forEach(k=>want.add(k));
+    saveWant(); render(); clean();
+    toast(`Added ${label} from a shared list`);
+    return;
+  }
+
+  const fresh=picks.filter(k=>!want.has(k)).length;
+  bn.innerHTML='<div class="banner"><p>Someone shared a list of '+label+
+    ' with you \u2014 '+(fresh?fresh+' not already on yours':'all of them already on yours')+
+    '. You currently have '+want.size+' starred.</p>'+
+    '<div class="row"><button id="lmerge">Add to my list</button>'+
+    '<button class="alt" id="lswap">Replace my list</button>'+
+    '<button class="alt" id="lskip">Ignore</button></div></div>';
+  const close=()=>{ bn.innerHTML=''; clean(); };
+  document.getElementById('lmerge').onclick=()=>{
+    picks.forEach(k=>want.add(k)); saveWant(); render(); close(); toast('Lists combined');
+  };
+  document.getElementById('lswap').onclick=()=>{
+    want.clear(); picks.forEach(k=>want.add(k)); saveWant(); render(); close();
+    toast('List replaced');
+  };
+  document.getElementById('lskip').onclick=close;
+})();
+
+/* ---- Wishlist PDF ------------------------------------------------------
+   Writes a real PDF by hand. No library and no browser print dialog, so the
+   page breaks land where we put them. Helvetica is one of the 14 fonts every
+   reader ships with, so nothing needs embedding; the accented names in the
+   data (Café, Märzen, Cocina) all live inside WinAnsiEncoding.            */
+
+const WP=[191,222,238,260,278,280,333,334,350,355,365,370,389,400,469,474,500,537,556,584,611,667,722,737,778,833,834,889,944,975,1000,1015],WA='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdef',
+  WR='EEJSSbVAGGMTEGEESSSSSSSSSSEETTTSfVVWWVUYWEQVSZWYVYWVUWVcVVUEEEOSGSSQSSESSBBQBZSSSSGQESQWQQQHDHTISIBSGeSSGeVGeIUIIBBGGISeGeQGcIQVEGSSSSDSGXLSTGXGNTGGGSREGGKSaaaUVVVVVVeWVVVVEEEEWWYYYYYTYWWWWVVUSSSSSSbQSSSSEEEESSSSSSSTUSSSSQSQ',
+  WB='EGPSSbWCGGMTEGEESSSSSSSSSSGGTTTUdWWWWVUYWESWUZWYVYWVUWVcVVUGEGTSGSUSUSGUUEESEbUUUUMSGUSYSSQMFMTISIESQeSSGeVGeIUIIEEQQISeGeSGcIQVEGSSSSFSGXLSTGXGNTGGGUSEGGKSaaaUWWWWWWeWVVVVEEEEWWYYYYYTYWWWWVVUSSSSSSbSSSSSEEEEUUUUUUUTUUUUUSUS';
+
+/* UTF-16 to WinAnsi. Latin-1 passes straight through; the handful of smart
+   punctuation characters in the data sit in WinAnsi's 0x80 block. */
+const WIN={0x2018:145,0x2019:146,0x201C:147,0x201D:148,0x2022:149,0x2013:150,0x2014:151,0x2026:133};
+function wbytes(str){
+  const o=[];
+  for(const ch of String(str)){
+    const c=ch.codePointAt(0);
+    o.push(c<256?c:(WIN[c]||63));
+  }
+  return o;
+}
+function cw(b,bold){
+  if(b<32||b>255)return 500;
+  return WP[WA.indexOf((bold?WB:WR)[b-32])];
+}
+function tw(str,size,bold){
+  let n=0; for(const b of wbytes(str))n+=cw(b,bold);
+  return n*size/1000;
+}
+function pstr(str){
+  let o='';
+  for(const b of wbytes(str)){
+    if(b===40||b===41||b===92)o+='\\'+String.fromCharCode(b);
+    else if(b<32||b>126)o+='\\'+b.toString(8).padStart(3,'0');
+    else o+=String.fromCharCode(b);
+  }
+  return '('+o+')';
+}
+function wrap(str,size,bold,max){
+  const out=[]; let line='';
+  for(const w of String(str).split(/\s+/)){
+    const t=line?line+' '+w:w;
+    if(tw(t,size,bold)<=max||!line)line=t; else{out.push(line);line=w;}
+  }
+  if(line)out.push(line);
+  return out;
+}
+
+const PG={w:612,h:792,m:54,gut:18,foot:20};
+PG.col=(PG.w-PG.m*2-PG.gut)/2;
+
+/* h is the vertical space a row consumes; asc is the drop from the top of
+   that space down to the text baseline. */
+const ROW={
+  park:{h:20,asc:13}, land:{h:14.5,asc:9.5}, spot:{h:11.5,asc:9.5},
+  meta:{h:8.6,asc:7.3}, item:{h:11.2,asc:9}
+};
+
+function wishRows(){
+  const rows=[];
+  const push=(k,t,extra)=>rows.push(Object.assign({k,t},ROW[k],extra||{}));
+  for(const p of D){
+    const pStart=rows.length;
+    for(const land of p.L){
+      const lStart=rows.length;
+      for(const sp of land.s){
+        const hits=sp.i.filter(it=>want.has(sp.n+'|'+it.n));
+        if(!hits.length)continue;
+        wrap(sp.n,9.5,true,PG.col).forEach((l,i)=>push('spot',l,{cont:i>0}));
+        if(sp.m)wrap(sp.m,7.3,false,PG.col).forEach(l=>push('meta',l));
+        hits.forEach((it,n)=>{
+          const tail=' ends '+it.e;
+          const room=PG.col-13-tw(tail,7.3,false)-4;
+          const ls=wrap(it.n,9.5,false,room);
+          ls.forEach((l,i)=>push('item',l,{
+            box:i===0, first:n===0&&i===0, cont:i>0,
+            tail:i===ls.length-1?tail:null,
+            tailx:13+tw(l,9.5,false)+4
+          }));
+        });
+        push('gap','',{h:5,asc:0});
+      }
+      if(rows.length>lStart){
+        const lr=wrap(land.l,8,true,PG.col).map((l,i)=>
+          Object.assign({k:'land',t:l},ROW.land,{cont:i>0}));
+        rows.splice(lStart,0,...lr);
+      }
+    }
+    if(rows.length>pStart)
+      rows.splice(pStart,0,Object.assign({k:'park',t:p.p},ROW.park));
+  }
+
+  /* A heading may only end a column if real content follows it there.
+     reserve = everything from this row down to the next item line. */
+  let run=0;
+  for(let i=rows.length-1;i>=0;i--){
+    rows[i].reserve=run;
+    run = rows[i].k==='item' ? 0 : run+rows[i].h;
+  }
+  return rows;
+}
+
+function wishPDF(){
+  const rows=wishRows();
+  const top=PG.h-PG.m, bot=PG.m+PG.foot;
+  const pages=[]; let pg=null,col=0,y=0,first=true;
+
+  function newPage(){
+    pg={items:[]}; pages.push(pg); col=0; y=top;
+    if(first){ pg.items.push({k:'title',x:PG.m,y:y-16}); y-=48; first=false; }
+    pg.colTop=y;
+  }
+  function nextCol(){ if(col===0){col=1;y=pg.colTop;} else newPage(); }
+  newPage();
+
+  for(const r of rows){
+    const breakable = !r.cont && (r.k==='park'||r.k==='land'||r.k==='spot'||
+                                  (r.k==='item'&&!r.first));
+    if(breakable && y-r.h-r.reserve<bot && y<pg.colTop) nextCol();
+    if(r.k==='gap'){ y-=r.h; continue; }
+    pg.items.push(Object.assign({},r,{x:PG.m+col*(PG.col+PG.gut),y:y-r.asc}));
+    y-=r.h;
+  }
+
+  const n=want.size;
+  const sub='Disneyland Resort \u00b7 '+n+' treat'+(n===1?'':'s')+' to try';
+  const streams=pages.map((page,pi)=>{
+    const c=[];
+    const T=(t,x,ty,size,bold,g)=>c.push('BT /'+(bold?'F2':'F1')+' '+size+' Tf '+
+      (g===undefined?0:g)+' g '+x.toFixed(2)+' '+ty.toFixed(2)+' Td '+pstr(t)+' Tj ET');
+    const rule=(x,ry,w,lw,g)=>c.push(lw+' w '+g+' G '+x.toFixed(2)+' '+ry.toFixed(2)+
+      ' m '+(x+w).toFixed(2)+' '+ry.toFixed(2)+' l S');
+    for(const it of page.items){
+      if(it.k==='title'){
+        T('Halloween Time Treats \u2014 My List',it.x,it.y,16,true);
+        T(sub,it.x,it.y-13,9,false,.42);
+        rule(PG.m,it.y-22,PG.w-PG.m*2,.6,'0');
+      }
+      else if(it.k==='park'){ T(it.t,it.x,it.y,11.5,true); rule(it.x,it.y-4,PG.col,.8,'0'); }
+      else if(it.k==='land') T(it.t,it.x,it.y,8,true,.45);
+      else if(it.k==='spot') T(it.t,it.x,it.y,9.5,true);
+      else if(it.k==='meta') T(it.t,it.x,it.y,7.3,false,.5);
+      else if(it.k==='item'){
+        if(it.box)c.push('0.7 w 0.4 G '+it.x.toFixed(2)+' '+(it.y-.8).toFixed(2)+' 8 8 re S');
+        T(it.t,it.x+13,it.y,9.5,false);
+        if(it.tail)T(it.tail,it.x+it.tailx,it.y,7.3,false,.55);
+      }
+    }
+    T('Halloween Time 2026 \u00b7 my list',PG.m,PG.m-2,7.3,false,.55);
+    const pn='Page '+(pi+1)+' of '+pages.length;
+    T(pn,PG.w-PG.m-tw(pn,7.3,false),PG.m-2,7.3,false,.55);
+    return c.join('\n');
+  });
+
+  const obj=[]; const add=s=>{obj.push(s);return obj.length;};
+  const fR=add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
+  const fB=add('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+  const pagesId=obj.length+1+streams.length*2; const kids=[];
+  streams.forEach(st=>{
+    const sid=add('<< /Length '+st.length+' >>\nstream\n'+st+'\nendstream');
+    kids.push(add('<< /Type /Page /Parent '+pagesId+' 0 R /MediaBox [0 0 '+PG.w+' '+PG.h+
+      '] /Resources << /Font << /F1 '+fR+' 0 R /F2 '+fB+' 0 R >> >> /Contents '+sid+' 0 R >>'));
+  });
+  add('<< /Type /Pages /Kids ['+kids.map(k=>k+' 0 R').join(' ')+'] /Count '+kids.length+' >>');
+  const cat=add('<< /Type /Catalog /Pages '+pagesId+' 0 R >>');
+  const inf=add('<< /Title (Halloween Time Treats \\055 My List) /Creator (Halloween Time Treat Guide) >>');
+
+  let out='%PDF-1.4\n'; const offs=[];
+  obj.forEach((o,i)=>{ offs.push(out.length); out+=(i+1)+' 0 obj\n'+o+'\nendobj\n'; });
+  const xref=out.length;
+  out+='xref\n0 '+(obj.length+1)+'\n0000000000 65535 f \n';
+  offs.forEach(o=>out+=String(o).padStart(10,'0')+' 00000 n \n');
+  out+='trailer\n<< /Size '+(obj.length+1)+' /Root '+cat+' 0 R /Info '+inf+
+       ' 0 R >>\nstartxref\n'+xref+'\n%%EOF';
+
+  const bytes=new Uint8Array(out.length);
+  for(let i=0;i<out.length;i++)bytes[i]=out.charCodeAt(i)&0xff;
+  return bytes;
+}
+
+function pdfName(){
+  const n=want.size;
+  return 'halloween-time-my-list-'+n+'-treat'+(n===1?'':'s')+'.pdf';
+}
+document.getElementById('print').addEventListener('click',async()=>{
+  if(!want.size){ toast('Star a few treats first'); return; }
+  let bytes;
+  try{ bytes=wishPDF(); }
+  catch(e){ toast('Could not build the PDF'); return; }
+  const file=new Blob([bytes],{type:'application/pdf'});
+  const name=pdfName();
+  /* On a phone the share sheet is the useful destination — it drops the
+     file straight into Messages. Fall back to a plain download elsewhere. */
+  if(navigator.canShare){
+    try{
+      const f=new File([file],name,{type:'application/pdf'});
+      if(navigator.canShare({files:[f]})){
+        await navigator.share({files:[f],title:'Halloween Time — My List'});
+        return;
+      }
+    }catch(e){ if(e&&e.name==='AbortError')return; }
+  }
+  try{
+    const url=URL.createObjectURL(file);
+    const a=document.createElement('a');
+    a.href=url; a.download=name; a.rel='noopener';
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(()=>URL.revokeObjectURL(url),8000);
+    toast('PDF saved');
+  }catch(e){ toast('Could not save the PDF'); }
+});
+
+document.getElementById('reset').addEventListener('click',()=>{
+  if(!done.size&&!want.size){ toast('Nothing to clear'); return; }
+  const bits=[];
+  if(want.size)bits.push(`${want.size} starred`);
+  if(done.size)bits.push(`${done.size} checked off`);
+  if(!confirm(`Clear ${bits.join(' and ')}?`))return;
+  done.clear(); want.clear(); save(); saveWant(); render(); toast('Cleared');
+});
+document.querySelectorAll('.chip').forEach(c=>c.addEventListener('click',()=>{
+  const f=c.dataset.f;
+  if(active.has(f)){active.delete(f);c.setAttribute('aria-pressed','false');}
+  else{active.add(f);c.setAttribute('aria-pressed','true');}
+  render();
+}));
+q.addEventListener('input',render);
+render();
+</script>
+</body>
+</html>

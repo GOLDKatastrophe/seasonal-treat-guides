@@ -1,0 +1,8 @@
+# Static-asset Worker. `wrangler deploy` uploads dist/ as-is.
+name = "treats"
+compatibility_date = "2026-11-01"
+
+[assets]
+directory = "./dist"
+not_found_handling = "none"
+html_handling = "auto-trailing-slash"

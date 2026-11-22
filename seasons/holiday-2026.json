@@ -1,0 +1,3180 @@
+{
+ "slug": "holiday-2026",
+ "title": "Holiday Treats",
+ "year": 2026,
+ "season": "Holidays at the Disneyland Resort",
+ "subtitle": "Disneyland Resort · Nov 13, 2026 – Jan 6, 2027",
+ "runs": {
+  "start": "2026-11-13",
+  "end": "2027-01-06"
+ },
+ "source": "Disney Eats Foodie Guide to Holidays at the Disneyland Resort 2026, Disney Parks Blog, Nov 4 2026, plus the Disney Eats Foodie Guide to Disney Festival of Holidays 2026",
+ "theme": {
+  "paper": "#0E1A16",
+  "card": "#16271F",
+  "ink": "#F2EFE4",
+  "soft": "#9FB3A4",
+  "rule": "#28463A",
+  "accent": "#ED5A66",
+  "accent2": "#F2C94C",
+  "done": "#6FCF97",
+  "want": "#F2C94C",
+  "warn": "#E8A33C"
+ },
+ "chips": [
+  {
+   "f": "new",
+   "label": "New this year"
+  },
+  {
+   "f": "short",
+   "label": "Short run"
+  },
+  {
+   "f": "food",
+   "label": "Food"
+  },
+  {
+   "f": "drink",
+   "label": "Drinks"
+  },
+  {
+   "f": "booze",
+   "label": "Alcohol"
+  },
+  {
+   "f": "novelty",
+   "label": "Buckets & sippers"
+  },
+  {
+   "f": "todo",
+   "label": "Not tried"
+  },
+  {
+   "f": "want",
+   "label": "My list"
+  }
+ ],
+ "parks": [
+  {
+   "p": "Disneyland Park",
+   "L": [
+    {
+     "l": "Main Street, U.S.A.",
+     "s": [
+      {
+       "n": "Carnation Café",
+       "m": "Reservations highly recommended",
+       "i": [
+        {
+         "n": "Holiday Dinner Special",
+         "d": "Petite New York medallions, herbed Yukon Gold mashed potatoes, haricots verts, onion straws, and cabernet demi-glace. Kids option available",
+         "t": [
+          "food",
+          "short"
+         ],
+         "e": "Jan 6",
+         "b": "Nov 27"
+        },
+        {
+         "n": "Pomegranate-Jalapeño-Ginger Spritzer",
+         "d": "Tito's Handmade Vodka, pomegranate, lime and jalapeño-ginger syrups topped with Sprite",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Eggnog Old Fashioned",
+         "d": "Buffalo Trace Bourbon, bitters, orange-infused brown sugar syrup, and candied orange peel topped with eggnog cream",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Churros near Town Square",
+       "i": [
+        {
+         "n": "Apple Pie Dip",
+         "d": "Cream cheese frosting topped with spiced apple compote",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Gibson Girl Ice Cream Parlor",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Peppermint Holiday Sundae",
+         "d": "Two scoops of peppermint ice cream with whipped cream, crushed peppermint, and crème-filled cookies in a candy-topped waffle bowl",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peppermint Ice Cream",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Jolly Holiday Bakery Cafe",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Roast Beef and Cheddar on a Hoagie Roll",
+         "d": "With tomato, lettuce, pickled red onion, and whole-grain mustard aïoli served with house-made chips",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Thanks-mas Sandwich",
+         "d": "Oven-roasted turkey breast, stuffing, gravy, and cranberry sauce on sourdough bread served with house-made chips",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Turkey Pot Pie Soup",
+         "d": "With tender turkey breast, potatoes, peas, and carrots topped with pie crust pieces",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Matterhorn Macaroon",
+         "d": "Coconut macaroon dipped in white chocolate and sprinkles",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Maple-Bacon Cinnamon Roll",
+         "d": "Cinnamon roll topped with maple cream cheese, glazed bacon, and pecans drizzled with white chocolate",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mickey Gingerbread",
+         "d": "Soft gingerbread Mickey cookie. Limit five per person, per transaction",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Milk and Cookies Tree-shaped Macaron",
+         "d": "Green macaron with milk buttercream filled with chocolate cookie dough",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Orange-Cranberry Loaf",
+         "d": "Topped with cream cheese glaze and dried cranberries drizzled with white chocolate",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Pumpkin Muffin",
+         "d": "Topped with cream cheese icing",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "S'mores Cheesecake",
+         "d": "Chocolate cheesecake with chocolate ganache topped with marshmallow mousse and a torched marshmallow",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Sticky Toffee Bundt Cake",
+         "d": "With toffee sauce topped with vanilla chantilly cream",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peppermint Mocha Cold Brew",
+         "d": "Topped with vanilla foam and crushed peppermint",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Little Red Wagon",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Spicy Chili-Cheese Corn Dog",
+         "d": "Classic corn dog topped with spicy chili, jalapeño-cilantro crema, cheddar, and hot cheese puff dust served with choice of Cuties Mandarin Oranges or potato chips",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Lychee-Strawberry Green Tea",
+         "d": "Infused with lychee and strawberry",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Market House",
+       "i": [
+        {
+         "n": "Churro Hand Tart",
+         "d": "Pastry tart filled with spiced cake and topped with cinnamon and sugar",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mickey Gingerbread",
+         "d": "Soft gingerbread Mickey cookie. Limit five per person, per transaction",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Plaza Inn",
+       "i": [
+        {
+         "n": "Gingerbread Cake",
+         "d": "With cream cheese filling and gingerbread crunch finished with buttercream, glaze, and a chocolate gingerbread cookie",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Pumpkin Pie",
+         "d": "Classic pumpkin pie with cinnamon chantilly cream",
+         "t": [
+          "food",
+          "short"
+         ],
+         "e": "Nov 30"
+        },
+        {
+         "n": "Apple Bundt Cake",
+         "d": "With caramelized apple filling topped with a cream cheese glaze, green mousse, chocolate ears, and a red bow",
+         "t": [
+          "food",
+          "short"
+         ],
+         "e": "Jan 6",
+         "b": "Dec 1"
+        }
+       ]
+      },
+      {
+       "n": "Refreshment Corner",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Philly Cheese Potato",
+         "d": "Baked potato filled with Italian sausage, thinly sliced steak, bell peppers, pepperoncini, cheese sauce, and cherry pepper spread",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Warm Spiced Apple Tea",
+         "d": "With hints of cinnamon and clove topped with vanilla cream foam",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Adventureland",
+     "s": [
+      {
+       "n": "Bengal Barbecue",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Vietnamese Iced Coffee",
+         "d": "With brown sugar spheres and cold foam",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "The Tropical Hideaway",
+       "i": [
+        {
+         "n": "Miso Soup",
+         "d": "Seaweed, tofu, and green onion",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Tiki Juice Bar",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "DOLE Whip Cone",
+         "d": "DOLE Whip Pineapple in a sugar cone topped with holiday sprinkles",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Frontierland",
+     "s": [
+      {
+       "n": "Rancho del Zocalo Restaurante",
+       "i": [
+        {
+         "n": "Pozole",
+         "d": "Pork pozole, onions, cabbage, lime wedge, and sliced radishes served with corn tortilla chips",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Pinwheels",
+         "d": "Fried wheat pinwheels served with lemon juice and hot sauce",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Hot Chocolate Cafe",
+         "d": "Hot chocolate, espresso, cream, and coconut",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "River Belle Terrace",
+       "m": "Reservations highly recommended",
+       "i": [
+        {
+         "n": "Chocolate Torte",
+         "d": "Topped with mint chantilly cream, chocolate glaze, and holiday sprinkles",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Ship to Shore Marketplace",
+       "i": [
+        {
+         "n": "Pinwheels",
+         "d": "Fried wheat pinwheels served with lemon juice and hot sauce",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Stage Door Café",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Chili-Cheese Fries",
+         "d": "Fries topped with hearty chili, beef, shredded cheese, sour cream, and green onions",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Strawberry Soda",
+         "d": "Sprite with strawberry purée",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "The Golden Horseshoe",
+       "i": [
+        {
+         "n": "Chili-Cheese Fries",
+         "d": "Fries topped with hearty chili, beef, shredded cheese, sour cream, and green onions",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Strawberry Soda",
+         "d": "Sprite with strawberry purée",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "New Orleans Square",
+     "s": [
+      {
+       "n": "Cafe Orleans",
+       "i": [
+        {
+         "n": "Seaborn Cherry Temple Cocktail",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Harbour Galley",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Gingerbread Cookies",
+         "d": "Fresh-baked gingerbread cookies, sold in packs of six or 13 while supplies last",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Royal Icing Dipping Sauce",
+         "d": "Pairs with the gingerbread cookies",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Brown Butter Maple Cold Brew",
+         "d": "Joffrey's Coffee Beignet Cold Brew with maple and brown butter syrup topped with brown butter cold foam",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Mint Julep Bar",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Enchanted Holiday Cocoa Dip",
+         "d": "Whipped cocoa peppermint dip",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Bayou Country",
+     "s": [
+      {
+       "n": "Hungry Bear Barbecue Jamboree",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Grizzly Pumpkin Cold Brew Latte",
+         "d": "Joffrey's Coffee French Roast Cold Brew with whipped cream topper and pumpkin spice topped with a gingerbread candy",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Fantasyland",
+     "s": [
+      {
+       "n": "Churros near Casey Jr. Circus Train",
+       "i": [
+        {
+         "n": "Cranberry Cream Cheese Dip",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Churros at it's a small world Promenade",
+       "i": [
+        {
+         "n": "Cranberry Cream Cheese Dip",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Pretzels at it's a small world Promenade",
+       "i": [
+        {
+         "n": "Cranberry Cream Cheese Dip",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Edelweiss Snacks",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Matterhorn Puff",
+         "d": "Filled with cinnamon apples and cream topped with chocolate and snow sugar",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Maurice's Treats",
+       "i": [
+        {
+         "n": "Sea Salt Vanilla Cream",
+         "d": "With sprinkles",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Red Rose Taverne",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Mickey Gingerbread",
+         "d": "Soft gingerbread Mickey cookie. Limit five per person, per transaction",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Christmas Stuff",
+         "d": "Green mousse with a brown sugar cake and lingonberry jam center topped with holiday sprinkles and a white chocolate star",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "French Toast Cold Brew",
+         "d": "Joffrey's Coffee French Roast Cold Brew with brown sugar and vanilla topped with cinnamon cream and cinnamon cereal",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Mickey's Toontown",
+     "s": [
+      {
+       "n": "Café Daisy",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Peppermint S'mores Hot Chocolate",
+         "d": "Hot chocolate, peppermint, and toasted marshmallow syrups topped with whipped cream, graham cracker crumbs, and chocolate syrup",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Very Merry Cran-Peary",
+         "d": "Minute Maid Zero Sugar Lemonade and cranberry and pear syrups garnished with cranberries",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Tomorrowland",
+     "s": [
+      {
+       "n": "Alien Pizza Planet",
+       "m": "Mobile order for select items via Alien Pizza Planet Express",
+       "i": [
+        {
+         "n": "Heatwave Pizza Slice",
+         "d": "Spicy blush sauce topped with mozzarella and pepper jack, Italian sausage, classic and crispy cupped pepperoni, smoked bratwurst, sliced red Fresno chiles garnished with basil and hot honey drizzle",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Spicy Blush Pasta",
+         "d": "Italian sausage with chef's choice of pasta topped with spicy blush sauce and garnished with tomato relish",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Alien Reindeer Macarooooon",
+         "d": "Filled with salted caramel buttercream, chocolate ganache, and brownie pieces",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Green Drink",
+         "d": "Minute Maid Apple Juice and apple syrup topped with caramel cold foam and sprinkles",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Churros near Buzz Lightyear Astro Blasters",
+       "i": [
+        {
+         "n": "Caramel-Peanut Butter Candy Loaded Dip",
+         "d": "Topped with chocolate-peanut butter flakes and holiday candies",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Galactic Grill",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Merry Cranberry Crispy Chicken Sandwich",
+         "d": "With cranberry-orange marmalade BBQ sauce, provolone, onion rings, and arugula served on a toasted bun with your choice of a Cuties Mandarin Orange or french fries",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Steakhouse Burger",
+         "d": "Angus beef patty, brown sugar spiced bacon, provolone, crispy onions, and house steak sauce served on a toasted bun with your choice of a Cuties Mandarin Orange or french fries",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Parfait",
+         "d": "Layers of chocolate cake, edible cookie dough, marshmallow mousse, chocolate crunch, chocolate mousse, and ganache finished with colored mousse, star glitter, and truffle shell",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Pomegranate Punch",
+         "d": "Sprite and pomegranate, cranberry and orange juices garnished with cranberries and an orange wedge",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Pretzel near Star Tours — The Adventures Continue",
+       "i": [
+        {
+         "n": "Toffee Pretzel",
+         "d": "Cream cheese-filled pretzel with toffee sugar",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "p": "California Adventure",
+   "L": [
+    {
+     "l": "Buena Vista Street",
+     "s": [
+      {
+       "n": "Fiddler, Fifer & Practical Cafe",
+       "i": [
+        {
+         "n": "Mickey Gingerbread",
+         "d": "Soft gingerbread Mickey cookie. Limit five per person, per transaction",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Clarabelle's Hand-Scooped Ice Cream",
+       "i": [
+        {
+         "n": "Holiday Mickey Ice Cream Bar",
+         "d": "Dipped in white chocolate and topped with crushed peppermint candy",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 21"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Hollywood Land",
+     "s": [
+      {
+       "n": "Award Wieners",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "“Don't Forget the Milk & Cookies” Fried Cookies",
+         "d": "Three battered and fried chocolate creme-filled cookies with whipped topping, chocolate drizzle, and crushed peppermint candy",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Brewery X, Baja Breeze",
+         "d": "Served over ice",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Seaborn Sangria",
+         "d": "Served over ice and mixed fruit",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Hollywood Lounge",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Spiced Pomegranate Cocktail",
+         "d": "Spiced and dark rums with pomegranate, orange, and cranberry juices with a hint of citrus and spice",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Calidad Beer, El Titán Dark Lager",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Seaborn, Prickly Pear Margarita",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Schmoozies!",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Pumpkin Spice Mickey-shaped Waffles",
+         "d": "Filled with pumpkin spice cream cheese icing",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mickey Elf Shake",
+         "d": "Mint and chocolate cookie shake with green whipped topping and crushed peppermint candy",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 21"
+        }
+       ]
+      },
+      {
+       "n": "Studio Catering Co.",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Holiday Leftover Burrito",
+         "d": "Turkey, stuffing, sweet potato bites, and cranberry sauce with a side of gravy",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Southern Holiday Brisket Tacos",
+         "d": "Chipotle BBQ brisket, corn salsa, cotija, crema, and lime wedges",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 21"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Avengers Campus",
+     "s": [
+      {
+       "n": "Pym Tasting Lab",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Seaborn Pomegranate Margarita",
+         "d": "Served over ice",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Pym Test Kitchen",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "French Dip Grilled Cheese",
+         "d": "Sliced prime rib and mozzarella with onion mayo, caramelized onions, and beef jus served with potato bites. Experiment No. 1918",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 21"
+        },
+        {
+         "n": "Strawberry Matcha Latte",
+         "d": "Matcha with strawberry cold foam topped with strawberry sugar wafers and strawberry condensed milk drizzle",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Strawberry Matcha Rum Cocktail",
+         "d": "White rum and matcha with strawberry cold foam topped with strawberry sugar wafers and strawberry condensed milk drizzle served in a particle beaker",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Terran Treats",
+       "i": [
+        {
+         "n": "Salted Caramel Chocolate Cake",
+         "d": "Chocolate lava cake topped with salted caramel, fleur de sel, whipped topping, and fruity cereal",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Cars Land",
+     "s": [
+      {
+       "n": "Cozy Cone Motel 1 — Churros",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Snowy Matcha Foam Iced Coffee",
+         "d": "Iced Vietnamese coffee with matcha sweet cream foam topped with holiday sprinkles",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Vietnamese Coffee-Matcha Cocktail",
+         "d": "Iced Vietnamese coffee with Baileys Irish Cream topped with matcha sweet cream foam",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Cozy Cone Motel 2 — Ice Cream Cones",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Cars-mas Tree Cone",
+         "d": "Peppermint soft serve decorated with holiday sprinkles",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peppermint-Vanilla Twist Soft Serve",
+         "d": "Peppermint and vanilla soft serve decorated with holiday sprinkles",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Cozy Cone Motel 3 — Chili Cone Queso",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Jerry's Junk Truck Cone",
+         "d": "Chopped fried chicken, garlic mashed potatoes, chicken gravy, and cheese topped with green onions",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Cozy Cone Motel 4 — Frozen Cone-Coctions",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Strawberry Michelada",
+         "d": "Modelo with strawberry-chamoy lemonade, a strawberry candy, and rimmed with chile-lime seasoning",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Strawberry-Peach Margarita",
+         "d": "Tequila with spicy strawberry-peach chamoy lemonade topped with a peach ring",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Brewery X, Melon Hard Seltzer",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mission Brewing, Milk and Cookies Ale",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Flo's V8 Cafe",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Desert Pear Agave Wine Margarita",
+         "d": "Agave wine with desert pear lemonade",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Pineapple-Honey Glazed Chicken Strips",
+         "d": "Topped with green onions and served with fries",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "San Fransokyo Square",
+     "s": [
+      {
+       "n": "Aunt Cass Café",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Chicken Pot Pie Soup",
+         "d": "Chicken pot pie in a bread bowl",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Candy Cane Sourdough Bread",
+         "d": "Plant-based",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Christmas Tree Pull-apart Sourdough Bread",
+         "d": "Plant-based",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Snowman Sourdough Bread",
+         "d": "Plant-based",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Pumpkin Spice Sweet Cream Cold Brew",
+         "d": "With pumpkin cream cheese topper",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Caramel Apple Bread Pudding",
+         "d": "With caramelized apples, whipped topping, and caramel sauce",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Boudin Bread Cart",
+       "i": [
+        {
+         "n": "Candy Cane Sourdough Bread",
+         "d": "Plant-based",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Christmas Tree Pull-apart Sourdough Bread",
+         "d": "Plant-based",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Snowman Sourdough Bread",
+         "d": "Plant-based",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Cappuccino Cart",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Mickey-shaped Waffle Macaron",
+         "d": "Mickey-shaped macaron filled with salted maple buttercream, maple syrup, and chocolate-coated waffle pieces",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Gingerbread Hot Chocolate",
+         "d": "Also available with liqueur",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Coronado Brewing Co., Pumpkin Spice Hard Cider",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Chocolate Horchata",
+         "d": "House-made horchata with hot chocolate-flavored cold foam",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Cocina Cucamonga Mexican Grill",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Tequila Sunset Agua Fresca Cocktail",
+         "d": "Tequila, orange, and yuzu and cranberry agua fresca with cinnamon and clove",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Bottle Logic Brewing, Cranberry Paloma Hard Seltzer",
+         "d": "Served over ice",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Sunset Agua Fresca",
+         "d": "Yuzu and cranberry agua fresca with cinnamon and clove",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Lucky Fortune Cookery",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Santa Baymax Macaron",
+         "d": "Filled with peppermint buttercream, chocolate ganache, and dark chocolate crunchies",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Cinnamon Pear Mule",
+         "d": "Pear vodka with ginger beer topped with cinnamon and garnished with a cinnamon stick",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Three Milk Ube Tea",
+         "d": "Ube tea with brown sugar tapioca spheres topped with coconut foam",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Orange Chicken Rice Bowl",
+         "d": "Sweet orange-glazed chicken with sautéed vegetables, mandarin oranges, and steamed rice",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Rita's Turbine Blenders",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Hot Blueberry Apple Cider",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Bourbon Berry Elixir",
+         "d": "Hot blueberry apple cider cocktail with bourbon",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Grizzly Peak",
+     "s": [
+      {
+       "n": "Smokejumpers Grill",
+       "i": [
+        {
+         "n": "Bottle Logic Brewing Aurora Borealis Hard Seltzer",
+         "d": "Honeydew lime seltzer served over ice",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Loaded Pulled Pork Fries",
+         "d": "Seasoned fries, cranberry BBQ sauce, and gochujang aïoli topped with pickled onions and chives",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Berry Pomegranate Paloma",
+         "d": "Blanco tequila, blueberry purée, lime, cranberry and pomegranate juices, agave syrup, and Fresca with a chile-lime rim and orange wheel",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Pixar Pier & Paradise Gardens",
+     "s": [
+      {
+       "n": "Lamplight Lounge",
+       "m": "Reservations highly recommended",
+       "i": [
+        {
+         "n": "Steak Frites",
+         "d": "New York steak, Manchego truffle fries, and peppercorn sauce",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 21"
+        },
+        {
+         "n": "Arroz Con Leche Donut",
+         "d": "Cinnamon sugar donut with arroz con leche, candied pecans, and spiced chocolate powder",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Cocktail",
+         "d": "Bourbon, maple syrup, lemon juice, vanilla liqueur, and cinnamon whiskey",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Ommegang Seasonal Selection",
+         "d": "Ommegang Imperial Blonde Stout",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "2 Towns Spiced Cosmic Crisp",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Lamplight Lounge — Boardwalk Dining",
+       "m": "Reservations highly recommended",
+       "i": [
+        {
+         "n": "Holiday Cocktail",
+         "d": "Bourbon, maple syrup, lemon juice, vanilla liqueur, and cinnamon whiskey",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "2 Towns Spiced Cosmic Crisp",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Bayside Brews",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Santa Monica Brew Works Pickle Lager",
+         "d": "Michelada option available",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Boardwalk Pizza & Pasta",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Italian Sausage Pesto Pizza",
+         "d": "Tomato cream sauce, mozzarella cheese, Italian sausage, basil pesto, and bruschetta. Available by slice or whole pie",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Cookie Butter Trifle",
+         "d": "Cookie butter, cheesecake mousse, and vanilla chantilly topped with a spice cookie",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 21"
+        }
+       ]
+      },
+      {
+       "n": "Churros near Goofy's Sky School",
+       "i": [
+        {
+         "n": "Caramel Cheesecake Churro",
+         "d": "Classic churro with caramel cheesecake icing, caramel, and chocolate drizzle",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Festival of Holidays marketplaces",
+     "s": [
+      {
+       "n": "Holiday Duets",
+       "i": [
+        {
+         "n": "Holiday Brisket KRAFT Deluxe Original Cheddar Mac & Cheese",
+         "d": "With KRAFT BBQ Sauce and dill pickle crispy onions",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "French Onion KRAFT Deluxe White Cheddar Mac & Cheese",
+         "d": "With caramelized onions and garlic crouton crunch",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Duet of KRAFT Deluxe Mac & Cheese",
+         "d": "A half portion of both the Holiday Brisket and French Onion mac and cheese",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Merry Berry Holiday Punch",
+         "d": "Strawberry purée, orange juice, blackberry and winter citrus syrups, and sweet and sour, topped with cupcake sweet cream and rainbow candy clusters",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Kern River Brewing Company Just Outstanding IPA",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Seaborn Cran-Merry Lime Margarita",
+         "d": "Served over ice",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "A Twist on Tradition",
+       "i": [
+        {
+         "n": "Chicken Pot Pie Wings",
+         "d": "With rich gravy and herb pie crumble",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Shrimp & Grits",
+         "d": "With andouille sausage",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "TWIX Bits Iced Chocolate",
+         "d": "Chocolate oat milk and caramel and cookie butter syrups topped with whipped cream, caramel drizzle, and TWIX Bits",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Stella Artois Pilsner",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Brews & Bites",
+       "i": [
+        {
+         "n": "Chorizo Queso Fundido",
+         "d": "With tortilla chips",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Hot Cocoa Macaron",
+         "d": "With marshmallow cream cheese filling and milk chocolate ganache topped with mini marshmallows",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Cafe de Olla Cold Brew",
+         "d": "Joffrey's Coffee with whole and condensed milk, spiced syrup of star anise, clove and cinnamon, chocolate dulce de leche cream, and a pan dulce garnish",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Apple Cider Guava Margarita",
+         "d": "Tequila, apple cider, guava syrup, sweet and sour, and lime juice garnished with a dried apple chip",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Unsung Brewing Co. Chocolate Snowball Blonde Ale",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Grandma's Recipes",
+       "i": [
+        {
+         "n": "Turkey Tamale",
+         "d": "With gravy roasted mirepoix and cranberry relish",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Sweet Potato Pecan Pie",
+         "d": "Topped with pecan streusel, spiced chantilly, and a candied pecan",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Berry Pomegranate Paloma",
+         "d": "Blanco tequila, blueberry purée, lime, cranberry and pomegranate juices, agave syrup, and Fresca with a chile-lime rim and orange wheel",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Bottle Logic Brewing 3 on the Tree Nectarine Blonde Ale",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Favorite Things",
+       "i": [
+        {
+         "n": "Braised Pork Belly Adobo",
+         "d": "With garlic rice",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Santa Milk & Cookies Hot Cocoa",
+         "d": "Cookies and cream mix, white chocolate mix, and milk topped with whipped cream",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Maple Hazelnut Hot Buttered Rum",
+         "d": "Rum, butter, hazelnut, maple syrup, cinnamon, nutmeg, clove, and demerara sugar topped with salted caramel sweet cream",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Left Coast Brewing Co. Churro Ale",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Merry Mashups",
+       "i": [
+        {
+         "n": "Cookie Butter & Jelly Cheesecake Tart",
+         "d": "Cookie butter cheesecake topped with strawberry jam in a graham cracker tart shell",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Reimagined Beef Wellington",
+         "d": "Mashed potatoes, beef jus, crispy prosciutto, mushroom duxelles cream sauce, and puff pastry",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Cran-Blackberry Mule",
+         "d": "Bourbon, cranberry juice, blackberry syrup, and sweet and sour topped with ginger beer and garnished with a lime wheel",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Salted Caramel Brownie White Russian",
+         "d": "Vodka, coffee liqueur, oat milk, chocolate and cookie butter syrups, salted caramel sweet cream, and a double chocolate brownie garnish",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Paradise Garden Grill — Disney ¡Viva Navidad!",
+       "m": "Paradise Gardens Park · Mobile order",
+       "i": [
+        {
+         "n": "Red Velvet Cake Flan",
+         "d": "With whipped topping and holiday sprinkles",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Chilaquiles Carnitas Torta",
+         "d": "Red chilaquiles, refried beans, avocado spread, queso fresco, and pickled red onions",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Chilaquiles Carnitas Torta with egg and chips",
+         "d": "Red chilaquiles, refried beans, avocado spread, queso fresco, pickled red onions, and a fried egg served with chips",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Carts & other stands",
+     "s": [
+      {
+       "n": "Outdoor vending carts",
+       "m": "Select carts around the park",
+       "i": [
+        {
+         "n": "Honey-glazed Turkey Leg",
+         "d": "With a pineapple ring",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Pumpkin Spice Cream Cheese Bread",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Seaborn, Winter Berry Margarita",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Unsung Brewing Company, Metaplex IPA",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mickey-shaped Gingerbread Cookie",
+         "d": "Soft gingerbread Mickey cookie with sprinkles",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Cherry Cotton Candy",
+         "d": "Red and white cherry cotton candy in a snowflake bag",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "World of Color Dessert Party",
+       "m": "Paradise Gardens Park · Reserved viewing · Booking required",
+       "i": [
+        {
+         "n": "Artisan charcuterie and cheeses",
+         "d": "With assorted accoutrements",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peppermint crème macaron",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Twinkling crisped rice treat",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday cranberry square",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Eggnog-filled snowflake cookie",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "p": "Downtown Disney",
+   "L": [
+    {
+     "l": "Coffee & sweets",
+     "s": [
+      {
+       "n": "Parkside Market Coffee",
+       "m": "Nov 18 onward",
+       "i": [
+        {
+         "n": "Holly Jolly S'more Latte",
+         "d": "Blend of creamy white chocolate and cool peppermint topped with marshmallows, cookie crumbs, and a chocolate drizzle",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Peppermint Mocha Freeze",
+         "d": "Blend of chocolate and peppermint whipped into a smooth frosty treat",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Salted Caramel Cookie Latte",
+         "d": "Latte infused with salted caramel and topped with cold foam and a touch of sea salt",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Winter Berry Frost",
+         "d": "Blend of sweet berries and warm spice",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Peppermint Hot Chocolate",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Mexican Hot Chocolate",
+         "d": "House-made Abuelita chocolate spice syrup served hot",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Gingerbread Whoopie Pie",
+         "d": "Spiced gingerbread whoopie pie filled with vanilla cream",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Peppermint Mocha Whoopie Pie",
+         "d": "Rich mocha whoopie pie filled with fluffy peppermint cream and rolled in crushed peppermint candy",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 8"
+        }
+       ]
+      },
+      {
+       "n": "California Churro",
+       "i": [
+        {
+         "n": "Chocolate Peppermint Churro",
+         "d": "Churro rolled in chocolate sugar drizzled with peppermint icing and topped with peppermint candies",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peppermint Hot Chocolate",
+         "d": "Peppermint-flavored hot chocolate topped with homemade whipped cream and peppermint candies",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Beignets Expressed",
+       "i": [
+        {
+         "n": "Nog, Spice & Everything Nice",
+         "d": "Golden beignets with eggnog icing and sprinkled with cinnamon sugar dust",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Frozen Hot Chocolate Holiday Special",
+         "d": "Signature frozen premium Dutch cocoa and milk made with Ghirardelli topped with peppermint-flavored whipped cream and red and green sprinkles",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Happy Ice",
+       "i": [
+        {
+         "n": "Sweet Potato Pie",
+         "d": "Happy Ice, marshmallow cream, vanilla sweet cream ice cream, and graham cracker crumble",
+         "t": [
+          "food",
+          "new",
+          "short"
+         ],
+         "e": "Dec 4"
+        },
+        {
+         "n": "Campfire S'more's Chocolate Malt",
+         "d": "Happy Ice, chocolate malt ice cream, marshmallow cream, hot fudge, and graham cracker crumble",
+         "t": [
+          "food",
+          "new",
+          "short"
+         ],
+         "e": "Jan 1",
+         "b": "Dec 4"
+        }
+       ]
+      },
+      {
+       "n": "Big Boi Lumpia Co.",
+       "i": [
+        {
+         "n": "Gingerbread Cookie Lumpia",
+         "d": "Crispy lumpia with gingerbread cookie filling dusted with powdered sugar and served with cinnamon icing",
+         "t": [
+          "food",
+          "new",
+          "short"
+         ],
+         "e": "Dec 31"
+        }
+       ]
+      },
+      {
+       "n": "Kayla's Cake",
+       "i": [
+        {
+         "n": "Snowman Macaron",
+         "d": "Snowman shaped macaron filled with salted caramel ganache and vanilla buttercream dressed with a white chocolate scarf",
+         "t": [
+          "food",
+          "short"
+         ],
+         "e": "Dec 31"
+        }
+       ]
+      },
+      {
+       "n": "Salt & Straw",
+       "i": [
+        {
+         "n": "The Almond Brittle Cake",
+         "d": "Double fold vanilla ice cream studded with Grandma Malek's almond brittle and house-made salted chocolate ganache topped with sweet and salty clusters of saltine Florentine cookies and drizzled with chocolate",
+         "t": [
+          "food",
+          "short"
+         ],
+         "e": "Dec 31"
+        }
+       ]
+      },
+      {
+       "n": "Wetzel's Pretzels",
+       "m": "Nov 18 onward",
+       "i": [
+        {
+         "n": "Cin-A-Bitz",
+         "d": "Freshly baked original bitz tossed in sweet cinnamon sugar. Holiday creamy sweet glaze sold separately",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 8"
+        }
+       ]
+      },
+      {
+       "n": "Seoul Sister",
+       "i": [
+        {
+         "n": "The Jingle Berry Lemonade",
+         "d": "Blend of cranberry and lemonade garnished with fresh rosemary and cranberries",
+         "t": [
+          "drink",
+          "new",
+          "short"
+         ],
+         "e": "Jan 1",
+         "b": "Dec 4"
+        }
+       ]
+      },
+      {
+       "n": "Earl of Sandwich",
+       "i": [
+        {
+         "n": "Holiday Turkey Sandwich",
+         "d": "Turkey, cornbread stuffing, gravy, cranberry sauce, and mayonnaise",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Cookies",
+         "d": "Festively decorated sugar cookies",
+         "t": [
+          "food",
+          "new",
+          "short"
+         ],
+         "e": "Jan 1"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Bars & restaurants",
+     "s": [
+      {
+       "n": "Vista Parkside Market",
+       "m": "Nov 18 onward",
+       "i": [
+        {
+         "n": "Mistletoe Wren",
+         "d": "Holiday cocktail with botanical notes, hint of citrus and herbaceous finish",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "North Pole Nightcap",
+         "d": "Cocktail with coffee notes",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "The Biscowl",
+         "d": "Dessert-inspired cocktail with coffee notes, holiday spice, and a cookie finish served in the Owl Tiki Glass",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Brown Butter Blackbird",
+         "d": "Bourbon cocktail with rich toasted notes and subtle sweetness",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Holiday Hearth Soda",
+         "d": "Holiday dirty soda blending cookie butter and creamy vanilla topped with a Biscoff cookie",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 8"
+        },
+        {
+         "n": "Red Nosed Refresher",
+         "d": "Blend of ginger ale, cherry flavor, and vanilla cream",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 8"
+        }
+       ]
+      },
+      {
+       "n": "Ballast Point Brewing Co.",
+       "i": [
+        {
+         "n": "Merry Manila BBQ Pork Chop",
+         "d": "Double-bone-in pork chop roasted with Manila BBQ-inspired flavors paired with creamy whipped purple sweet yam, and mole-braised Brussels sprouts",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 1"
+        },
+        {
+         "n": "Gingerbread House Spiced Winter Ale",
+         "d": "Dark and malty beer brewed with amber molasses and spiced with a generous use of ginger, nutmeg, cinnamon, and cloves",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 1"
+        },
+        {
+         "n": "Cranberry Sour",
+         "d": "Fruited sour with cranberries",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 1"
+        }
+       ]
+      },
+      {
+       "n": "Jazz Kitchen Coastal Grill & Patio",
+       "i": [
+        {
+         "n": "Eggnog Bread Pudding",
+         "d": "Bread pudding infused with creamy holiday eggnog finished with eggnog creme anglaise",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Pumpkin French Toast",
+         "d": "Pumpkin purée, cinnamon, vanilla scented brioche, caramel, apple-wood bacon, and fresh pumpkin flavored whipped cream. Sundays only, brunch 10:30am–3pm",
+         "t": [
+          "food",
+          "new",
+          "short"
+         ],
+         "e": "Jan 3",
+         "b": "Nov 15"
+        },
+        {
+         "n": "Malibu Snow Day",
+         "d": "Hot chocolate, Malibu Rum, and a sprinkle of coconut",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Céntrico",
+       "i": [
+        {
+         "n": "Chicken Tamal",
+         "d": "Corn husk tamales, mole rojo, braised chicken, and pickled vegetables",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Tamal de Rajas",
+         "d": "Corn husk tamales, rajas, Mexican cheese blend, and pickled vegetables",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Spicy Cranberry Margarita",
+         "d": "Tesoro Azul Blanco Tequila, triple sec, cranberry juice, orange juice, lime juice, and spicy cranberry syrup",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mexican Hot Chocolate",
+         "d": "Mexican chocolate topped with a roasted marshmallow. Alcohol option available",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Paseo",
+       "i": [
+        {
+         "n": "Holiday Special",
+         "d": "Cornish game hen stuffed with a chorizo-date stuffing, orange beurre blanc, pickled jalapeño, and shaved fennel salad with chicken chicharron",
+         "t": [
+          "food",
+          "short"
+         ],
+         "e": "Dec 25",
+         "b": "Dec 24"
+        },
+        {
+         "n": "Snowman",
+         "d": "Cardamom cake, tangerine mousse, orange peel gel, yogurt streusel, and rosemary ice cream",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Spicy Cranberry Margarita",
+         "d": "Tesoro Azul Blanco Tequila, triple sec, cranberry juice, orange juice, lime juice, and spicy cranberry syrup",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Ponche",
+         "d": "Dried fruit, cinnamon, piloncillo, hibiscus, and nances",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Tiendita",
+       "i": [
+        {
+         "n": "Holiday Buñuelo",
+         "d": "Spiced chocolate, cinnamon sugar, and holiday candy",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mexican Hot Chocolate",
+         "d": "Mexican chocolate topped with a roasted marshmallow. Alcohol option available",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Splitsville Luxury Lanes",
+       "i": [
+        {
+         "n": "Gingerbread Sundae",
+         "d": "Warm house-baked gingerbread served with vanilla ice cream and drizzled with caramel sauce",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Espresso Martini",
+         "d": "Irish cream liqueur, vanilla vodka, fresh espresso, and coffee liqueur",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Snowball Martini",
+         "d": "Vodka, white rum, blue curaçao, coconut, and pineapple",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Naples Ristorante e Bar",
+       "i": [
+        {
+         "n": "The Merry Maker",
+         "d": "Maker's Mark Bourbon, Cointreau, almond orgeat, gingerbread syrup, and lime juice",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Santa's Margarita",
+         "d": "Tequila blanco, razzmatazz raspberry liqueur, margarita mix, and cranberry juice",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Gordon Ramsay at The Carnaby",
+       "m": "Reservations highly recommended",
+       "i": [
+        {
+         "n": "Roasted Turkey Roulade",
+         "d": "Served with thyme gravy, sourdough stuffing, sweet glazed yams, fried Brussels sprouts, and cranberry sauce",
+         "t": [
+          "food",
+          "new",
+          "short"
+         ],
+         "e": "Nov 26"
+        },
+        {
+         "n": "Pumpkin Bakewell Tart",
+         "d": "With cinnamon frangipane, pumpkin jam, whipped cream, and toasted almonds",
+         "t": [
+          "food",
+          "new",
+          "short"
+         ],
+         "e": "Nov 26"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "p": "Hotels",
+   "L": [
+    {
+     "l": "Disneyland Hotel",
+     "s": [
+      {
+       "n": "Broken Spell Lounge",
+       "i": [
+        {
+         "n": "Chocolate Marshmallow Old Fashioned",
+         "d": "Graham cracker and chocolate-infused Woodford Bourbon, Tempus Fugit Crème de Cacao Liqueur, brown sugar molasses syrup, chocolate bitters, wood smoke, and mini marshmallows",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Five Golden Rings",
+         "d": "Golden Eagle Vodka, St-Germain Elderflower Liqueur, ginger, rosemary, and cranberry flavors with edible shimmer glitter",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Prickly Pear French 75",
+         "d": "Condesa Prickly Pear Gin, St. George Spiced Pear Liqueur, sparkling wine, honey, and lemon juice",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "House-made Eggnog",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "House-made Hot Chocolate",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Goofy's Kitchen",
+       "m": "Nov 16 onward · Reservations highly recommended",
+       "i": [
+        {
+         "n": "Dulce de Leche Latte",
+         "d": "Available hot or iced",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 3"
+        },
+        {
+         "n": "House-made Eggnog",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 3"
+        },
+        {
+         "n": "Peppermint Mocha",
+         "d": "Available hot or iced",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 3"
+        },
+        {
+         "n": "Chocolate Cake Cocktail",
+         "d": "Tito's Vodka, Frangelico Hazelnut Liqueur, simple syrup, and lemon juice",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 3"
+        },
+        {
+         "n": "Holiday Rum Punch",
+         "d": "Captain Morgan Spiced Rum and cranberry and orange juices",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 3"
+        },
+        {
+         "n": "Pomegranate Margarita",
+         "d": "LALO Tequila, pomegranate juice, simple syrup, and lime juice",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 3"
+        },
+        {
+         "n": "Yuletide Ember",
+         "d": "Fireball Cinnamon Whisky, cranberry juice, simple syrup, bitters, and a splash of ginger beer",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 3"
+        }
+       ]
+      },
+      {
+       "n": "Palm Breeze Bar",
+       "i": [
+        {
+         "n": "Atole Cocktail",
+         "d": "Tequila, guava, cinnamon, almond milk, and nutmeg topped with masa foam and served warm",
+         "t": [
+          "booze",
+          "new"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "The Coffee House",
+       "m": "Mobile order",
+       "i": [
+        {
+         "n": "Ponche Refresher Hot",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Ponche Refresher Iced",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Snickerdoodle Latte Hot",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Snickerdoodle Latte Iced",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Eggnog Latte",
+         "d": "House-made eggnog with a shot of espresso. Hot or iced",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "House-made Eggnog",
+         "d": "Hot or iced",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peppermint Mocha",
+         "d": "Topped with whipped cream. Hot or iced",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Trader Sam's Enchanted Tiki Bar",
+       "m": "DOLE Whip cups served at the Outdoor Patio Bar, limit 2 per person",
+       "i": [
+        {
+         "n": "Mele KalikiMocha",
+         "d": "Kahlúa Coffee Liqueur, cream of coconut, orgeat, and cold brew",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peppermint Barks",
+         "d": "El Dorado 8 Rum, Rumple Minze Peppermint Liqueur, falernum, cream of coconut and pomegranate and lemon juices",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Yuletide Cheers",
+         "d": "Zaya Rum, Avissi Prosecco Sparkling Wine, pomegranate and cranberry juices, and cinnamon syrup",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "DOLE Whip Pineapple-Orange with Guava Juice",
+         "d": "Served in a Nightmare Before Christmas Haunted Mansion Holiday cup, while supplies last",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "DOLE Whip Tropical Float",
+         "d": "DOLE Pineapple Juice topped with DOLE Whip Pineapple and Orange with guava juice, in the Holiday cup",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "DOLE Whip Tropical Float with a splash of Rum",
+         "d": "With Captain Morgan Parrot Bay Coconut Rum, Holiday cup served on the side",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Grand Californian",
+     "s": [
+      {
+       "n": "GCH Craftsman Bar",
+       "i": [
+        {
+         "n": "Sugar Plum Cocktail",
+         "d": "Grey Goose, Green Bar Hibiscus Liqueur, Poire-Williams Brandy, cranberry and lemon juices, cinnamon syrup, Luxardo cherry, and mint",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peat & Bramble Cocktail",
+         "d": "Macallan Scotch 12-year, lemon juice, apple and cranberry juices, maple and sage syrups, and blackberries",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "GCH Craftsman Grill",
+       "i": [
+        {
+         "n": "Chocolate Peppermint Long John Donut",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Christmas Tree Cupcake",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Cranberry Orange Muffin",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Cake Donut",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Grand Californian Great Hall Cart",
+       "i": [
+        {
+         "n": "Chocolate-Peppermint Loaf",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Jumbo Santa Cake Pop",
+         "d": "Chocolate cake pop dipped in white chocolate",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mickey Gingerbread",
+         "d": "Soft gingerbread Mickey cookie. Limit five per person, per transaction",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mickey-shaped Poinsettia Cookie",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mickey Snowman Macaron",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Pecan Caramel Crunch Cookie",
+         "d": "Giant house-made cookie filled with caramel bits, toasted pecans, and toffee",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peppermint Swirl Crisped Rice Pop",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Raspberry Coconut Macaroon Wreath",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Cookie Box",
+         "d": "With assorted cookies",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Chocolate Chip Cookie Cup with Milk",
+         "d": "Also available with choice of liqueur",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "House-made Hot Chocolate",
+         "d": "Also available with Baileys Original Irish Cream Liqueur",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "House-made Hot Apple Cider",
+         "d": "House-made apple cider with ginger, orange, and lemongrass. Also available with choice of liqueur",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Eggnog",
+         "d": "Also available with Baileys Original Irish Cream Liqueur",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Hearthstone Lounge",
+       "i": [
+        {
+         "n": "Sugar Plum Cocktail",
+         "d": "Grey Goose, Green Bar Hibiscus Liqueur, Poire-Williams Brandy, cranberry and lemon juices, cinnamon syrup, Luxardo cherry, and mint",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peat & Bramble Cocktail",
+         "d": "Macallan Scotch 12-year, lemon juice, apple and cranberry juices, maple and sage syrups, and blackberries",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      },
+      {
+       "n": "Storytellers Cafe",
+       "m": "Nov 16 onward",
+       "i": [
+        {
+         "n": "Sugar Plum Cocktail",
+         "d": "Grey Goose, Green Bar Hibiscus Liqueur, Poire-Williams Brandy, cranberry and lemon juices, cinnamon syrup, Luxardo cherry, and mint",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Peat & Bramble Cocktail",
+         "d": "Macallan Scotch 12-year, lemon juice, apple and cranberry juices, maple and sage syrups, and blackberries",
+         "t": [
+          "booze"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "l": "Pixar Place Hotel",
+     "s": [
+      {
+       "n": "Great Maple Modern American Eatery",
+       "m": "Reservations highly recommended",
+       "i": [
+        {
+         "n": "A Great Maple Thanksgiving",
+         "d": "Three-course prix fixe with a sparkling toast, choice of turkey or honey-rosemary glazed ham with the classic fixings, and choice of pumpkin butter cake or apple pie",
+         "t": [
+          "food",
+          "short"
+         ],
+         "e": "Nov 26"
+        }
+       ]
+      },
+      {
+       "n": "The Sketch Pad Cafe",
+       "i": [
+        {
+         "n": "Holiday Cookie",
+         "d": "Vanilla shortbread and holiday icing",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 7"
+        },
+        {
+         "n": "Holiday Brownie",
+         "d": "Holiday icing and crushed peppermint",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 7"
+        },
+        {
+         "n": "Chocolate Peppermint Linzer Cookie",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 7"
+        },
+        {
+         "n": "White Chocolate Peppermint Mocha",
+         "d": "Cafe Moto espresso, white chocolate, and peppermint",
+         "t": [
+          "drink",
+          "new"
+         ],
+         "e": "Jan 7"
+        },
+        {
+         "n": "Cookie Butter Latte",
+         "d": "Cafe Moto espresso, cookie butter, condensed milk, and whipped cream",
+         "t": [
+          "drink"
+         ],
+         "e": "Jan 7"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "p": "Candy Shops",
+   "L": [
+    {
+     "l": "Candy Palace and Candy Kitchen · Pooh Corner · Trolley Treats · Bing Bong's Sweet Stuff · Disney Wonderful World of Sweets",
+     "s": [
+      {
+       "n": "Same case at every shop",
+       "m": "Nov 12 onward · While supplies last",
+       "i": [
+        {
+         "n": "Mickey Ornament Caramel Apple",
+         "d": "Granny Smith apple with marshmallow ears dipped in caramel and red chocolatey coating with colored chocolatey drizzle and sprinkles",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 2"
+        },
+        {
+         "n": "Mickey Snowglobe Marshmallow Pop",
+         "d": "Mickey marshmallow with colored chocolatey coating and Mickey snowman design",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 2"
+        },
+        {
+         "n": "Minnie Present Vanilla Cake Pop",
+         "d": "Vanilla cake pop with colored chocolatey coating and red chocolatey bow",
+         "t": [
+          "food",
+          "new"
+         ],
+         "e": "Jan 2"
+        },
+        {
+         "n": "Holiday Marshmallow Wand",
+         "d": "Marshmallow wand dipped in caramel and milk chocolatey coating with colored chocolatey drizzle",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 2"
+        },
+        {
+         "n": "Mickey Wreath Cereal Treat",
+         "d": "Crisped rice cereal treat with colored chocolatey coating and holiday sprinkles",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 2"
+        },
+        {
+         "n": "Peppermint Patty",
+         "d": "Smooth peppermint-flavored patty with dark chocolatey coating",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 2"
+        },
+        {
+         "n": "Santa Mickey Caramel Apple",
+         "d": "Granny Smith apple with marshmallow ears dipped in caramel and milk chocolatey coating with M&M'S Milk Chocolate Candies and sanding sugar. Not at Pooh Corner or Bing Bong's",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 2"
+        },
+        {
+         "n": "Santa Minnie Caramel Apple",
+         "d": "Granny Smith apple with marshmallow ears dipped in caramel and milk chocolatey coating with M&M'S Milk Chocolate Candies, sanding sugar, and a red chocolatey Santa hat with bow",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 2"
+        },
+        {
+         "n": "Santa Minnie Chocolate Cake Pop",
+         "d": "Chocolate cake pop with milk chocolatey coating and red chocolatey Santa hat with bow",
+         "t": [
+          "food"
+         ],
+         "e": "Jan 2"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "p": "Novelties",
+   "L": [
+    {
+     "l": "Buckets, sippers and tumblers",
+     "s": [
+      {
+       "n": "Available throughout the resort",
+       "m": "From Nov 13 · While supplies last · Purchase limits apply",
+       "i": [
+        {
+         "n": "Toy Story Gingerbread House Bucket",
+         "d": "Limit two per person, per transaction. No discounts",
+         "t": [
+          "novelty",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Train Bucket",
+         "d": "Limit two per person, per transaction. No discounts",
+         "t": [
+          "novelty",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Popcorn Bucket",
+         "d": "Most popcorn carts in both parks. Limit 10 per person, per transaction",
+         "t": [
+          "novelty",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Stitch Christmas Tree Sipper",
+         "d": "Limit two per person, per transaction. No discounts",
+         "t": [
+          "novelty",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Ornament Glow Cube",
+         "d": "Limit two per person, per transaction. No discounts",
+         "t": [
+          "novelty",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Stainless Steel Tumbler",
+         "d": "Limit two per person, per transaction. No discounts",
+         "t": [
+          "novelty",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Travel Tumbler",
+         "d": "Limit 10 per person, per transaction. Discounts at select locations",
+         "t": [
+          "novelty",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Mickey Wreath Holiday Straw Clip",
+         "d": "Limit two per person, per transaction. No discounts",
+         "t": [
+          "novelty",
+          "new"
+         ],
+         "e": "Jan 6"
+        },
+        {
+         "n": "Holiday Chip 'n' Dale Candy Cane Straw Clip",
+         "d": "Mobile order at Little Red Wagon. Limit 10 per person, per transaction",
+         "t": [
+          "novelty"
+         ],
+         "e": "Jan 6"
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
