@@ -60,7 +60,10 @@ jobs:
 
       - name: Install Claude Code
         if: steps.guides.outputs.changed == 'true' || inputs.force
-        run: npm install -g @anthropic-ai/claude-code
+        # The official installer tracks current releases; the npm package lags.
+        run: |
+          curl -fsSL https://claude.ai/install.sh | bash
+          echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Update the season data
         if: steps.guides.outputs.changed == 'true' || inputs.force
