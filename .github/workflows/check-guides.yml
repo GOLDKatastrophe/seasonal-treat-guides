@@ -1,0 +1,117 @@
+name: Check Disney guides
+
+# Weekly. The fingerprint check is free, so the only cost in a normal week is
+# a few seconds of CI. Claude is invoked only when a guide has actually
+# changed, and the result is a pull request — nothing reaches the live site
+# without review.
+on:
+  schedule:
+    - cron: '37 16 * * 0'   # Sundays, 08:37 America/Los_Angeles (ST)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Run the update step even if no guide changed'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Fingerprint the guides
+        id: guides
+        run: node tools/check_guides.js
+
+      - name: Capture what changed
+        id: diff
+        if: steps.guides.outputs.changed == 'true' || inputs.force
+        run: |
+          {
+            echo 'GUIDE_DIFF<<__EOF__'
+            git diff --unified=2 -- data/guides/ | head -c 60000
+            echo '__EOF__'
+          } >> "$GITHUB_ENV"
+
+      # Nothing changed: record the check date and stop. No Claude, no PR.
+      - name: Record the check
+        if: steps.guides.outputs.changed != 'true' && !inputs.force
+        run: |
+          if [ -n "$(git status --porcelain data/)" ]; then
+            git config user.name  'github-actions[bot]'
+            git config user.email 'github-actions[bot]@users.noreply.github.com'
+            git add data/
+            git commit -m 'Guides unchanged; record check date'
+            git push
+          fi
+
+      - name: Install Claude Code
+        if: steps.guides.outputs.changed == 'true' || inputs.force
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Update the season data
+        if: steps.guides.outputs.changed == 'true' || inputs.force
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          printf '%s\n\n%s\n' "$(cat tools/update-prompt.md)" "$GUIDE_DIFF" > /tmp/prompt.txt
+          # The prompt carries text scraped from Disney's page, so Bash is
+          # limited to the build. node/python3 wildcards would allow any code
+          # alongside the API key and a push-capable token.
+          claude -p "$(cat /tmp/prompt.txt)" \
+            --allowedTools 'Read,Edit,Write,Glob,Grep,Bash(make:*),Bash(git diff:*),Bash(git status:*)' \
+            --permission-mode acceptEdits
+
+      - name: Verify the build still passes
+        if: steps.guides.outputs.changed == 'true' || inputs.force
+        run: make check
+
+      - name: Open a pull request
+        if: steps.guides.outputs.changed == 'true' || inputs.force
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: guides/update
+          base: main
+          title: 'Disney guide changed: ${{ steps.guides.outputs.summary }}'
+          commit-message: |
+            Update season data from Disney's guide
+
+            ${{ steps.guides.outputs.summary }}
+          body: |
+            A watched Disney foodie guide changed, so the season data has been
+            updated to match.
+
+            **Detected:** ${{ steps.guides.outputs.summary }}
+
+            `make check` passes on this branch. Review the `seasons/*.json`
+            diff against the `data/guides/*.txt` diff — the latter is what
+            Disney actually changed. `CHANGES.md` has a plain-English summary.
+
+            Merging deploys to treats.kylejgold.com.
+          delete-branch: true
+          add-paths: |
+            seasons/
+            data/
+            CHANGES.md
+
+      # A guide that couldn't be fetched, or whose anchors no longer match, is
+      # skipped above rather than reported as a change. Fail last so the run
+      # goes red without blocking a PR for any guide that did change.
+      - name: Fail if a guide couldn't be read
+        if: always() && steps.guides.outputs.fetch_failures != '0'
+        run: |
+          echo "::error::${{ steps.guides.outputs.fetch_failures }} guide(s) could not be read; see 'Fingerprint the guides'."
+          exit 1
