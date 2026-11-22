@@ -17,12 +17,15 @@ Live: https://treats.kylejgold.com
     tools/render_pdfs.js   runs the page's own PDF generator under Node
     tools/make_index.py    all seasons -> dist/index.html
     tools/check_build.js   post-build checks; CI fails on these
+    tools/render_previews.js  link-preview cards -> previews/*.png (needs Chrome)
+    previews/              committed 1200x630 og:image cards, one per page
     dist/                  build output, deployed to Cloudflare (gitignored)
 
 ## Build
 
     make          # build everything into dist/
     make check    # build, then run the checks
+    make previews # redraw the link-preview cards (needs Chrome)
     make clean
 
 Needs Python 3 and Node 20. No dependencies to install.

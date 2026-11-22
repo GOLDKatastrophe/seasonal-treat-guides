@@ -5,6 +5,7 @@ The shell is the Halloween page; everything season-specific is replaced
 here, so adding a season means adding a JSON file, not editing HTML.
 """
 import io, json, re, sys, html, os
+import og
 
 SHELL = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'shell.html')
 
@@ -265,12 +266,18 @@ document.getElementById('reset').addEventListener('click',()=>{""",
     # ---------------------------------------------------------- footer source
     s = re.sub(r'  <p>Compiled from .*?</p>',
                f'  <p>Compiled from {esc(season["source"])}.</p>', s, count=1, flags=re.S)
-    s = re.sub(r'<title>.*?</title>',
-               f'<title>{esc(season["title"])} {season["year"]} — Disneyland Resort</title>',
-               s, count=1, flags=re.S)
+    n = sum(len(sp['i']) for p in parks for L in p['L'] for sp in L['s'])
+    page_title = f'{season["title"]} {season["year"]} — Disneyland Resort'
+    head = (f'<title>{esc(page_title)}</title>\n' + og.tags(
+        page_title,
+        f'Unofficial checklist of all {n} seasonal foods and drinks at the Disneyland '
+        f'Resort, by park and land. Star what you want, tick off what you’ve tried, '
+        f'share your list.',
+        f'{season["slug"]}/',
+        f'{season["title"]} {season["year"]}, unofficial Disneyland Resort treat guide'))
+    s = re.sub(r'<title>.*?</title>', lambda m: head, s, count=1, flags=re.S)
 
     io.open(out_path, 'w', encoding='utf-8').write(s)
-    n = sum(len(sp['i']) for p in parks for L in p['L'] for sp in L['s'])
     print(f'built {out_path}: {len(s):,} chars, {n} items')
     return s
 

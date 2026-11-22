@@ -2,6 +2,7 @@
 /* Post-build checks. Runs in CI, so a bad season file fails the deploy
    rather than shipping a broken page. */
 const fs = require('fs'), path = require('path');
+const { cardInputs, indexInputs, digest } = require('./preview_inputs.js');
 
 let fails = 0;
 const ok = (c, m) => { console.log((c ? '  ok   ' : '  FAIL ') + m); if (!c) fails++; };
@@ -10,6 +11,28 @@ const seasons = fs.readdirSync('seasons').filter(f => f.endsWith('.json'));
 ok(seasons.length > 0, `${seasons.length} season file(s) found`);
 
 const slugs = [];
+
+// Link previews: tags with absolute URLs, a 1200x630 PNG beside the page, and
+// a card drawn from the season as it is now (not a stale title or palette).
+let manifest = {};
+try { manifest = JSON.parse(fs.readFileSync('previews/manifest.json', 'utf8')); } catch (e) {}
+// The address comes from SITE_URL at build time; read it back from the pages
+// so this also works when run outside make (as the deploy workflow does).
+const origins = new Set();
+function previewChecks(html, dir, key, inputs) {
+  const m = html.match(/<meta property="og:image" content="(https:\/\/[^/"]+)\/([^"]*)">/);
+  ok(!!m && m[2] === `${dir}preview.png`, `og:image is an absolute https URL to ${dir}preview.png`);
+  if (m) origins.add(m[1]);
+  ok(/<meta property="og:title" content="[^"]+">/.test(html) &&
+     /<meta property="og:description" content="[^"]+">/.test(html), 'og:title and og:description set');
+  const f = path.join('dist', dir, 'preview.png');
+  if (fs.existsSync(f)) {
+    const b = fs.readFileSync(f);
+    ok(b.readUInt32BE(16) === 1200 && b.readUInt32BE(20) === 630, 'preview.png is 1200x630');
+  } else ok(false, 'preview.png present (run make previews)');
+  ok(manifest[key] === digest(inputs), 'preview card is up to date (else run make previews)');
+}
+const cards = Object.fromEntries(cardInputs().map(c => [c.slug, c]));
 for (const f of seasons) {
   const s = JSON.parse(fs.readFileSync(path.join('seasons', f), 'utf8'));
   const slug = s.slug;
@@ -68,6 +91,7 @@ for (const f of seasons) {
       ok(!html.includes(`treats:${o}`), `no leakage from ${o}`);
     }
     ok(/<title>[^<]+<\/title>/.test(html), 'has a title');
+    previewChecks(html, slug + '/', slug, cards[slug]);
   }
   for (const pdf of ['everything.pdf', 'highlights.pdf']) {
     const f2 = path.join('dist', slug, pdf);
@@ -87,7 +111,10 @@ if (fs.existsSync(idx)) {
   const html = fs.readFileSync(idx, 'utf8');
   for (const slug of slugs) ok(html.includes(`"${slug}/"`), `links to ${slug}`);
   ok(/not affiliated/i.test(html), 'carries the unaffiliated notice');
+  previewChecks(html, '', 'index', indexInputs());
 }
+
+ok(origins.size === 1, `every page points previews at one site (${[...origins].join(', ')})`);
 
 console.log(fails ? `\n${fails} check(s) failed\n` : '\nall checks passed\n');
 process.exit(fails ? 1 : 0);

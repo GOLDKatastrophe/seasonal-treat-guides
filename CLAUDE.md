@@ -72,7 +72,7 @@ When updating season data from such a diff:
 - If a whole new season's guide appears, create `seasons/<new-slug>.json`
   rather than extending an existing season. Copy the structure of the newest
   existing season file and give it its own palette; `make check` enforces
-  the contrast floor.
+  the contrast floor. Then run `make previews` to draw its link-preview card.
 
 ## What not to change without being asked
 
@@ -84,6 +84,11 @@ When updating season data from such a diff:
 
     make          build dist/
     make check    build, then run tools/check_build.js
+    make previews redraw the link-preview cards in previews/ (needs Chrome)
     make clean
+
+`make check` fails when a preview card no longer matches its season's title,
+dates or palette; `make previews` fixes it. The cards carry no domain name: the
+site address is set once, as `SITE_URL` in the Makefile.
 
 Python 3 and Node 20. No dependencies.
