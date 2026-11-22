@@ -2,9 +2,13 @@ name: Check Disney guides
 
 # Weekday evenings. Disney publishes and edits its foodie guides on weekdays,
 # 06:00-16:00 Pacific (31 Disneyland guides checked, 2019-2026; none on a
-# weekend), so an evening run catches the same day's changes. The fingerprint
-# check is free; Claude is invoked only when a guide has actually changed, and
-# the result is a pull request. Nothing reaches the live site without review.
+# weekend), so an evening run catches the same day's changes.
+#
+# Each run (1) looks for new Disneyland guides for the recurring events in
+# tools/discover_guides.js and starts watching them, and (2) fingerprints every
+# watched guide. Both are free. Claude runs only when a guide is new or has
+# changed: it edits the season, or drafts a whole new one, and the result is a
+# pull request. Nothing reaches the live site without review.
 on:
   schedule:
     - cron: '0 2 * * 2-6'   # Mon-Fri 18:00 PST / 19:00 PDT (02:00 UTC next day)
@@ -22,6 +26,7 @@ permissions:
 jobs:
   check:
     runs-on: ubuntu-latest
+    timeout-minutes: 45   # a new season is a few hundred items; cap a runaway
     steps:
       - uses: actions/checkout@v4
 
@@ -37,10 +42,27 @@ jobs:
         id: guides
         run: node tools/check_guides.js
 
+      # While a bot PR waits for review, don't redraft it every evening: that
+      # would rerun Claude on the same changes daily. Merge or close the PR and
+      # the next run picks up everything since.
+      - name: Decide whether to update
+        id: go
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          open=$(gh pr list --head guides/update --state open --json number --jq length)
+          if [ "${{ inputs.force }}" = "true" ]; then echo "run=true" >> "$GITHUB_OUTPUT"
+          elif [ "${{ steps.guides.outputs.changed }}" != "true" ]; then echo "run=false" >> "$GITHUB_OUTPUT"
+          elif [ "$open" != "0" ]; then
+            echo "::notice::A guide changed, but an update PR is already open; merge or close it first."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          else echo "run=true" >> "$GITHUB_OUTPUT"; fi
+
       - name: Capture what changed
         id: diff
-        if: steps.guides.outputs.changed == 'true' || inputs.force
+        if: steps.go.outputs.run == 'true'
         run: |
+          git add --intent-to-add data/guides/   # so brand-new guide files appear in the diff
           {
             echo 'GUIDE_DIFF<<__EOF__'
             git diff --unified=2 -- data/guides/ | head -c 60000
@@ -48,14 +70,14 @@ jobs:
           } >> "$GITHUB_ENV"
 
       - name: Install Claude Code
-        if: steps.guides.outputs.changed == 'true' || inputs.force
+        if: steps.go.outputs.run == 'true'
         # The official installer tracks current releases; the npm package lags.
         run: |
           curl -fsSL https://claude.ai/install.sh | bash
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Update the season data
-        if: steps.guides.outputs.changed == 'true' || inputs.force
+        if: steps.go.outputs.run == 'true'
         env:
           # Subscription token from `claude setup-token`; expires after a year.
           CLAUDE_CODE_OAUTH_TOKEN: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
@@ -69,16 +91,16 @@ jobs:
             --permission-mode acceptEdits
 
       - name: Verify the build still passes
-        if: steps.guides.outputs.changed == 'true' || inputs.force
+        if: steps.go.outputs.run == 'true'
         run: make check
 
       - name: Open a pull request
-        if: steps.guides.outputs.changed == 'true' || inputs.force
+        if: steps.go.outputs.run == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           branch: guides/update
           base: main
-          title: 'Disney guide changed: ${{ steps.guides.outputs.summary }}'
+          title: 'Disney guides: ${{ steps.guides.outputs.summary }}'
           commit-message: |
             Update season data from Disney's guide
 
@@ -86,14 +108,15 @@ jobs:
 
             Drafted by Claude Code from the guide diff.
           body: |
-            A watched Disney foodie guide changed, so Claude Code has updated
-            the season data to match.
+            A Disney foodie guide is new or has changed, so Claude Code has
+            updated the season data to match, or drafted a new season.
 
             **Detected:** ${{ steps.guides.outputs.summary }}
 
             `make check` passes on this branch. Review the `seasons/*.json`
             diff against the `data/guides/*.txt` diff — the latter is what
-            Disney actually changed. `CHANGES.md` has a plain-English summary.
+            Disney actually published. `CHANGES.md` has a plain-English
+            summary. A new season also adds its preview card in `previews/`.
 
             Merging deploys to treats.kylejgold.com.
           delete-branch: true

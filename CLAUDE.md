@@ -69,10 +69,40 @@ When updating season data from such a diff:
   Renaming changes the share-link fingerprint either way, which is expected
   and handled — old links are rejected with an explanation rather than
   resolving to the wrong treat.
-- If a whole new season's guide appears, create `seasons/<new-slug>.json`
-  rather than extending an existing season. Copy the structure of the newest
-  existing season file and give it its own palette; `make check` enforces
-  the contrast floor. Then run `make previews` to draw its link-preview card.
+- A guide for a season with no file yet means a new season: see below.
+  Never extend an existing season with another year's or event's items.
+
+## Starting a new season
+
+`tools/check_guides.js` discovers new Disneyland guides for the recurring
+events listed in `tools/discover_guides.js` (Lunar New Year, Food & Wine,
+Season of the Force, Halloween, Holidays) and adds each to `data/guides.json`
+with the season it belongs to, e.g. `lunar-new-year-2027`. One file per event
+per year; a second guide for the same season (Festival of Holidays alongside
+the Holidays guide) adds to that season's file rather than making another.
+
+When a guide's `season` has no `seasons/<season>.json` yet, create it:
+
+- **Read the whole guide** in `data/guides/<id>.txt`. The diff in your prompt
+  is truncated; the file is not.
+- **Structure:** copy `seasons/holiday-2026.json`'s shape. `slug` is the
+  season name exactly; `title` is short and names the event ("Lunar New Year
+  Treats", "Food & Wine Festival Treats"); `year` is the slug's year;
+  `subtitle` is "Disneyland Resort · <first day> – <last day>"; `source` names
+  the guide(s) and their publish date; no `legacyKey`.
+- **`runs`:** the event's first and last day as Disney states them, as ISO
+  dates.
+- **Items:** every food and drink item, under the park, land and location
+  Disney gives, with Disney's names and descriptions as written (the rules
+  above apply). Exactly one category tag each; `new` where Disney says New;
+  `short` where an item's run is narrower than the season. Every item needs
+  `e`, and `b` when it starts after the season does.
+- **Skip merchandise.** Buckets, sippers, tumblers, straw clips and glow cubes
+  are out of scope for new seasons, even when Disney lists them.
+- **Chips:** the holiday season's set, minus any whose tag no item carries.
+- **Palette:** nine colours that suit the event and differ from the other
+  seasons. `make check` enforces 4.5:1 contrast on every pairing.
+- Then `make previews` to draw its link-preview card, and `make check`.
 
 ## What not to change without being asked
 
