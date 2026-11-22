@@ -62,7 +62,13 @@ starring the wrong items.
 ## Deploying
 
 CI builds on every push and pull request, and deploys `dist/` to Cloudflare
-only from `main`. Two repository secrets are needed:
+only from `main`.
+
+    Repo:   GOLDKatastrophe/seasonal-treat-guides
+    Worker: treats
+    Domain: treats.kylejgold.com
+
+Two repository secrets are needed:
 
 - `CLOUDFLARE_API_TOKEN` — scoped to Workers Scripts: Edit
 - `CLOUDFLARE_ACCOUNT_ID`
