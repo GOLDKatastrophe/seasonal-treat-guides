@@ -44,6 +44,16 @@ When updating season data from such a diff:
   changed. Do not reformat, reorder or rewrite untouched entries — a large
   diff is impossible to review and defeats the point.
 - Item names, locations and dates come from Disney verbatim. They are facts.
+- **Descriptions are Disney's wording, kept as written.** This was a deliberate
+  decision, not an oversight: do not paraphrase, shorten or restyle them. The
+  only edits to make are structural, and only where Disney's own markup is
+  broken:
+    - split an entry where the item name runs into its description, and
+      capitalise the resulting description fragment
+    - move an availability trailer such as `(Available Nov. 13 through Jan. 6,
+      2027)` out of the prose and into the `b` / `e` date fields
+    - close unmatched parentheses and drop Disney's duplicated trailers
+  If a description reads oddly but is intact, leave it alone.
 - An item that disappears from Disney's guide is **removed**, not retagged.
 - An item that is renamed is an edit to that entry, not a delete plus an add.
   Renaming changes the share-link fingerprint either way, which is expected
