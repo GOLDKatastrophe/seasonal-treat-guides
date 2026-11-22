@@ -79,6 +79,7 @@ def build(season_files, out_path, today=None):
        without notice &mdash; confirm in the Disneyland app.</p>
     <p>An unofficial fan project. Not affiliated with, endorsed by, or sponsored by
        The Walt Disney Company.</p>
+    <p>Built with <a href="https://claude.com/claude-code">Claude Code</a>.</p>
   </footer>
 </div>
 </html>
