@@ -62,6 +62,16 @@ jobs:
         if: steps.guides.outputs.changed == 'true' || inputs.force
         run: npm install -g @anthropic-ai/claude-code
 
+      - name: Check the token's shape (diagnostic)
+        if: steps.guides.outputs.changed == 'true' || inputs.force
+        env:
+          T: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+        run: |
+          echo "length: ${#T}"
+          case "$T" in sk-ant-oat01-*) echo "prefix: sk-ant-oat01- (ok)";; *) echo "prefix: unexpected";; esac
+          if printf '%s' "$T" | grep -q '[[:space:]]'; then echo "whitespace inside: YES"; else echo "whitespace inside: no"; fi
+          claude --version
+
       - name: Update the season data
         if: steps.guides.outputs.changed == 'true' || inputs.force
         env:
