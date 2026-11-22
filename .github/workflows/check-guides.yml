@@ -7,7 +7,7 @@ name: Check Disney guides
 # the result is a pull request. Nothing reaches the live site without review.
 on:
   schedule:
-    - cron: '47 1 * * 2-6'   # Mon-Fri 17:47 PST / 18:47 PDT (01:47 UTC next day)
+    - cron: '0 2 * * 2-6'   # Mon-Fri 18:00 PST / 19:00 PDT (02:00 UTC next day)
   workflow_dispatch:
     inputs:
       force:
