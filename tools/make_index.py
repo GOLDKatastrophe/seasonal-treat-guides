@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Build the root landing page listing every season, current one first."""
 import io, json, html, sys, datetime
+import og
 
 def esc(t): return html.escape(str(t), quote=True)
 
@@ -34,7 +35,7 @@ def build(season_files, out_path, today=None):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Disneyland Resort Seasonal Treat Guides</title>
-<meta name="description" content="Checklists of every seasonal food and drink item at the Disneyland Resort, by park and land.">
+{og.tags(og.SITE_NAME, "Unofficial checklists of every seasonal food and drink item at the Disneyland Resort, by park and land.", "", "Disneyland Resort seasonal treat checklists, unofficial")}
 <style>
   :root{{
     --paper:#14141A; --card:#1F1F29; --ink:#F2EFE6; --soft:#A7A3B5; --rule:#343243;

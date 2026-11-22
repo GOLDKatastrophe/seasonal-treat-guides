@@ -17,12 +17,20 @@ Live: https://treats.kylejgold.com
     tools/render_pdfs.js   runs the page's own PDF generator under Node
     tools/make_index.py    all seasons -> dist/index.html
     tools/check_build.js   post-build checks; CI fails on these
+    tools/render_previews.js  link-preview cards -> previews/*.png (needs Chrome)
+    previews/              committed 1200x630 og:image cards, one per page
+    tools/check_guides.js  daily: discover new Disney guides, fingerprint watched ones
+    tools/discover_guides.js  which events are seasons; guide -> season matching
+    data/guides.json       watched guides and the season each belongs to
+    data/guide-index.json  every Disney guide seen, so old ones aren't re-added
+    data/guides/<id>.txt   each guide's normalised text; its diff is the change
     dist/                  build output, deployed to Cloudflare (gitignored)
 
 ## Build
 
     make          # build everything into dist/
     make check    # build, then run the checks
+    make previews # redraw the link-preview cards (needs Chrome)
     make clean
 
 Needs Python 3 and Node 20. No dependencies to install.
@@ -62,6 +70,16 @@ Share links encode the wishlist as a bitfield plus a fingerprint of the
 item order. Editing a season's data changes the fingerprint, so links made
 before the edit are rejected with an explanation instead of silently
 starring the wrong items.
+
+## Automatic updates
+
+`.github/workflows/check-guides.yml` runs weekday evenings. It looks for new
+Disneyland foodie guides for the recurring events (Lunar New Year, Food &
+Wine, Season of the Force, Halloween, Holidays) and checks every watched guide
+for changes. When something is new or changed, Claude Code edits the season,
+or drafts a whole new `seasons/<event>-<year>.json`, and opens a pull request.
+Nothing reaches the site until it's merged. A season stops being watched two
+weeks after it ends and stays published as an archive.
 
 ## Deploying
 
