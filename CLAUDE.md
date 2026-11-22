@@ -54,12 +54,21 @@ When updating season data from such a diff:
       2027)` out of the prose and into the `b` / `e` date fields
     - close unmatched parentheses and drop Disney's duplicated trailers
   If a description reads oddly but is intact, leave it alone.
-- An item that disappears from Disney's guide is **removed**, not retagged.
+- **The site is also an archive.** Each season file is the record of what that
+  season offered, and stays published after the season ends. So an item that
+  disappears from Disney's guide is usually **kept**, not deleted:
+    - Its end date has passed: Disney is just tidying up. Leave it untouched.
+    - It disappears before its end date, after it went on sale: it was pulled
+      early. Keep it, and move `e` back to the last date the guide listed it.
+    - It disappears before it ever went on sale (`b`, or the season start, is
+      still in the future): it never ran. Remove it.
+  The same applies to a location and its items. Keeping items also keeps
+  share links working: removing one changes the fingerprint and rejects
+  every list shared before the edit.
 - An item that is renamed is an edit to that entry, not a delete plus an add.
   Renaming changes the share-link fingerprint either way, which is expected
   and handled — old links are rejected with an explanation rather than
   resolving to the wrong treat.
-- A location that no longer appears is removed along with its items.
 - If a whole new season's guide appears, create `seasons/<new-slug>.json`
   rather than extending an existing season. Copy the structure of the newest
   existing season file and give it its own palette; `make check` enforces
