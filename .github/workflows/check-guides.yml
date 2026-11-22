@@ -22,6 +22,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 jobs:
   check:
@@ -120,6 +121,11 @@ jobs:
 
             Merging deploys to treats.kylejgold.com.
           delete-branch: true
+          # Assigning the owner and asking for their review makes this a
+          # "participating" notification: email and app, on GitHub's defaults.
+          assignees: ${{ github.repository_owner }}
+          reviewers: ${{ github.repository_owner }}
+          labels: ${{ contains(steps.guides.outputs.summary, 'new season') && 'new season' || 'guide update' }}
           add-paths: |
             seasons/
             data/
@@ -129,6 +135,27 @@ jobs:
       # A guide that couldn't be fetched, or whose anchors no longer match, is
       # skipped above rather than reported as a change. Fail last so the run
       # goes red without blocking a PR for any guide that did change.
+      # Any failure (a guide unreadable, the token expired, the build broken)
+      # opens one issue assigned to the owner, so it can't go unnoticed. Later
+      # failures comment on it instead of opening more; close it once fixed.
+      - name: Raise an issue if this run failed
+        if: failure() || steps.guides.outputs.fetch_failures != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          FAILS: ${{ steps.guides.outputs.fetch_failures }}
+        run: |
+          msg="The guide check failed on $(date -u +%Y-%m-%d). Unreadable guides: ${FAILS:-unknown}. Log: $RUN_URL"
+          gh label create "check failing" --color B60205 --force >/dev/null
+          n=$(gh issue list --label "check failing" --state open --json number --jq '.[0].number // empty')
+          if [ -n "$n" ]; then gh issue comment "$n" --body "$msg"
+          else
+            gh issue create --title "Guide check is failing" --label "check failing" \
+              --assignee "${{ github.repository_owner }}" --body "$msg
+
+          Common causes: Disney changed its page layout or blocked the fetch; CLAUDE_CODE_OAUTH_TOKEN expired (it lasts a year; make a new one with \`claude setup-token\`); a season file broke \`make check\`. Close this once a run passes."
+          fi
+
       - name: Fail if a guide couldn't be read
         if: always() && steps.guides.outputs.fetch_failures != '0'
         run: |
