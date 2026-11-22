@@ -3,6 +3,10 @@
 An unofficial fan project. Not affiliated with, endorsed by, or sponsored by
 The Walt Disney Company.
 
+Built with [Claude Code](https://claude.com/claude-code). It also drafts the
+season-data updates when Disney changes a guide; each one arrives as a pull
+request for review.
+
 Live: https://treats.kylejgold.com
 
 ## Layout
