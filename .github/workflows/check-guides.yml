@@ -1,12 +1,13 @@
 name: Check Disney guides
 
-# Weekly. The fingerprint check is free, so the only cost in a normal week is
-# a few seconds of CI. Claude is invoked only when a guide has actually
-# changed, and the result is a pull request — nothing reaches the live site
-# without review.
+# Weekday evenings. Disney publishes and edits its foodie guides on weekdays,
+# 06:00-16:00 Pacific (31 Disneyland guides checked, 2019-2026; none on a
+# weekend), so an evening run catches the same day's changes. The fingerprint
+# check is free; Claude is invoked only when a guide has actually changed, and
+# the result is a pull request. Nothing reaches the live site without review.
 on:
   schedule:
-    - cron: '37 16 * * 0'   # Sundays, 08:37 America/Los_Angeles (ST)
+    - cron: '47 1 * * 2-6'   # Mon-Fri 17:47 PST / 18:47 PDT (01:47 UTC next day)
   workflow_dispatch:
     inputs:
       force:
@@ -45,18 +46,6 @@ jobs:
             git diff --unified=2 -- data/guides/ | head -c 60000
             echo '__EOF__'
           } >> "$GITHUB_ENV"
-
-      # Nothing changed: record the check date and stop. No Claude, no PR.
-      - name: Record the check
-        if: steps.guides.outputs.changed != 'true' && !inputs.force
-        run: |
-          if [ -n "$(git status --porcelain data/)" ]; then
-            git config user.name  'github-actions[bot]'
-            git config user.email 'github-actions[bot]@users.noreply.github.com'
-            git add data/
-            git commit -m 'Guides unchanged; record check date'
-            git push
-          fi
 
       - name: Install Claude Code
         if: steps.guides.outputs.changed == 'true' || inputs.force
