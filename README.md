@@ -75,6 +75,11 @@ Two repository secrets are needed:
 
 To deploy by hand instead: `make && npx wrangler deploy`.
 
+The weekly guide check (`check-guides.yml`) needs a third secret,
+`CLAUDE_CODE_OAUTH_TOKEN`, made with `claude setup-token`. It expires a
+year after it's made; when it does, the update step fails until it's
+replaced.
+
 ## Sources
 
 Compiled from Disney's official Disney Eats foodie guides. Item names,
