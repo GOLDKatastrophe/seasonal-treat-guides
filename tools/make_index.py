@@ -80,7 +80,7 @@ def build(season_files, out_path, today=None):
        without notice &mdash; confirm in the Disneyland app.</p>
     <p>An unofficial fan project. Not affiliated with, endorsed by, or sponsored by
        The Walt Disney Company.</p>
-    <p>Built with <a href="https://claude.com/claude-code">Claude Code</a>.</p>
+    <p>Spotted a mistake or a missing treat? <a href="https://github.com/GOLDKatastrophe/seasonal-treat-guides/issues/new/choose">Report it on GitHub</a>. Built with <a href="https://claude.com/claude-code">Claude Code</a>; source at <a href="https://github.com/GOLDKatastrophe/seasonal-treat-guides">GitHub</a>.</p>
   </footer>
 </div>
 </html>
