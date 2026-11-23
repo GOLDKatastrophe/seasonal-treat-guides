@@ -114,6 +114,16 @@ if (fs.existsSync(idx)) {
   previewChecks(html, '', 'index', indexInputs());
 }
 
+// --- search indexing ------------------------------------------------------
+console.log('\nsearch');
+const sm = fs.existsSync('dist/sitemap.xml') ? fs.readFileSync('dist/sitemap.xml', 'utf8') : '';
+const site = [...origins][0] || '';
+ok(sm.includes(`<loc>${site}/</loc>`), 'sitemap lists the landing page');
+for (const slug of slugs) ok(sm.includes(`<loc>${site}/${slug}/</loc>`), `sitemap lists ${slug}`);
+const rb = fs.existsSync('dist/robots.txt') ? fs.readFileSync('dist/robots.txt', 'utf8') : '';
+ok(rb.includes(`Sitemap: ${site}/sitemap.xml`), 'robots.txt points at the sitemap');
+ok(!/Disallow:\s*\/\s*$/m.test(rb), 'robots.txt does not block the site');
+
 ok(origins.size === 1, `every page points previews at one site (${[...origins].join(', ')})`);
 
 console.log(fails ? `\n${fails} check(s) failed\n` : '\nall checks passed\n');

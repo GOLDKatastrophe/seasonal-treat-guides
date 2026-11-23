@@ -16,6 +16,7 @@ def tags(title, description, path, alt):
     e = lambda t: html.escape(str(t), quote=True)
     page = f'{site_url()}/{path}'
     return '\n'.join([
+        f'<link rel="canonical" href="{e(page)}">',
         f'<meta name="description" content="{e(description)}">',
         '<meta property="og:type" content="website">',
         f'<meta property="og:site_name" content="{e(SITE_NAME)}">',

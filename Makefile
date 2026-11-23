@@ -17,6 +17,7 @@ all:
 	  cp previews/$$s.png dist/$$s/preview.png 2>/dev/null || echo "  no preview for $$s: run make previews"; \
 	done
 	@python3 tools/make_index.py $(SEASONS) dist/index.html
+	@python3 tools/make_sitemap.py $(SEASONS) dist/
 	@cp previews/index.png dist/preview.png 2>/dev/null || echo "  no landing preview: run make previews"
 	@echo "dist/ ready:"
 	@find dist -type f | sort | sed 's/^/  /'
