@@ -16,6 +16,7 @@ Live: https://treats.kylejgold.com
     tools/build.py         season JSON -> dist/<slug>/index.html
     tools/render_pdfs.js   runs the page's own PDF generator under Node
     tools/make_index.py    all seasons -> dist/index.html
+    tools/make_sitemap.py  dist/sitemap.xml + robots.txt for search engines
     tools/check_build.js   post-build checks; CI fails on these
     tools/render_previews.js  link-preview cards -> previews/*.png (needs Chrome)
     previews/              committed 1200x630 og:image cards, one per page
