@@ -72,7 +72,9 @@ for (const f of seasons) {
   const t = s.theme;
   for (const [fg, bg, label] of [['ink', 'paper', 'body'], ['soft', 'card', 'muted'],
                                  ['accent', 'paper', 'accent'], ['warn', 'paper', 'warn'],
-                                 ['want', 'card', 'star'], ['done', 'card', 'tick']]) {
+                                 ['want', 'card', 'star'], ['done', 'card', 'tick'],
+                                 // the landing-page card: title and status badge
+                                 ['ink', 'card', 'card title'], ['accent', 'card', 'card badge']]) {
     const r = ratio(t[fg], t[bg]);
     ok(r >= 4.5, `${label} contrast ${r.toFixed(2)}:1 (${t[fg]} on ${t[bg]})`);
   }
