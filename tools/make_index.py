@@ -24,7 +24,7 @@ def build(season_files, out_path, today=None):
             'Starts ' + s['start'].strftime('%b %-d') if s['start'] > today
             else 'Ended ' + s['end'].strftime('%b %-d, %Y'))
         cards.append(f'''    <a class="season{' live' if s['live'] else ''}" href="{esc(s['slug'])}/"
-       style="--sa:{th['accent']};--sc:{th['card']};--sp:{th['paper']}">
+       style="--sa:{th['accent']};--sc:{th['card']};--sp:{th['paper']};--si:{th['ink']};--ss:{th['soft']}">
       <span class="badge">{esc(status)}</span>
       <h2>{esc(s['title'])} {s['year']}</h2>
       <p>{esc(s['count'])} items &middot; {esc(s['start'].strftime('%b %-d'))} &ndash; {esc(s['end'].strftime('%b %-d, %Y'))}</p>
@@ -51,20 +51,23 @@ def build(season_files, out_path, today=None):
   h1{{font:600 1.6rem/1.2 Georgia,"Iowan Old Style",serif;margin:0 0 .35rem}}
   header p{{margin:0;color:var(--soft);font-size:.92rem}}
   .season{{
-    display:block;text-decoration:none;color:inherit;margin:0 0 .8rem;
+    display:block;text-decoration:none;color:var(--si,var(--ink));margin:0 0 .8rem;
     padding:1rem 1.1rem;border-radius:12px;border:1px solid var(--rule);
     background:var(--sc,var(--card));position:relative;
   }}
   .season.live{{border-color:var(--sa);box-shadow:inset 3px 0 0 var(--sa)}}
   .season:active{{transform:scale(.995)}}
   .season h2{{font:600 1.08rem/1.3 Georgia,serif;margin:.3rem 0 .2rem}}
-  .season p{{margin:0;color:var(--soft);font-size:.86rem}}
+  /* a card keeps its season's dark palette in light mode too, so its text
+     uses that season's colours, never the page's */
+  .season p{{margin:0;color:var(--ss,var(--soft));font-size:.86rem}}
   .badge{{
     display:inline-block;font-size:.68rem;letter-spacing:.04em;text-transform:uppercase;
     color:var(--sa,var(--soft));font-weight:700;
   }}
   footer{{margin:2rem 0 0;color:var(--soft);font-size:.78rem;line-height:1.55}}
   footer p{{margin:0 0 .5rem}}
+  footer a{{color:var(--ink);text-decoration:underline;text-underline-offset:2px}}
   @media (prefers-color-scheme:light){{
     :root:not([data-theme="dark"]){{--paper:#F7F5F0;--ink:#1A1822;--soft:#5C5869;--rule:#D9D4CB}}
   }}
